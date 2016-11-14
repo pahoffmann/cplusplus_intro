@@ -1,0 +1,13 @@
+- cmake vereinfach Einbinden von Bibliotheken ( im Gegensatz zu make)
+- in normalen makefiles müssen Bibliotheken oft manueel gesucht werden
+- cmake hat skripte, die viele Bibliotheken suchen (systemunabhängig) -> plattformunabhängige Komplierung
+- Grundlegende Funktionalitäten:
+  - Eingabe von In- und Outputverzeichnissen
+  - Spezifizieren von Build-Targets & jeweiligen Bibliotheken
+  - Komplieren von Bibliotheksdateien
+  - übergeben von Verzeichnissen an cmake, die dem Standart nicht entsprechen, zum durchsuchen
+
+
+- Unterschied zwischen In-Source und Out-of-source:
+  -> für Out-of-source werden alle Dateien, die beim Builden entstehen, an ein Verzeichnis
+     außerhalb des Quellverzeichnisses "übergeben" (werden dort abgelegt)
