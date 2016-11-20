@@ -51,7 +51,7 @@ jmpr_Image* jmpr_readImage(char* filename){
 		fputs("error",stderr);
 		return NULL;
 	}
-	/**fetting parameters, skipping whitespace
+	/**getting parameters, skipping whitespace
 	*/
 	fscanf(file,"%s",magic);
 	fgets(buffer,sizeof(buffer),file);
@@ -152,14 +152,112 @@ jmpr_Image* jmpr_readImage(char* filename){
 	
 }
 
-
+/**
+ * @brief Frees all resources in \ref img
+ */
 void jmpr_freeImage(jmpr_Image* img){
-	for(int i=0;i<img->h;i++){
+  	for(int i=0;i<img->h;i++){
 		free(img->pixels[i]);
 	}
 	free(img->pixels);
 	//free(&(img->w));
 	//free(&(img->h));
-	
+   
+}
+
+/**
+ * @brief Saves a file in binary PNM format.
+ *
+ * @param 	filename	The filename of the target file
+ * @param	img			An jmpr_Image struct to so save
+ * @param	mode		The storage mode
+ *
+ * If a gray map mode is selected, the image will be converted
+ * into a gray scale image and color information is lost.
+ */
+void jmpr_savePNM(char* filename, jmpr_Image* img, enum jmpr_PNMMode mode){
+
+  FILE* file;
+  int i;
+  int width = img->w;
+  int height = img->h;
+  int value;
+  
+
+  file = fopen(filename, "w");
+
+  i = 255;
+  
+  // if mode is portable pixmap ASCII (P3)
+  if(ASCII_PPM == mode){
+    fprintf(file, "%s\n", "P3");
+    fprintf(file, "%s\n", "# CREATOR: GIMP PNM Filter Version 1.1");
+    fprintf(file, "%i %i\n%i\n", width, height, i);
+
+    //write actual data into file
+    for(int j = 0; j < height; j++){
+      for(int k = 0; k < width; k++){
+	fprintf(file, "%i\n", img->pixels[j][k].r);
+	fprintf(file, "%i\n", img->pixels[j][k].g);
+	fprintf(file, "%i\n", img->pixels[j][k].b);
+      }
+    }
+  }
+
+  // if mode is portable greymap ASCII (P2)
+  if(ASCII_PGM == mode){
+    fprintf(file, "%s\n", "P2");
+    fprintf(file, "%s\n", "# CREATOR: GIMP PNM Filter Version 1.1");
+    fprintf(file, "%i %i\n%i\n", width, height, i);
+
+    //write actual data into file
+    for(int j = 0; j < height; j++){
+      for(int k = 0; k < width; k++){
+	fprintf(file, "%i\n", ((img->pixels[j][k].r+img->pixels[j][k].g+img->pixels[j][k].b)/3));
+      }
+    }
+  }
+
+  
+  // if mode is portable greymap binary (P5)
+  if(BINARY_PGM == mode){
+    fprintf(file, "%s\n", "P5");
+    fprintf(file, "%s\n", "# CREATOR: GIMP PNM Filter Version 1.1");
+    fprintf(file, "%i %i\n%i\n", width, height, i);
+
+    //write actual data into file   
+    for(int j = 0; j < height; j++){
+      for(int k = 0; k < width; k++){
+	value = (img->pixels[j][k].r+img->pixels[j][k].g+img->pixels[j][k].b)/3;
+	fwrite(&value, 1, 1, file);
+
+      }
+    
+    }
+  
+
+  }
+
+   // if mode is portable pixmap binary (P6)
+  if(BINARY_PPM == mode){
+    fprintf(file, "%s\n", "P6");
+    fprintf(file, "%s\n", "# CREATOR: GIMP PNM Filter Version 1.1");
+    fprintf(file, "%i %i\n%i\n", width, height, i);
+
+    //write actual data into file
+    for(int j = 0; j < height; j++){
+      for(int k = 0; k < width; k++){
+	fwrite(&img->pixels[j][k].r, 1, 1, file);
+	fwrite(&img->pixels[j][k].g, 1, 1, file);
+	fwrite(&img->pixels[j][k].b, 1, 1, file);
+      }
+    
+    }
+  
+
+  }
+
+  fclose(file);
+  
 }
 

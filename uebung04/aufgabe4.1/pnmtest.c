@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "jmprPNMIO.h"
 
 
@@ -44,7 +45,9 @@ SDL_Surface* jmpr_surfaceFromImage(jmpr_Image* img){
 
         surface = SDL_CreateRGBSurfaceFrom(pixels,width,hight,24,pitch,rmask,gmask,bmask,amask);
 
-        return surface;
+	
+
+	return surface;
 }
 
 
@@ -58,9 +61,29 @@ int main(int argc, char *argv[]){
         SDL_Texture* texture;
         SDL_Renderer* renderer;
 
-        filename = "panorama1.pnm";
+
+	enum jmpr_PNMMode mode;
+
+	
+	
+
+        
+	filename = "panorama2.pnm";
         printf("%s\n",filename);
         image = jmpr_readImage(filename);
+
+	
+	//test save method
+	mode = BINARY_PPM;
+	jmpr_savePNM("testfile_bin_ppm.pnm", image, mode);
+	mode = BINARY_PGM;
+	jmpr_savePNM("testfile_bin_pgm.pnm", image, mode);
+	mode = ASCII_PPM;
+	jmpr_savePNM("testfile_ascii_ppm.pnm", image, mode);
+	mode = ASCII_PGM;
+	jmpr_savePNM("testfile_ascii_pgm.pnm", image, mode);
+	
+	
         if((SDL_Init(SDL_INIT_VIDEO)) != 0){
         fprintf(stderr, "%s\n", SDL_GetError());
                 return -1;
@@ -84,11 +107,12 @@ int main(int argc, char *argv[]){
         texture = SDL_CreateTextureFromSurface(renderer,surface);
         SDL_RenderCopy(renderer,texture,0,0);
         SDL_RenderPresent(renderer);
-        SDL_Delay(10000);
+        SDL_Delay(5000);
         SDL_DestroyWindow(window);
         SDL_DestroyRenderer(renderer);
-	jmpr_freeImage(image);
         SDL_Quit();
+
+	jmpr_freeImage(image);
 
 
         return 0;
