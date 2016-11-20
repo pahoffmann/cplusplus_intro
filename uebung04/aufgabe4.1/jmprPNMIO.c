@@ -5,6 +5,8 @@
 #include <string.h>
 
 
+enum jmpr_PNMMode mode;
+
 SDL_Surface* jmpr_surfaceFromImage(jmpr_Image* img){
         SDL_Surface* surface;
         int width;
@@ -30,7 +32,6 @@ SDL_Surface* jmpr_surfaceFromImage(jmpr_Image* img){
         gmask = 0x0000ff00;
         bmask = 0x00ff0000;
         amask = 0xff000000;
-	printf("PETER1");
         pixels = (unsigned char *)malloc(height*width*3*sizeof(unsigned char));
 
 
@@ -44,7 +45,6 @@ SDL_Surface* jmpr_surfaceFromImage(jmpr_Image* img){
                         k++;
                 }
         }
-	printf("PETER2");
         surface = SDL_CreateRGBSurfaceFrom(pixels,width,height,24,pitch,rmask,gmask,bmask,amask);
 
         return surface;
@@ -62,7 +62,6 @@ void jmpr_savePNM(char* filename, jmpr_Image* img, enum jmpr_PNMMode mode){
 
 
 void printTest(jmpr_Pixel** image,int h,int w){
-	printf("{%d, %d, %d}!!!!\n",image[h-1][w-1].r,image[h-1][w-1].g,image[h-1][w-1].b);
 	for(int i=0;i<10;i++){
 		for(int j=0;j<10;j++){
 			printf("{%d, %d, %d} ",image[i][j].r,image[i][j].g,image[i][j].b);
@@ -82,6 +81,7 @@ jmpr_Image* jmpr_readImage(char* filename){
 	
 	/**variables
 	*/
+
 	FILE* file;
 	jmpr_Image* image;
 	int width;
@@ -126,10 +126,12 @@ jmpr_Image* jmpr_readImage(char* filename){
                 pixels[i] = (jmpr_Pixel*)malloc(width * sizeof(jmpr_Pixel));
         }
 	
+	image = (jmpr_Image*)malloc(sizeof(jmpr_Image));
+	
 	/**if magic number is P2
 	*/
 	if(!strcmp(magic,"P2")){
-		printf("Kekseee!!!!");
+		mode=ASCII_PGM;
 		for(i = 0; i < height ; i++){
 			for(j=0;j<width;j++){
 				fscanf(file,"%d",&tmp);
@@ -143,7 +145,7 @@ jmpr_Image* jmpr_readImage(char* filename){
 	/** if magic number is P3
 	*/
 	else if(!strcmp(magic,"P3")){
-		
+		mode = ASCII_PPM;
 		for(i = 0; i < height ; i++){
 			for(j=0;j<width;j++){
 				fscanf(file,"%d",&tmp);
@@ -159,6 +161,7 @@ jmpr_Image* jmpr_readImage(char* filename){
 	/** if magic number is P5
 	*/
 	else if(!strcmp(magic,"P5")){
+		mode = BINARY_PGM;
 		a=(unsigned char*)malloc(width*height*sizeof(unsigned char));
 		fread(a,1,width*height,file);
 		for(i=0;i<height;i++){
@@ -173,6 +176,7 @@ jmpr_Image* jmpr_readImage(char* filename){
 	/** if magic number is P6
 	*/
 	else if(!strcmp(magic,"P6")){
+		mode=BINARY_PPM;
 		a=(unsigned char*)malloc(width*height*3*sizeof(unsigned char));
 		fread(a,1,width*height*3,file);
 		for(i=0;i<height;i++){
@@ -192,9 +196,8 @@ jmpr_Image* jmpr_readImage(char* filename){
 	image = (jmpr_Image*)malloc(sizeof(jmpr_Image));
 	image->w = width;
 	image->h = height;
-	printf("WAZZUPP");
+	image->pixels = pixels;
 	//printTest(pixels,height,width);
-	printf("ENDEEEE");
 	fclose(file);
 	return image;
 	
@@ -217,17 +220,15 @@ int main(int argc, char* argv[]){
         SDL_Texture* texture;
         SDL_Renderer* renderer;
 	
-	filename = "/home/patrick/UniOsnabrück/c++/uebungen/uebung4/panorama2.pnm";
+	filename = "/home/patrick/UniOsnabrück/c++/uebungen/uebung4/panorama1.pnm";
 	printf("%s\n",filename);
-	printf("MAIN1");
 	image = jmpr_readImage(filename);
-	printf("MAIN2");
         if((SDL_Init(SDL_INIT_VIDEO)) != 0){
         fprintf(stderr, "%s\n", SDL_GetError());
                 return -1;
         }
 
-        window = SDL_CreateWindow("TEST", 0, 0, 5390,1133, SDL_WINDOW_SHOWN);
+        window = SDL_CreateWindow("TEST", 0, 0, (image->w)/3,1133/3, SDL_WINDOW_SHOWN);
 
         if(NULL == window){
             fprintf(stderr, "%s\n", SDL_GetError());
