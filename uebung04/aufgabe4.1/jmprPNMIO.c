@@ -154,7 +154,12 @@ jmpr_Image* jmpr_readImage(char* filename){
 
 
 void jmpr_freeImage(jmpr_Image* img){
-	
+	for(int i=0;i<img->h;i++){
+		free(img->pixels[i]);
+	}
+	free(img->pixels);
+	//free(&(img->w));
+	//free(&(img->h));
 	
 }
 

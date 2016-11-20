@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
         SDL_Texture* texture;
         SDL_Renderer* renderer;
 
-        filename = "/home/patrick/UniOsnabrück/c++/uebungen/uebung4/panorama1.pnm";
+        filename = "panorama1.pnm";
         printf("%s\n",filename);
         image = jmpr_readImage(filename);
         if((SDL_Init(SDL_INIT_VIDEO)) != 0){
@@ -87,6 +87,7 @@ int main(int argc, char *argv[]){
         SDL_Delay(10000);
         SDL_DestroyWindow(window);
         SDL_DestroyRenderer(renderer);
+	jmpr_freeImage(image);
         SDL_Quit();
 
 
