@@ -10,8 +10,11 @@
  */
 
 #include "jmpr.hpp"
-
+#include <fstream>
 #include <iostream>
+#include <SDL2/SDL.h>
+#include <string>
+
 
 /* SDL related global variables */
 SDL_Window* 	pWindow 		= 0;
@@ -132,13 +135,77 @@ SDL_Texture* jmprLoadTextureWithKey(const char* filename, unsigned char key_r, u
 
 
 struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
-{
-	return 0;
+{	
+ 	int key_r;
+        int key_g;
+        int key_b;
+	
+	int i,j;
+
+        jmprLevel* level;
+	int** tiles;
+        SDL_Texture* texture;
+        const char* tilefile;
+        std::string tilefilename;
+        std::ifstream in;
+        
+	/* opening file */
+	in.open(filename);
+        if(!in.good()){
+                exit(1);
+        }
+
+
+        /* getting and setting level parameters */
+        level = (jmprLevel*)malloc(sizeof(jmprLevel));
+        std::getline(in,tilefilename);                   /*getting the first line of test.lvl */
+        in.clear();
+        tilefile = tilefilename.c_str();                 /* converting string to const char* */
+        std::cout << tilefile << std::endl;              /* printing for test */
+        in>>(level->tile_width)                          /* tile width */
+          >>(level->tile_height)                         /* tile height */
+          >>(level->num_rows)                            /* tile num_rows */
+          >>(level->tiles_per_row)                       /* tile num_rows */
+          >>(level->tile_offset)                         /* tile num_rows */
+          >>(key_r)                                      /* key_r keycolor */
+          >>(key_g)                                      /* key_g keycolor */
+          >>(key_b)                                      /* key_b keycolor */
+          >>(level->level_width)                         /* level-width */
+          >>(level->level_height);                       /* level-height */
+
+        level->key_r = key_r;
+        level->key_g = key_g;
+        level->key_b = key_b;
+
+        /*printtest! */
+        std::cout << level -> tile_width << " " << level -> tile_height << " " <<level -> num_rows <<
+                     " " << level -> tiles_per_row << " " << level -> tile_offset << " " <<(int)(level -> key_r) <<
+                     " " << (int)(level -> key_g) << " " <<(int)(level -> key_b) << " " << level->level_width <<
+                     " " <<level -> level_height<<std::endl;
+
+        texture = jmprLoadTextureWithKey(tilefile,level->key_r,level->key_g,level->key_b);
+	level->texture = texture;
+	
+        tiles = (int**)malloc((level->level_height)*sizeof(int));
+        for(i=0;i<(level->level_height);i++){
+                tiles[i]=(int*)malloc((level->level_width)*sizeof(int));
+        }
+
+
+        for(i=0;i<(level->level_height) && in;i++){
+                for(j=0;j<(level->level_width) && in; j++){
+                        in>>tiles[i][j];
+                        std::cout<<tiles[i][j]<<" ";
+                }
+                std::cout<<std::endl;
+        }
+        level -> tiles = tiles;
+
+
+
+        return level;    /* returning the loaded level*/
 }
 
-void jmprRenderTiles(struct jmprLevel* t)
-{
+void jmprRenderTiles(struct jmprLevel* t){
 
 }
-
-

@@ -10,7 +10,7 @@
  */
 
 #include <stdio.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "jmpr.hpp"
 
@@ -48,13 +48,20 @@ int main(int argc, char** argv)
 			SDL_RenderClear( pRenderer );
 
 			/* Render tiles and sprite */
-			jmprRenderTiles(tileset);
+			//jmprRenderTiles(tileset);
 
 			/* Update screen */
-			SDL_RenderPresent( pRenderer );
+			//SDL_RenderPresent( pRenderer );
 		}
 	}
 
+        int i;
+
+        for(i=0;i<tileset->level_height;i++){
+                free(tileset->tiles[i]);
+        }
+        //free(tileset->tiles);
+	
 	free(tileset);
 	jmprClearSDL();
 
