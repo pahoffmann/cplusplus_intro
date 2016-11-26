@@ -1,1 +1,0 @@
-/usr/bin/c++   -Wall -Werror    CMakeFiles/jumper.dir/src/main.cpp.o CMakeFiles/jumper.dir/src/jmpr.cpp.o  -o jumper -rdynamic -Wl,-Bstatic -lSDL2main -Wl,-Bdynamic -lSDL2 -lpthread -lSDL2_image -lSDL2_image -lpthread -lm 

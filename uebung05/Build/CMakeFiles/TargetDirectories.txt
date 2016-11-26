@@ -1,3 +1,0 @@
-/home/patrick/UniOsnabrück/c++/C06/uebung05/Build/CMakeFiles/rebuild_cache.dir
-/home/patrick/UniOsnabrück/c++/C06/uebung05/Build/CMakeFiles/edit_cache.dir
-/home/patrick/UniOsnabrück/c++/C06/uebung05/Build/CMakeFiles/jumper.dir
