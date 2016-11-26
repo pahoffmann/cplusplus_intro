@@ -19,7 +19,7 @@ int main(int argc, char** argv)
 {
 	SDL_Event e;
 	int quit = 0;
-	struct jmprLevel* tileset;
+	struct jmprLevel* tileset = NULL;
 
 	if(jmprInitSDL())
 	{
@@ -48,19 +48,19 @@ int main(int argc, char** argv)
 			SDL_RenderClear( pRenderer );
 
 			/* Render tiles and sprite */
-			//jmprRenderTiles(tileset);
+			jmprRenderTiles(tileset);
 
 			/* Update screen */
-			//SDL_RenderPresent( pRenderer );
+			SDL_RenderPresent( pRenderer );
 		}
 	}
 
         int i;
 
         for(i=0;i<tileset->level_height;i++){
-                free(tileset->tiles[i]);
+			free(tileset->tiles[i]);
         }
-        //free(tileset->tiles);
+        free(tileset->tiles);
 	
 	free(tileset);
 	jmprClearSDL();

@@ -161,7 +161,7 @@ struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
         std::getline(in,tilefilename);                   /*getting the first line of test.lvl */
         in.clear();
         tilefile = tilefilename.c_str();                 /* converting string to const char* */
-        std::cout << tilefile << std::endl;              /* printing for test */
+        //std::cout << tilefile << std::endl;              /* printing for test */
         in>>(level->tile_width)                          /* tile width */
           >>(level->tile_height)                         /* tile height */
           >>(level->num_rows)                            /* tile num_rows */
@@ -195,7 +195,7 @@ struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
         for(i=0;i<(level->level_height) && in;i++){
                 for(j=0;j<(level->level_width) && in; j++){
                         in>>tiles[i][j];
-                        std::cout<<tiles[i][j]<<" ";
+                        //std::cout<<tiles[i][j]<<" ";
                 }
                 std::cout<<std::endl;
         }
@@ -207,5 +207,42 @@ struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
 }
 
 void jmprRenderTiles(struct jmprLevel* t){
-
+	
+	std::cout << "Anfang von jmprRenderTiles" << std::endl;
+	
+	SDL_Rect src;
+	SDL_Rect targ;
+	         
+	src.w = 16;
+	src.h = 16;
+	targ.w = 16;
+	targ.h = 16;
+	
+	int currentTile = 0;
+	currentTile = t->tiles[2][3] - 1;
+	
+	/*
+	for (int i = 0; i < t->num_rows; i++){
+		for (int j = 0; j < t->tiles_per_row; j++){
+			if(t->tiles[i][j] != 0){
+				currentTile = t->tiles[i][j] - 1;
+				src.y = ((currentTile % t->tiles_per_row) * 16 + j);
+				src.x = ((currentTile / t->num_rows + 1) * 16 + i);
+				
+				targ.x = (i * (16 + 1));
+				targ.y = (j * (16 + 1));
+				SDL_RenderCopy(pRenderer, t->texture, &src, &targ);
+			}
+		}
+	}
+	*/
+	src.y = ((currentTile % t->tiles_per_row) * 16 + 3);
+	src.x = ((currentTile / t->num_rows + 1) * 16 + 2);
+	
+	targ.x = (2 * (16 + 1));
+	targ.y = (3 * (16 + 1));
+	
+	std::cout << "vor SDL_RenderCopy" << std::endl;
+	SDL_RenderCopy(pRenderer, t->texture, &src, &targ);
+	
 }
