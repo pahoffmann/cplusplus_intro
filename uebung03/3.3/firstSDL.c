@@ -3,12 +3,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
+#include <sys/time.h>
+
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
 
 
-printUsage(){
+void printUsage(){
 	printf("Ungültige Eingabe!\n");
 	printf("Bitte [min_size] [max_size] [n] als parameter angeben!\n");
 	printf("n*max_size darf 600 nicht überschreiten!\n");
@@ -17,7 +20,7 @@ printUsage(){
 
 
 //random values
-randomValues(SDL_Rect array[],int min, int max, int n){
+void randomValues(SDL_Rect array[],int min, int max, int n){
 	int i;
 	SDL_Rect rect;
 	for(i=0;i<n;i++){
@@ -28,7 +31,7 @@ randomValues(SDL_Rect array[],int min, int max, int n){
 		usleep(1000);
 	}
 }
-printArray(SDL_Rect array[],int n){
+void printArray(SDL_Rect array[],int n){
 	int i;
 	for(i=0;i<n;i++){
 	 	printf("%d | %d , ",array[i].w,array[i].h);
@@ -36,7 +39,7 @@ printArray(SDL_Rect array[],int n){
 	printf("\n");
 }
 
-printArray1(SDL_Rect array[],int n){
+void printArray1(SDL_Rect array[],int n){
 	int i;
 	for(i=0;i<n;i++){
 	 	printf("%d | %d , ",array[i].x,array[i].y);
@@ -50,14 +53,14 @@ int cmpfunc ( const void * a, const void *b){
 	return ( rectA->w-rectB->w );
 }
 
-getX(SDL_Rect rect[],int n){
+void getX(SDL_Rect rect[],int n){
 	int i;
 	for(i=0;i<n; i++){
 		rect[i].x = SCREEN_WIDTH/2-rect[i].w/2;
 	}
 }
 
-getY(SDL_Rect rect[],int n){
+void getY(SDL_Rect rect[],int n){
 	int i;
 	int j;
 	int sum=0;
@@ -72,7 +75,7 @@ getY(SDL_Rect rect[],int n){
 	
 }
 
-rendering(SDL_Rect rect[],int n,SDL_Renderer* renderer){
+void rendering(SDL_Rect rect[],int n,SDL_Renderer* renderer){
 	int i;
 	for(i=0;i<n;i++){
 		SDL_RenderDrawRect(renderer,&rect[i]);
