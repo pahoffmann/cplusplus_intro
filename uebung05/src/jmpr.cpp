@@ -12,7 +12,7 @@
 #include "jmpr.hpp"
 #include <fstream>
 #include <iostream>
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <string>
 
 
@@ -134,6 +134,16 @@ SDL_Texture* jmprLoadTextureWithKey(const char* filename, unsigned char key_r, u
 }
 
 
+
+/**
+ * Loads a tileset from the given file.
+ *
+ * @param       filename        A file defining a tile set.
+ * @return      A pointer to jmprTileSet struct (if loaded successfully)
+ *                      or a null pointer if the given file could not be
+ *                      parsed.
+ */
+
 struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
 {	
  	int key_r;
@@ -165,18 +175,18 @@ struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
         std::cout << tilefile << std::endl;              /* printing for test */
         in>>(level->tile_width)                          /* tile width */
           >>(level->tile_height)                         /* tile height */
+          >>(level->tiles_per_row)                       /* tile tiles_per_row */
           >>(level->num_rows)                            /* tile num_rows */
-          >>(level->tiles_per_row)                       /* tile num_rows */
-          >>(level->tile_offset)                         /* tile num_rows */
+          >>(level->tile_offset)                         /* tile tile_offset */
           >>(key_r)                                      /* key_r keycolor */
           >>(key_g)                                      /* key_g keycolor */
           >>(key_b)                                      /* key_b keycolor */
           >>(level->level_width)                         /* level-width */
           >>(level->level_height);                       /* level-height */
 
-        level->key_r = key_r;
-        level->key_g = key_g;
-        level->key_b = key_b;
+        level->key_r = (unsigned char)key_r;
+        level->key_g = (unsigned char)key_g;
+        level->key_b = (unsigned char)key_b;
 
         /*printtest! */
         std::cout << level -> tile_width << " " << level -> tile_height << " " <<level -> num_rows <<
@@ -196,19 +206,21 @@ struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
         for(i=0;i<(level->level_height) && in;i++){
                 for(j=0;j<(level->level_width) && in; j++){
                         in>>tiles[i][j];
-                        std::cout<<tiles[i][j]<<" ";
                 }
-                std::cout<<std::endl;
         }
         level -> tiles = tiles;
-
+	in.clear();
+	in.close();
 
 
         return level;    /* returning the loaded level*/
 }
 
 
-
+/***
+ * Renders a tileset.
+ * @param       tileset A tileset to render.
+ */
 void jmprRenderTiles(struct jmprLevel* t){
 	SDL_Rect* source;
 	SDL_Rect* target;
@@ -237,7 +249,6 @@ void jmprRenderTiles(struct jmprLevel* t){
 				row = ((tmp / (t-> tiles_per_row)));
 				source->x = column*16 + (column * t->tile_offset) ;
 				source->y = row * 16  + (row * t->tile_offset) ;
-		
 				target->y = i*(t->tile_height ); //passt
 				target->x = j*(t->tile_width );  //passt
 

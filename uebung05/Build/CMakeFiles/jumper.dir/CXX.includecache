@@ -13,7 +13,7 @@ fstream
 -
 iostream
 -
-SDL2/SDL.h
+SDL.h
 -
 string
 -

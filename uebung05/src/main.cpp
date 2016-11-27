@@ -61,7 +61,6 @@ int main(int argc, char** argv)
                 free(tileset->tiles[i]);
         }
         //free(tileset->tiles);
-	
 	free(tileset);
 	jmprClearSDL();
 
