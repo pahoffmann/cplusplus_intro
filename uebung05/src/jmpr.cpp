@@ -158,8 +158,9 @@ struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
 
         /* getting and setting level parameters */
         level = (jmprLevel*)malloc(sizeof(jmprLevel));
+
+
         std::getline(in,tilefilename);                   /*getting the first line of test.lvl */
-        in.clear();
         tilefile = tilefilename.c_str();                 /* converting string to const char* */
         std::cout << tilefile << std::endl;              /* printing for test */
         in>>(level->tile_width)                          /* tile width */
@@ -206,6 +207,52 @@ struct jmprLevel* jmprLoadTileDefinitions(const char* filename)
         return level;    /* returning the loaded level*/
 }
 
+
+
 void jmprRenderTiles(struct jmprLevel* t){
+	SDL_Rect* source;
+	SDL_Rect* target;
+	
+	int i,j;
+	int tmp;
+	int row;
+	int column;
+
+	source = (SDL_Rect*)malloc(sizeof(SDL_Rect));
+	target = (SDL_Rect*)malloc(sizeof(SDL_Rect));
+	
+	source->w = 16;
+	source->h = 16;
+
+	target->w = 16;
+	target->h = 16;
+	
+	for(i=0 ; i < t->level_height ; i++){
+		for(j=0 ; j < t->level_width ; j++){
+			
+			tmp = t->tiles[i][j]-1;
+		
+			if( tmp != -1 ){
+				column = (tmp % (t -> tiles_per_row));
+				row = ((tmp / (t-> tiles_per_row)));
+				source->x = column*16 + (column * t->tile_offset) ;
+				source->y = row * 16  + (row * t->tile_offset) ;
+		
+				target->y = i*(t->tile_height ); //passt
+				target->x = j*(t->tile_width );  //passt
+
+				SDL_RenderCopy(pRenderer,t->texture,source,target);
+			}
+		}
+	}
+
+	free(source);
+	free(target);
+
 
 }
+
+
+
+
+

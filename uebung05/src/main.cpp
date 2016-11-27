@@ -48,10 +48,10 @@ int main(int argc, char** argv)
 			SDL_RenderClear( pRenderer );
 
 			/* Render tiles and sprite */
-			//jmprRenderTiles(tileset);
+			jmprRenderTiles(tileset);
 
 			/* Update screen */
-			//SDL_RenderPresent( pRenderer );
+			SDL_RenderPresent( pRenderer );
 		}
 	}
 
