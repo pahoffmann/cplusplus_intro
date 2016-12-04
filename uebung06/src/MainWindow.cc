@@ -1,145 +1,141 @@
 #include "MainWindow.hh"
-#include <SDL2/SDL.h>
-#include <SDL_image.h>
-#include <string>
-#include <iostream>
 
 
 
-/**
-* @brief initializes window and Renderer
-* @param title title of the window
-* 		 w width of window
-*		 h height of window
-*/
-MainWindow::MainWindow(std::string title, int w, int h) {
-	pWindow = 0;
-	pRenderer = 0;
-	
+// Erstellt ein Hauptfenster mit Title title, width w und height h
+MainWindow::MainWindow(std::string title, int w, int h){	
+	renderer = 0; /*initialize private variable*/
+	window = 0;
 	
 	/* Init SDL */
-	if(SDL_Init( SDL_INIT_VIDEO ) < 0)
-	{
-		std::cout << "SDL could not initialize: " << SDL_GetError() << std::endl;
-	}
+        if(SDL_Init( SDL_INIT_VIDEO ) < 0)
+        {
+                std::cout << "SDL could not initialize: " << SDL_GetError() << std::endl;
+                exit(1);
+        }
 
-	/* Generate SDL main window */
-	pWindow = SDL_CreateWindow(
-			title.c_str(),
-			SDL_WINDOWPOS_UNDEFINED,
-			SDL_WINDOWPOS_UNDEFINED,
-			w,
-			h,
-			SDL_WINDOW_SHOWN );
+        /* Generate SDL main window */
+        window = SDL_CreateWindow(
+                        title.c_str(),
+                        SDL_WINDOWPOS_UNDEFINED,
+                        SDL_WINDOWPOS_UNDEFINED,
+                        w,
+                        h,
+                        SDL_WINDOW_SHOWN );
 
-	if(pWindow == NULL)
-	{
-		std::cout << "SDL window could not be generated: " << SDL_GetError() << std::endl;
-	}
+        if(window == NULL)
+        {
+                std::cout << "SDL window could not be generated: " << SDL_GetError() << std::endl;
+                exit(1);
+        }
 
-	/* Create renderer for the SDL main window */
-	pRenderer = SDL_CreateRenderer( pWindow, -1, SDL_RENDERER_ACCELERATED );
+        /* Create renderer for the SDL main window */
+        renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED );
 
-	if(pRenderer == NULL)
-	{
-		std::cout << "SDL could not generate renderer: " << SDL_GetError() << std::endl;
-	}
+        if(renderer == NULL)
+        {
+                std::cout << "SDL could not generate renderer: " << SDL_GetError() << std::endl;
+                exit(1);
+        }
+         
+         //Initialize PNG loading
+        int imgFlags = IMG_INIT_PNG;
+        if( !( IMG_Init( imgFlags ) & imgFlags ) )
+        {       
+                std::cout << "SDL_image could not initialize! SDL_image Error: " << IMG_GetError() << std::endl;
+                exit(1);
+        }
 
-	 //Initialize PNG loading
-	int imgFlags = IMG_INIT_PNG;
-	if( !( IMG_Init( imgFlags ) & imgFlags ) )
-	{
-		std::cout << "SDL_image could not initialize! SDL_image Error: " << IMG_GetError() << std::endl;
-	}
+
+        /* Set background color for renderer */
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 0);
+		
 
 
-	/* Set background color for renderer */
-	SDL_SetRenderDrawColor(pRenderer, 255, 255, 255, 0);
 	
-	
+
 }
 
-/**
- * @brief returns the renderer
- */
+
+// Returns a pointer to the internal SDL-Renderer
 SDL_Renderer* MainWindow::getRenderer(){
-	return pRenderer;
+	return renderer;
 }
 
 
-/**
-*	@brief opens a window and renders it
-*/
+// Main loop: Renders contends and handles events
 void MainWindow::mainLoop(){
-	SDL_Event e;
 	int quit = 0;
-	Camera cam;
+	SDL_Event e;
 	
-	
-	
-	while(!quit)
-	{
-		/* Processs events, detect quit signal for window closing */
-		while(SDL_PollEvent(&e))
-		{
-			if(e.type == SDL_QUIT)
-			{
-				quit = 1;
-			}
-			
-			if(e.type == SDL_KEYDOWN){
-				
-				if(e.key.keysym.sym == SDLK_UP){
-					cam.moveY(-5);
-					myLevel->render(cam);
-				}
-				
-				if(e.key.keysym.sym == SDLK_DOWN){
-					cam.moveY(5);
-					myLevel->render(cam);
-				}
-				
-				if(e.key.keysym.sym == SDLK_LEFT){
-					cam.moveX(-5);
-					myLevel->render(cam);
-				}
-				
-				if(e.key.keysym.sym == SDLK_RIGHT){
-					cam.moveX(5);
-					myLevel->render(cam);
-				}
-			}
-		}
-		
-		/* Clear screen */
-		SDL_RenderClear( pRenderer );
-		
-		myLevel->render(cam);
-			
-		
-		/* Update screen */
-		SDL_RenderPresent( pRenderer );
-	}
-	
-	
+	Camera cam;        
 
-	SDL_DestroyRenderer(pRenderer);
-	pRenderer = NULL;
+	/* Start main loop and event handling */
+        while(!quit)
+        {
+	    
 
-	SDL_DestroyWindow(pWindow);
-	pWindow = NULL;
+            /* Processs events, detect quit signal for window closing */
+    	    while(SDL_PollEvent(&e))
+            {
+            	if(e.type == SDL_QUIT)
+                {
+           	     quit = 1;
+                }
 
+		if(e.type == SDL_KEYDOWN){
+
+                	if(e.key.keysym.sym == SDLK_UP){
+                        	cam.moveY(-5);
+                                levelX->render(cam);
+                        }
+
+                        if(e.key.keysym.sym == SDLK_DOWN){
+                	        cam.moveY(5);
+                                levelX->render(cam);
+                        }
+
+                        if(e.key.keysym.sym == SDLK_LEFT){
+                      		cam.moveX(-5);
+                                levelX->render(cam);
+                        }
+
+                        if(e.key.keysym.sym == SDLK_RIGHT){
+                        	cam.moveX(5);
+                                levelX->render(cam);
+                        }
+                  }
+	    }
+
+            /* Clear screen */
+            SDL_RenderClear( renderer );
+
+
+           /* Render tiles and sprite */
+           levelX->render(cam);
+	   /* Update screen */
+           SDL_RenderPresent( renderer );
+        }
+	
+	SDL_DestroyRenderer(renderer);
+	renderer = NULL;
+	
+	SDL_DestroyWindow(window);
+	window = NULL;
+	
 	IMG_Quit();
 	SDL_Quit();
+
+
 	
 }
 
+
+// Frees all resources
 MainWindow::~MainWindow(){
-	
-}
 
+
+}
 void MainWindow::setLevel(Level* level){
-	
-	myLevel = level;
-	
+	levelX=level;
 }

@@ -1,1 +1,0 @@
-Legen Sie hier Ihre Unterlagen zum 6. Aufgabenblatt ab. Legen Sie die Quellcode-Dateien in den src-Ordner. Im Ordner musterloesungen finden Sie einen Lösungsvorschalg zu Blatt5, den Sie als Vorlage verwenden können.
