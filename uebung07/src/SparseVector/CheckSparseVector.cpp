@@ -3,7 +3,7 @@
 #include <set>
 #include <sstream>
 
-#include "SparseVector.hh"
+#include "SparseVector.hpp"
 
 
 using namespace std;
