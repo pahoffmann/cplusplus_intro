@@ -92,51 +92,7 @@ void SparseVector::setNonzeroElem(int index, int value){
 			}
 
 			pos = pos->next;
-
-
-
-
-			/*
-			else if(pos == start && pos->index > index){
-
-				actSize++;
-
-				insert = new node(index,value,pos);
-				start = insert;
-
-
-			}
-			else if(pos->index == index){
-				//std::cerr << "A node with index " << index << " is already part of this Vector!"<<std::endl;
-				break;
-			}
-			else if(pos->index <= index && pos->next->index >=index){
-
-				actSize++;
-
-				insert = new node(index,value,pos->next);
-				pos->next = insert;
-
-				break;
-
-
-			}
-			else if(!pos->next){
-
-				actSize++;
-
-				insert = new node(index,value,0);
-				pos->next = insert;
-
-				break;
-
-			}
-
-			pos = pos->next;
-			*/
 		}
-
-	//}
 }
 
 void SparseVector::removeElem(int index){
