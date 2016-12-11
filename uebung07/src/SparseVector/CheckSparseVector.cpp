@@ -2,6 +2,7 @@
 #include <iostream>
 #include <set>
 #include <sstream>
+#include <assert.h>
 
 #include "SparseVector.hpp"
 
@@ -224,7 +225,7 @@ void getsetelem(ErrorContext &ec, int runs)
       {
         int idx = i * 4 + i % 3;
 
-        sv.setElem(idx, 100 - 3 * i);
+      sv.setElem(idx, 100 - 3 * i);
         indexes.insert(idx);
       }
 

@@ -7,49 +7,6 @@
 **********/
 
 
-/**
- * @brief adds a nonzero element to the list according to its index
- */
-void SparseVector::setNonzeroElem(int index, int value){
-	node *temp;
-	node *next;
-	temp = start;
-	while(temp->next != NULL){
-		if(temp->index > index){
-			break;
-		}
-
-		next = temp->next;
-		delete temp;
-		temp = next;
-
-	}
-
-	if(temp->next == NULL){
-		temp->next = new node(index, value, 0);
-	} else {
-		next = temp->next;
-		temp->next = new node (index, value, next);
-	}
-}
-
-
-/**
- * @brief removes an element from the list
- */
-void SparseVector::removeElem(int index){
-	node *temp;
-	node *next;
-	temp = start;
-
-	while(temp){
-		if (temp->index == index){
-			next = temp->next;
-			delete temp;
-			temp = next;
-		}
-	}
-}
 
 void SparseVector::clear(){
 
@@ -62,24 +19,105 @@ void SparseVector::clear(){
 	}
 }
 
+
 void SparseVector::copy(const SparseVector &other){
-	size = other.size;
-	actSize = other.actSize;
+	if(!other.start){
+                this->start = 0;
+        }
+        else if(this != &other){
+		
+		start = 0;
+			
+		size = other.size;
+		actSize = other.actSize;
+                
+		node *copy = start;
+                node *original = other.start;
+                while(original){
 
-	if (!other.start){
-    	this->start = 0;
-	} else if (this != &other){
-	  node *copy = start;
-	  node *original = other.start;
+                        copy = new node(original->index,original->value,0);
+                        copy = copy->next;
+                        original = original->next;
 
-	  while(original){
-		  copy = new node(original->index,original->value,0);
-		  copy = copy->next;
-		  original = original->next;
-	  }
-  } else {
-	  this->start = other.start;
-  }
+                }
+        }else{
+                this->start = other.start;
+        }
+
+}
+
+
+void SparseVector::setNonzeroElem(int index, int value){
+	
+	if(actSize < size){
+		
+		node *insert;
+		node *pos = start;
+		while(pos){
+
+			if(start == 0){
+				
+				start = new node(index,value,0);
+
+			}
+			else if(pos == start && pos->index > index){
+
+				actSize++;
+
+				insert = new node(index,value,pos);
+				start = insert;
+
+
+			}
+			else if(pos->index == index){
+				//std::cerr << "A node with index " << index << " is already part of this Vector!"<<std::endl;
+				break;
+			}
+			else if(pos->index <= index && pos->next->index >=index){
+				
+				actSize++;
+
+				insert = new node(index,value,pos->next);
+				pos->next = insert;
+				
+				break;
+				
+				
+			}
+			else if(!pos->next){
+				
+				actSize++;
+
+				insert = new node(index,value,0);
+				pos->next = insert;
+
+				break;
+				
+			}
+
+			pos = pos->next;
+		}
+	}
+}
+
+void SparseVector::removeElem(int index){
+	node *pos;
+	node *deleter;
+	bool found=false;
+
+	while(pos){
+		if(pos->next->index == index){
+			found = true;
+			deleter = pos->next;
+			pos->next = pos->next->next;
+			delete deleter;
+			break;
+		}
+
+	}
+	if(!found){
+		//std::cerr<<"Could not find an Element at position " << index << std::endl;
+	}
 
 }
 
@@ -94,67 +132,77 @@ void SparseVector::copy(const SparseVector &other){
 /* constructor with size */
 SparseVector::SparseVector(int size) /*: start(0,0,0)*/{
 	this->size = size;
-	actSize = 1;
-	start = new node (0,0,0);
+	actSize = 0;
+	start = NULL;
 }
 
 /* Copy - Constructor */
 SparseVector::SparseVector(const SparseVector &other){
-
+	
 	copy(other);
-
-}
-
-int SparseVector::getElem(int index){
-	if (this->actSize == 0){
-		std::cerr << "No element in list" << std::endl;
-		return 0;
-	}
-
-	node *temp;
-	node *next;
-	temp = start;
-	while(temp){
-		if(temp->index == index){
-			return temp->value;
-			break;
-		}
-		next = temp->next;
-		delete temp;
-		temp = next;
-	}
-
-	return -1;
-}
-
-void SparseVector::setElem(int index, int value){
-	setNonzeroElem(index, value);
+	
 }
 
 
 /* = operator */
 
-SparseVector& SparseVector::operator=(const SparseVector &other){
-
+SparseVector& SparseVector::operator=(const SparseVector &other){ 
+	
 	if(this != &other){
 		clear();
 		copy(other);
-	}
+	}	
 	return *this;
 }
 
-
-
-int SparseVector::getSize(){
-	return size;
-}
-
-bool operator ==(const SparseVector &first, const SparseVector &second){
-
-}
-
-bool operator !=(const SparseVector &first, const SparseVector &second){
+bool SparseVector::operator==(const SparseVector& rhs) const{
+	node *pos = this->start;
+	node *otherpos = rhs.start;
+	bool equal = true;
 	
+	while(pos && otherpos){
+		if(pos -> index != otherpos->index || pos->value != otherpos->value){
+			equal = false;
+		}	
+		pos = pos->next;
+		otherpos=otherpos->next;
+	
+	}
+	if(!(!pos && !otherpos)){
+		equal = false;
+	}
+
+	return equal;
+}
+
+bool SparseVector::operator!=(const SparseVector& rhs) const{
+	
+	return !(*this==rhs);
+
+}
+
+void SparseVector::setElem(int index, int value){
+	if(value == 0){
+		removeElem(index);
+	}
+	else {
+		setNonzeroElem(index,value);
+	}
+}
+
+
+int SparseVector::getElem(int index) const{
+	node *pos = start;
+	while(pos){
+		if(pos->index == index){
+			return pos->value;
+		}
+	}
+	return 0;
+}
+
+int SparseVector::getSize() const{
+	return size;
 }
 
 
