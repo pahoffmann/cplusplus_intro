@@ -56,7 +56,7 @@ void SparseVector::setNonzeroElem(int index, int value){
 
 		//Debug
 		//std::cout << "Debug" << std::endl;
-		for (int i = 0; i < actSize+1; i ++){
+		/*while(pos)*/for (int i = 0; i < actSize+1; i ++){
 		//	std::cout << "Debug2" << std::endl;
 
 			if(start == 0){
@@ -68,7 +68,7 @@ void SparseVector::setNonzeroElem(int index, int value){
 
 				break;
 
-			} else if (pos->index >= index){
+			} else if (pos == start && pos->index > index){
 
 				insert = new node(index, value, pos);
 				start = insert;
@@ -76,14 +76,16 @@ void SparseVector::setNonzeroElem(int index, int value){
 				//std::cout << "debug(is smaller): " << insert->value << std::endl;
 				actSize++;
 				break;
-
-			} else if(pos->index <= index){
-				insert = new node(index, value, pos->next);
-				//Debug
-				//std::cout << "debug(is larger): " << insert->value << std::endl;
-				actSize++;
-				pos->next = insert;
-				break;
+				
+			} else if(pos && pos->next){
+				if(pos->index < index && pos -> next ->index > index){
+					insert = new node(index, value, pos->next);
+					//Debug
+					//std::cout << "debug(is larger): " << insert->value << std::endl;
+					actSize++;
+					pos->next = insert;
+					break;
+				}
 			} else if(!pos->next){
 				insert = new node(index, value, 0);
 				actSize++;
@@ -128,7 +130,7 @@ void SparseVector::removeElem(int index){
 SparseVector::SparseVector(int size) /*: start(0,0,0)*/{
 	this->size = size;
 	actSize = 0;
-	start = NULL;
+	start = 0;
 }
 
 /* Copy - Constructor */
@@ -154,7 +156,11 @@ bool SparseVector::operator==(const SparseVector& rhs) const{
 	node *pos = this->start;
 	node *otherpos = rhs.start;
 	bool equal = true;
-
+	
+	if(size != rhs.size){
+		equal = false;
+	}
+		
 	while(pos && otherpos){
 		if(pos -> index != otherpos->index || pos->value != otherpos->value){
 			equal = false;
@@ -192,7 +198,7 @@ void SparseVector::setElem(int index, int value){
 int SparseVector::getElem(int index) const{
 	node *pos = start;
 	//std::cout << pos->value << std::endl;
-	for(int i = 0; i < actSize; i++){
+	/*while(pos)*/for(int i = 0; i < actSize; i++){
 		if(pos == 0){
 			//Debug
 			//std::cout << "pos is 0" << std::endl;
