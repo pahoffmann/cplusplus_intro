@@ -1,0 +1,12 @@
+<map id="jumper::Collision::Collision" name="jumper::Collision::Collision">
+<area shape="rect" id="node2" href="$classjumper_1_1Object.html#a219be69941c9d23cd80b951bbfc946f9" title="jumper::Object::rect" alt="" coords="176,5,309,32"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Rectangle.html#aeebe3901d5ba88f2523dfd984772e592" title="jumper::Rectangle::\lgetIntersection" alt="" coords="177,107,308,149"/>
+<area shape="rect" id="node9" href="$classjumper_1_1Rectangle.html#a81ada2ed6af2a6c3c1abf64f083cb81c" title="Get width. " alt="" coords="540,63,671,105"/>
+<area shape="rect" id="node10" href="$classjumper_1_1Rectangle.html#ab72b0ee66e2337175618ddae9c36d1e4" title="Get height. " alt="" coords="540,231,671,273"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Rectangle.html#a91a55080ccd16744935570cf7b713d6b" title="Converts an rectangle to the according SDL representation. " alt="" coords="357,173,488,214"/>
+<area shape="rect" id="node11" href="$classjumper_1_1Rectangle.html#a8d1ae581e1db72d3a4942e71e1741655" title="jumper::Rectangle::\lRectangle" alt="" coords="357,107,488,149"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Rectangle.html#affd3c27cf4be7c5cf37efddd14df60ca" title="Get x. " alt="" coords="537,129,674,156"/>
+<area shape="rect" id="node7" href="$classjumper_1_1Rectangle.html#a26d8c50ef6aab401e8fabe250b0c6d10" title="Get y. " alt="" coords="537,180,674,207"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Vector2.html#a4a0988879ec6ef6750e4ad359ad4aa87" title="Access x. " alt="" coords="723,115,847,141"/>
+<area shape="rect" id="node8" href="$classjumper_1_1Vector2.html#ad1262389add31c80fe7cc0188ca46ff9" title="Access y. " alt="" coords="723,195,847,221"/>
+</map>

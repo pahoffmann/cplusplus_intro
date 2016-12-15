@@ -1,0 +1,24 @@
+#
+# Einfuehrung in die Programmiersprache C++
+#
+# Makefile fuer Blatt 6
+#
+
+CC     = g++
+CFLAGS = 
+
+
+checkspvect: SparseVector.o checkspvect.o 
+	$(CC) checkspvect.o SparseVector.o -o checkspvect
+
+checkspvect.o: checkspvect.cc
+	$(CC) $(CFLAGS) -c checkspvect.cc
+
+SparseVector.o: SparseVector.cc SparseVector.hh
+	$(CC) $(CFLAGS) -c SparseVector.cc 
+
+clean:
+	rm -f *.o checkspvect
+
+test: checkspvect
+	./checkspvect

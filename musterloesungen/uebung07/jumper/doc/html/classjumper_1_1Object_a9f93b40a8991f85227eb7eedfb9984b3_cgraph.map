@@ -1,0 +1,8 @@
+<map id="jumper::Object::setPosition" name="jumper::Object::setPosition">
+<area shape="rect" id="node2" href="$classjumper_1_1Rectangle.html#af780fd008c0e58fd3ac836fae4e13d7c" title="Set x. " alt="" coords="230,5,389,32"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Vector2.html#a4a0988879ec6ef6750e4ad359ad4aa87" title="Access x. " alt="" coords="247,56,371,83"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Rectangle.html#a413475b52df9aadb6de7fc7a47546fd3" title="Set y. " alt="" coords="230,107,389,133"/>
+<area shape="rect" id="node7" href="$classjumper_1_1Vector2.html#ad1262389add31c80fe7cc0188ca46ff9" title="Access y. " alt="" coords="247,157,371,184"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Vector2.html#a65616139a57262be422c00b89e695da3" title="Sets x. " alt="" coords="438,5,583,32"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Vector2.html#ae9b96c5c35a91580cb85598c3def061d" title="Sets v. " alt="" coords="438,107,583,133"/>
+</map>

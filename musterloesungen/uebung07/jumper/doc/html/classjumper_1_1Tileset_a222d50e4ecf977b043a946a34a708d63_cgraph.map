@@ -1,0 +1,24 @@
+<map id="jumper::Tileset::render" name="jumper::Tileset::render">
+<area shape="rect" id="node2" href="$classjumper_1_1Tile.html#a0374450a86aa8d0f5e7cb4bf77bb024c" title="jumper::Tile::render" alt="" coords="203,408,333,435"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Rectangle.html#aaaf9e928d0835ab8938e413f4e4b6f4b" title="Set width. " alt="" coords="408,107,539,149"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Tileset.html#a111d88c511a479fb6cfbcb29ec56e0ad" title="jumper::Tileset::tileWidth" alt="" coords="392,56,555,83"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Rectangle.html#a9850b5e76674ab3b8c7b8152075150b2" title="Set height. " alt="" coords="408,225,539,266"/>
+<area shape="rect" id="node8" href="$classjumper_1_1Tileset.html#a7addc15f0a670ce02cb663c0e98c23f0" title="jumper::Tileset::tileHeight" alt="" coords="390,173,557,200"/>
+<area shape="rect" id="node9" href="$classjumper_1_1Rectangle.html#af780fd008c0e58fd3ac836fae4e13d7c" title="Set x. " alt="" coords="394,5,553,32"/>
+<area shape="rect" id="node10" href="$classjumper_1_1Vector2.html#a4a0988879ec6ef6750e4ad359ad4aa87" title="Access x. " alt="" coords="822,459,946,485"/>
+<area shape="rect" id="node11" href="$classjumper_1_1Rectangle.html#ac30759b06c4d7d71dfc011e75b2a8605" title="Get position. " alt="" coords="408,342,539,383"/>
+<area shape="rect" id="node12" href="$classjumper_1_1Rectangle.html#a413475b52df9aadb6de7fc7a47546fd3" title="Set y. " alt="" coords="394,291,553,317"/>
+<area shape="rect" id="node13" href="$classjumper_1_1Vector2.html#ad1262389add31c80fe7cc0188ca46ff9" title="Access y. " alt="" coords="822,743,946,769"/>
+<area shape="rect" id="node14" href="$classjumper_1_1Tileset.html#ae03732a9554e29b1ba91ca48dff8908f" title="jumper::Tileset::tilesPerRow" alt="" coords="382,509,565,536"/>
+<area shape="rect" id="node15" href="$classjumper_1_1Rectangle.html#affd3c27cf4be7c5cf37efddd14df60ca" title="Get x. " alt="" coords="625,459,762,485"/>
+<area shape="rect" id="node16" href="$classjumper_1_1Tileset.html#aa02a372a79a26c4740a78daa0163374b" title="jumper::Tileset::tileOffset" alt="" coords="391,611,555,637"/>
+<area shape="rect" id="node17" href="$classjumper_1_1Rectangle.html#a26d8c50ef6aab401e8fabe250b0c6d10" title="Get y. " alt="" coords="625,743,762,769"/>
+<area shape="rect" id="node18" href="$classjumper_1_1Tileset.html#a05f083e3c62504848fa61e08f6c4f6be" title="jumper::Tileset::texture" alt="" coords="398,712,549,739"/>
+<area shape="rect" id="node19" href="$classjumper_1_1Texture.html#a58fc6a226a318b50a84191b371ec3a05" title="jumper::Texture::render" alt="" coords="397,560,549,587"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Vector2.html#a65616139a57262be422c00b89e695da3" title="Sets x. " alt="" coords="621,60,766,87"/>
+<area shape="rect" id="node7" href="$classjumper_1_1Vector2.html#ae9b96c5c35a91580cb85598c3def061d" title="Sets v. " alt="" coords="621,261,766,288"/>
+<area shape="rect" id="node20" href="$classjumper_1_1Object.html#a219be69941c9d23cd80b951bbfc946f9" title="jumper::Object::rect" alt="" coords="627,692,760,719"/>
+<area shape="rect" id="node21" href="$classjumper_1_1Rectangle.html#a81ada2ed6af2a6c3c1abf64f083cb81c" title="Get width. " alt="" coords="628,510,759,551"/>
+<area shape="rect" id="node22" href="$classjumper_1_1Rectangle.html#ab72b0ee66e2337175618ddae9c36d1e4" title="Get height. " alt="" coords="628,575,759,617"/>
+<area shape="rect" id="node23" href="$classjumper_1_1Object.html#a82931123a0b7f5a2f802219f1f62af5d" title="jumper::Object::renderer" alt="" coords="614,641,773,668"/>
+</map>

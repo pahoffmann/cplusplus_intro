@@ -1,0 +1,5 @@
+<map id="jumper::Object" name="jumper::Object">
+<area shape="rect" id="node2" href="$classjumper_1_1Rectangle.html" title="{jumper::Rectangle\n||+ Rectangle()\l+ Rectangle()\l+ Rectangle()\l+ Rectangle()\l+ ~Rectangle()\l+ dimension()\l+ setDimension()\l+ position()\l+ setPosition()\l+ width()\land 8 more...\l&#45; toSDL()\l&#45; Rectangle()\l}" alt="" coords="16,765,141,1019"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Vector2.html" title="{jumper::Vector2\&lt; int \&gt;\n|&#45; m_x\l&#45; m_y\l|+ Vector2()\l+ Vector2()\l+ Vector2()\l+ operator=()\l+ operator*()\l+ operator/()\l+ operator+()\l+ operator&#45;()\l+ operator+=()\l+ operator&#45;=()\land 9 more...\l}" alt="" coords="5,449,152,687"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Vector2.html" title="{jumper::Vector2\&lt; T \&gt;\n||+ Vector2()\l+ Vector2()\l+ Vector2()\l+ operator=()\l+ operator*()\l+ operator/()\l+ operator+()\l+ operator&#45;()\l+ operator+=()\l+ operator&#45;=()\land 9 more...\l}" alt="" coords="7,160,149,384"/>
+</map>

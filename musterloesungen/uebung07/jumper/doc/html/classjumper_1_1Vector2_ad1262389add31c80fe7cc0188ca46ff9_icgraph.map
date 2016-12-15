@@ -1,0 +1,15 @@
+<map id="jumper::Vector2::y" name="jumper::Vector2::y">
+<area shape="rect" id="node2" href="$classjumper_1_1Object.html#a9f93b40a8991f85227eb7eedfb9984b3" title="jumper::Object::setPosition" alt="" coords="179,13,355,40"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Rectangle.html#ab72b0ee66e2337175618ddae9c36d1e4" title="Get height. " alt="" coords="201,65,332,106"/>
+<area shape="rect" id="node9" href="$classjumper_1_1Tile.html#a0374450a86aa8d0f5e7cb4bf77bb024c" title="jumper::Tile::render" alt="" coords="619,168,749,195"/>
+<area shape="rect" id="node13" href="$classjumper_1_1Rectangle.html#a26d8c50ef6aab401e8fabe250b0c6d10" title="Get y. " alt="" coords="198,131,335,157"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Collision.html#a7c8448d7898d324649cc4068057a606e" title="jumper::Collision::\lCollision" alt="" coords="821,7,944,49"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Rectangle.html#a91a55080ccd16744935570cf7b713d6b" title="Converts an rectangle to the according SDL representation. " alt="" coords="416,39,547,81"/>
+<area shape="rect" id="node7" href="$classjumper_1_1Texture.html#a58fc6a226a318b50a84191b371ec3a05" title="jumper::Texture::render" alt="" coords="405,105,557,132"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Rectangle.html#aeebe3901d5ba88f2523dfd984772e592" title="jumper::Rectangle::\lgetIntersection" alt="" coords="619,37,749,78"/>
+<area shape="rect" id="node8" href="$classjumper_1_1TexturedSprite.html#a229bc975bec8ceda24c491dc78f413fc" title="jumper::TexturedSprite\l::render" alt="" coords="609,102,759,143"/>
+<area shape="rect" id="node10" href="$classjumper_1_1Tileset.html#a222d50e4ecf977b043a946a34a708d63" title="jumper::Tileset::render" alt="" coords="809,168,957,195"/>
+<area shape="rect" id="node11" href="$classjumper_1_1Game.html#aa9f85ee650fe5b52e041a6631df0c2af" title="jumper::Game::start" alt="" coords="1006,168,1141,195"/>
+<area shape="rect" id="node12" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1189,168,1240,195"/>
+<area shape="rect" id="node14" href="$classjumper_1_1Object.html#a0540b9c9227ca15833713fd5a54c557d" title="jumper::Object::position" alt="" coords="403,207,559,233"/>
+</map>

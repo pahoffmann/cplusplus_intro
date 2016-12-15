@@ -1,0 +1,11 @@
+<map id="src/Game.hpp" name="src/Game.hpp">
+<area shape="rect" id="node4" href="$Window_8hpp.html" title="Window.hpp" alt="" coords="43,155,135,181"/>
+<area shape="rect" id="node5" href="$Tileset_8hpp.html" title="Tileset.hpp" alt="" coords="299,80,384,107"/>
+<area shape="rect" id="node7" href="$Jumper_8hpp.html" title="Jumper.hpp" alt="" coords="395,229,484,256"/>
+<area shape="rect" id="node8" href="$Object_8hpp.html" title="Object.hpp" alt="" coords="233,304,316,331"/>
+<area shape="rect" id="node13" href="$Texture_8hpp.html" title="Texture.hpp" alt="" coords="395,155,484,181"/>
+<area shape="rect" id="node14" href="$Tile_8hpp.html" title="Tile.hpp" alt="" coords="560,155,627,181"/>
+<area shape="rect" id="node9" href="$Rectangle_8hpp.html" title="Rectangle.hpp" alt="" coords="305,379,409,405"/>
+<area shape="rect" id="node10" href="$Vector2_8hpp.html" title="Vector2.hpp" alt="" coords="453,453,544,480"/>
+<area shape="rect" id="node15" href="$Collision_8hpp.html" title="Collision.hpp" alt="" coords="509,229,603,256"/>
+</map>

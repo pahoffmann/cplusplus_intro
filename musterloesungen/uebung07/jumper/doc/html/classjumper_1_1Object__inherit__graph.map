@@ -1,0 +1,3 @@
+<map id="jumper::Object" name="jumper::Object">
+<area shape="rect" id="node2" href="$classjumper_1_1Tileset.html" title="{jumper::Tileset\n|&#45; m_tileWidth\l&#45; m_tileHeight\l&#45; m_tileOffset\l&#45; m_rows\l&#45; m_tilesPerRow\l&#45; m_width\l&#45; m_height\l&#45; m_texture\l&#45; m_tiles\l&#45; m_keyColor\l|+ Tileset()\l+ ~Tileset()\l+ render()\l+ checkAndResolveCollision()\l+ height()\l+ setHeight()\l+ keyColor()\l+ setKeyColor()\l+ rows()\l+ setRows()\land 12 more...\l&#45; surroundingTiles()\l}" alt="" coords="5,235,200,605"/>
+</map>

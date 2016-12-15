@@ -1,0 +1,10 @@
+<map id="jumper::Texture::render" name="jumper::Texture::render">
+<area shape="rect" id="node2" href="$classjumper_1_1Object.html#a219be69941c9d23cd80b951bbfc946f9" title="jumper::Object::rect" alt="" coords="219,5,352,32"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Rectangle.html#affd3c27cf4be7c5cf37efddd14df60ca" title="Get x. " alt="" coords="217,56,354,83"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Rectangle.html#a26d8c50ef6aab401e8fabe250b0c6d10" title="Get y. " alt="" coords="217,173,354,200"/>
+<area shape="rect" id="node7" href="$classjumper_1_1Rectangle.html#a81ada2ed6af2a6c3c1abf64f083cb81c" title="Get width. " alt="" coords="220,107,351,149"/>
+<area shape="rect" id="node8" href="$classjumper_1_1Rectangle.html#ab72b0ee66e2337175618ddae9c36d1e4" title="Get height. " alt="" coords="220,225,351,266"/>
+<area shape="rect" id="node9" href="$classjumper_1_1Object.html#a82931123a0b7f5a2f802219f1f62af5d" title="jumper::Object::renderer" alt="" coords="206,291,365,317"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Vector2.html#a4a0988879ec6ef6750e4ad359ad4aa87" title="Access x. " alt="" coords="414,85,538,112"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Vector2.html#ad1262389add31c80fe7cc0188ca46ff9" title="Access y. " alt="" coords="414,203,538,229"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="jumper::Tileset" name="jumper::Tileset">
+<area shape="rect" id="node9" href="$classjumper_1_1Tile.html" title="{jumper::Tile\n|# m_index\l|+ Tile()\l+ ~Tile()\l+ getCollision()\l+ render()\l}" alt="" coords="163,1934,270,2055"/>
+<area shape="rect" id="node2" href="$classjumper_1_1Object.html" title="{jumper::Object\n|# m_renderer\l|+ Object()\l+ ~Object()\l+ rect()\l+ setRect()\l+ position()\l+ setPosition()\l+ renderer()\l}" alt="" coords="33,1083,139,1248"/>
+<area shape="rect" id="node8" href="$classjumper_1_1Texture.html" title="{jumper::Texture\n|&#45; m_texture\l|+ Texture()\l+ Texture()\l+ Texture()\l+ render()\l+ render()\l+ render()\l+ ~Texture()\l}" alt="" coords="31,1312,141,1477"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Rectangle.html" title="{jumper::Rectangle\n||+ Rectangle()\l+ Rectangle()\l+ Rectangle()\l+ Rectangle()\l+ ~Rectangle()\l+ dimension()\l+ setDimension()\l+ position()\l+ setPosition()\l+ width()\land 8 more...\l&#45; toSDL()\l&#45; Rectangle()\l}" alt="" coords="109,765,234,1019"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Vector2.html" title="{jumper::Vector2\&lt; int \&gt;\n|&#45; m_x\l&#45; m_y\l|+ Vector2()\l+ Vector2()\l+ Vector2()\l+ operator=()\l+ operator*()\l+ operator/()\l+ operator+()\l+ operator&#45;()\l+ operator+=()\l+ operator&#45;=()\land 9 more...\l}" alt="" coords="193,449,341,687"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Vector2.html" title="{jumper::Vector2\&lt; T \&gt;\n||+ Vector2()\l+ Vector2()\l+ Vector2()\l+ operator=()\l+ operator*()\l+ operator/()\l+ operator+()\l+ operator&#45;()\l+ operator+=()\l+ operator&#45;=()\land 9 more...\l}" alt="" coords="196,160,338,384"/>
+<area shape="rect" id="node7" href="$classjumper_1_1ColorRGB.html" title="{jumper::ColorRGB\n|+ r\l+ g\l+ b\l|}" alt="" coords="166,1341,291,1448"/>
+</map>

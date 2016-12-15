@@ -1,0 +1,6 @@
+<map id="jumper::Object::position" name="jumper::Object::position">
+<area shape="rect" id="node2" href="$classjumper_1_1Rectangle.html#affd3c27cf4be7c5cf37efddd14df60ca" title="Get x. " alt="" coords="211,5,349,32"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Rectangle.html#a26d8c50ef6aab401e8fabe250b0c6d10" title="Get y. " alt="" coords="211,56,349,83"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Vector2.html#a4a0988879ec6ef6750e4ad359ad4aa87" title="Access x. " alt="" coords="398,5,522,32"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Vector2.html#ad1262389add31c80fe7cc0188ca46ff9" title="Access y. " alt="" coords="398,56,522,83"/>
+</map>

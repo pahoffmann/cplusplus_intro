@@ -1,0 +1,8 @@
+<map id="jumper::Rectangle::toSDL" name="jumper::Rectangle::toSDL">
+<area shape="rect" id="node2" href="$classjumper_1_1Rectangle.html#affd3c27cf4be7c5cf37efddd14df60ca" title="Get x. " alt="" coords="185,5,322,32"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Rectangle.html#a26d8c50ef6aab401e8fabe250b0c6d10" title="Get y. " alt="" coords="185,123,322,149"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Rectangle.html#a81ada2ed6af2a6c3c1abf64f083cb81c" title="Get width. " alt="" coords="188,57,319,98"/>
+<area shape="rect" id="node7" href="$classjumper_1_1Rectangle.html#ab72b0ee66e2337175618ddae9c36d1e4" title="Get height. " alt="" coords="188,174,319,215"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Vector2.html#a4a0988879ec6ef6750e4ad359ad4aa87" title="Access x. " alt="" coords="371,35,495,61"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Vector2.html#ad1262389add31c80fe7cc0188ca46ff9" title="Access y. " alt="" coords="371,152,495,179"/>
+</map>

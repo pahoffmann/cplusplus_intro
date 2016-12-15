@@ -1,0 +1,7 @@
+<map id="jumper::Tileset::tileOffset" name="jumper::Tileset::tileOffset">
+<area shape="rect" id="node2" href="$classjumper_1_1Tile.html#a0374450a86aa8d0f5e7cb4bf77bb024c" title="jumper::Tile::render" alt="" coords="229,5,360,32"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Tileset.html#a8d7aeffef578c29a888014b6c56a6195" title="jumper::Tileset::setTile\lOffset" alt="" coords="219,57,370,98"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Tileset.html#a222d50e4ecf977b043a946a34a708d63" title="jumper::Tileset::render" alt="" coords="419,5,567,32"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Game.html#aa9f85ee650fe5b52e041a6631df0c2af" title="jumper::Game::start" alt="" coords="617,5,751,32"/>
+<area shape="rect" id="node5" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="800,5,851,32"/>
+</map>

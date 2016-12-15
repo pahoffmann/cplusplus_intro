@@ -1,0 +1,10 @@
+<map id="jumper::Vector2::setY" name="jumper::Vector2::setY">
+<area shape="rect" id="node2" href="$classjumper_1_1Rectangle.html#af563493b80b5b95b9bc285e4777dc611" title="jumper::Rectangle::\lRectangle" alt="" coords="215,5,345,46"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Rectangle.html#a9850b5e76674ab3b8c7b8152075150b2" title="Set height. " alt="" coords="215,70,345,111"/>
+<area shape="rect" id="node8" href="$classjumper_1_1Rectangle.html#a413475b52df9aadb6de7fc7a47546fd3" title="Set y. " alt="" coords="201,136,359,163"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Tile.html#a0374450a86aa8d0f5e7cb4bf77bb024c" title="jumper::Tile::render" alt="" coords="431,81,561,108"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Tileset.html#a222d50e4ecf977b043a946a34a708d63" title="jumper::Tileset::render" alt="" coords="633,81,781,108"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Game.html#aa9f85ee650fe5b52e041a6631df0c2af" title="jumper::Game::start" alt="" coords="830,81,965,108"/>
+<area shape="rect" id="node7" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1013,81,1064,108"/>
+<area shape="rect" id="node9" href="$classjumper_1_1Object.html#a9f93b40a8991f85227eb7eedfb9984b3" title="jumper::Object::setPosition" alt="" coords="408,136,584,163"/>
+</map>

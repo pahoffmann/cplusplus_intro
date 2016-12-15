@@ -1,0 +1,12 @@
+<map id="jumper::Rectangle::x" name="jumper::Rectangle::x">
+<area shape="rect" id="node2" href="$classjumper_1_1Object.html#a0540b9c9227ca15833713fd5a54c557d" title="jumper::Object::position" alt="" coords="193,5,349,32"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Rectangle.html#a91a55080ccd16744935570cf7b713d6b" title="Converts an rectangle to the according SDL representation. " alt="" coords="205,57,336,98"/>
+<area shape="rect" id="node6" href="$classjumper_1_1Texture.html#a58fc6a226a318b50a84191b371ec3a05" title="jumper::Texture::render" alt="" coords="195,123,347,149"/>
+<area shape="rect" id="node8" href="$classjumper_1_1Tile.html#a0374450a86aa8d0f5e7cb4bf77bb024c" title="jumper::Tile::render" alt="" coords="408,179,539,205"/>
+<area shape="rect" id="node4" href="$classjumper_1_1Rectangle.html#aeebe3901d5ba88f2523dfd984772e592" title="jumper::Rectangle::\lgetIntersection" alt="" coords="408,47,539,89"/>
+<area shape="rect" id="node5" href="$classjumper_1_1Collision.html#a7c8448d7898d324649cc4068057a606e" title="jumper::Collision::\lCollision" alt="" coords="611,47,733,89"/>
+<area shape="rect" id="node7" href="$classjumper_1_1TexturedSprite.html#a229bc975bec8ceda24c491dc78f413fc" title="jumper::TexturedSprite\l::render" alt="" coords="398,113,549,154"/>
+<area shape="rect" id="node9" href="$classjumper_1_1Tileset.html#a222d50e4ecf977b043a946a34a708d63" title="jumper::Tileset::render" alt="" coords="598,179,746,205"/>
+<area shape="rect" id="node10" href="$classjumper_1_1Game.html#aa9f85ee650fe5b52e041a6631df0c2af" title="jumper::Game::start" alt="" coords="795,179,930,205"/>
+<area shape="rect" id="node11" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="979,179,1029,205"/>
+</map>

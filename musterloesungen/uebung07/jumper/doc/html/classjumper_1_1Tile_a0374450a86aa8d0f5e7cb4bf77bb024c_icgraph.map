@@ -1,0 +1,5 @@
+<map id="jumper::Tile::render" name="jumper::Tile::render">
+<area shape="rect" id="node2" href="$classjumper_1_1Tileset.html#a222d50e4ecf977b043a946a34a708d63" title="jumper::Tileset::render" alt="" coords="185,5,333,32"/>
+<area shape="rect" id="node3" href="$classjumper_1_1Game.html#aa9f85ee650fe5b52e041a6631df0c2af" title="jumper::Game::start" alt="" coords="382,5,517,32"/>
+<area shape="rect" id="node4" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="565,5,616,32"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$jmpr_8c.html#af650d7c9106370c377e6dfba1d5b195a" title="Initialize SDL engine. " alt="" coords="160,5,251,32"/>
+<area shape="rect" id="node3" href="$jmpr_8c.html#a2e91d3f38803c5dd8ab6d12cb296d962" title="jmprLoadTileDefinitions" alt="" coords="127,56,284,83"/>
+<area shape="rect" id="node5" href="$jmpr_8c.html#a8f6e1ce8ab1134878983d80e1fb91bb9" title="jmprPrintTiles" alt="" coords="154,107,257,133"/>
+<area shape="rect" id="node6" href="$jmpr_8c.html#a7e0f5a96dd5ab08efcb071232d2c84ee" title="jmprLoadSprite" alt="" coords="150,157,261,184"/>
+<area shape="rect" id="node8" href="$jmpr_8c.html#af17bcb7539a38cd999bb72007c11d912" title="jmprInitPhysics" alt="" coords="150,208,261,235"/>
+<area shape="rect" id="node9" href="$jmpr_8c.html#a0869b86674d0a492b991b612416e8655" title="jmprInitCamera" alt="" coords="150,259,261,285"/>
+<area shape="rect" id="node10" href="$jmpr_8c.html#a3c5873375c9a9a214697789750c6ce0c" title="jmprSetSpritePosition" alt="" coords="131,309,279,336"/>
+<area shape="rect" id="node11" href="$jmpr_8c.html#a64a6e62246e2b7c151d62df307bfc4ef" title="jmprUpdateSprite" alt="" coords="144,360,267,387"/>
+<area shape="rect" id="node12" href="$jmpr_8c.html#a293e7ac376cda0acf86dc62b61990bab" title="jmprCheckAndResolveCollision" alt="" coords="104,411,307,437"/>
+<area shape="rect" id="node14" href="$jmpr_8c.html#aee352628f55d2b28b6c5e8d69b25265f" title="jmprRenderTiles" alt="" coords="147,461,263,488"/>
+<area shape="rect" id="node15" href="$jmpr_8c.html#ab5dcc80ffa4ec8f24ee0fe2599f61757" title="jmprRenderSprite" alt="" coords="144,512,267,539"/>
+<area shape="rect" id="node16" href="$jmpr_8c.html#aaee0b6742feeae3c5a14aba47b51aa7d" title="Close SDL engine. " alt="" coords="154,563,257,589"/>
+<area shape="rect" id="node4" href="$jmpr_8c.html#a00ce90bcd10ac039fd46c00ee696fdd3" title="jmprLoadTextureWithKey" alt="" coords="355,56,522,83"/>
+<area shape="rect" id="node7" href="$jmpr_8c.html#a1dd6e8b2f6686e40ee5234134bb6db9a" title="jmprLoadTexture" alt="" coords="379,157,498,184"/>
+<area shape="rect" id="node13" href="$jmpr_8c.html#ae90211a6b8ce3b4b116383e395785e80" title="jmprGetSurroundingTiles" alt="" coords="356,411,521,437"/>
+</map>
