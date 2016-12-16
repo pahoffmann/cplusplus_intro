@@ -5,8 +5,8 @@
 		
 		this -> rows = rows;
 		this -> columns = columns;
-		typedef SparseVector* VectorPointer;
-		m_rows = VectorPointer[columns];
+		typedef SparseVector VectorPointer;
+		m_rows = new VectorPointer[columns];
 		for(int i = 0; i < columns; i++){
 			m_rows[i] = new SparseVector(rows);
 		}
