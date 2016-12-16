@@ -1,5 +1,5 @@
 #include "MainWindow.hpp"
-#include "Level.hpp"
+//#include "Level.hpp"
 // #include "Player.hpp" <-- Unkomment me!
 
 #include <iostream>
@@ -23,5 +23,5 @@ int main(int argc, char** argv)
 	Player player(std::string(argv[2], window.getRenderer());
 	window.setPlayer(&player);
 */
-	window.run();
+	window.mainLoop();
 }

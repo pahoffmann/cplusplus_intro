@@ -1,60 +1,45 @@
-/*
- * Camera.hpp
- *
- *  Created on: Nov 13, 2015
- *      Author: twiemann
- */
-
-#ifndef CAMERA_HPP_
-#define CAMERA_HPP_
-
+#include <SDL2/SDL.h>
+#include <iostream>
 #include "Pixel.hpp"
-
-namespace jumper
-{
-
 /***
- * A camera object to scroll within a level
- */
+* A camera representation to scroll within a level
+*/
 class Camera
 {
+private:
+  jumper::Pixel p;
 public:
 
-	/***
-	 * Constructs a camera at (0, 0)
-	 */
-	Camera();
 
 	/***
-	 * Constructs a camera with the given pixel offsets
-	 */
-	Camera(const Pixel& pixel);
+	* Constructs a camera with the given pixel offsets
+	*/
+	Camera(int x=0 , int y=0 );
 
-	/***
-	 * Moves the camera according to the given offset
-	 * @param offset	A pixel offset for camera movement
-	 */
-	void move(const Pixel& offset);
+        
+        void move(const jumper::Pixel &offset);  
+        
 
 	/// Returns the current x-position
 	int x();
 
+
+
 	/// Returns the current y-position
 	int y();
 
-	/// Returns the current position
-	Pixel position() const;
 
 	/// Destructor
 	virtual ~Camera();
 
 private:
 
-	/// Current camera position
-	Pixel	m_position;
+
+	/// X-Position of the camera
+	int m_x;
+
+
+	/// Y-Position of the camera
+	int m_y;
 
 };
-
-} /* namespace jumper */
-
-#endif /* CAMERA_HPP_ */

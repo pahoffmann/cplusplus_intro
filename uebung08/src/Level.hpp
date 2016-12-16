@@ -1,96 +1,60 @@
-/*
- * Level.hpp
- *
- *  Created on: Nov 13, 2015
- *      Author: twiemann
- */
-
-#ifndef SRC_LEVEL_HPP_
-#define SRC_LEVEL_HPP_
-
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <string>
-#include <SDL.h>
-
+#include <iostream>
+#include <fstream>
 #include "Camera.hpp"
+#include "SparseMatrix.hpp"
 
-namespace jumper
-{
 
-/***
- * Represents a level in the jumper game.
- */
-class Level
-{
+
+struct jmprLevel {
+       	int tile_width;                 /* With of the tiles within the tile set bitmap  */
+       	int tile_height;                /* Height of the tile within the tile set bitmap */
+     	int tile_offset;                /* Offset between the tiles (in pixels)          */
+       	int num_rows;                   /* Number of tile rows in the bitmap             */
+       	unsigned char key_r;    /* R component of the keying color               */
+       	unsigned char key_g;    /* G component of the keying color               */
+       	unsigned char key_b;    /* B component of the keying color               */
+       	int tiles_per_row;              /* Number of tiles per row                       */
+       	int level_width;                /* Number of tiles per row in the tile array     */
+       	int level_height;               /* Number of rows in the tile array              */
+       	SDL_Texture* texture;   /* A SDL_Texture struct containing the bitmap    */
+       	SparseMatrix* matrix;            /* An array containing tile indices              */
+};
+
+class Level{
+
+	
+	SDL_Renderer* renderer;
+	struct jmprLevel* tileset;
+
 public:
-	/***
-	 * Loads a level from the given file
-	 *
-	 * @param filename
-	 */
+
+	
+
+	/* Constructs a new Level from the .lvl file specified by filename.
+	 The Renderer is used to render the tiles*/
 	Level(SDL_Renderer* renderer, std::string filename);
+	
 
-	/***
-	 * Renders the level to the given renderer
-	 *
-	 * @param renderer		A SDL_Renderer to render the tiles
-	 */
-	void render(Camera& cam);
+	/* Renders the level */
+	void render(Camera &cam);
+	
 
-        /// Renders the level
-        void render();
-
-	/***
-	 * Destructor
-	 */
+	/* Frees all resources */
 	~Level();
+	
 
-private:
-
-	/// Generates a SDL_Texture struct from the given files.
-	/// Returns NULL if texture generation failed.
+	/* Loads a texture from the given file */
 	SDL_Texture* loadTexture(std::string texFileName);
-
-	/// A SDL texture for the tile sheet
-	SDL_Texture*		m_texture;
-
-	/// Tile width
-	int					m_tileWidth;
-
-	/// Tile height
-	int					m_tileHeight;
-
-	/// Offset between the tiles in the tile sheet
-	int					m_tileOffset;
-
-	/// Number of rows in the tile sheet
-	int 				m_numRows;
-
-	/// Key color red component
-	unsigned char	 	m_keyR;
-
-	/// Key color green component
-	unsigned char		m_keyG;
-
-	/// Key color blue component
-	unsigned char		m_keyB;
-
-	/// Number of tiles per row
-	int					m_tilesPerRow;
-
-	/// Level width
-	int					m_levelWidth;
-
-	/// Level height
-	int					m_levelHeight;
-
-	/// Array for tile definitions
-	int**				m_tiles;
-
-	/// SDL Renderer
-	SDL_Renderer*		m_renderer;
 
 };
 
-} /* namespace jumper */
 
-#endif /* SRC_LEVEL_HPP_ */
+
+
+
+
+
+

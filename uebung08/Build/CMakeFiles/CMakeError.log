@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e5068/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e5068.dir/build.make CMakeFiles/cmTC_e5068.dir/build
+make[1]: Verzeichnis „/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp“ wird betreten
+Building C object CMakeFiles/cmTC_e5068.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e5068.dir/CheckSymbolExists.c.o   -c /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e5068
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5068.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e5068.dir/CheckSymbolExists.c.o  -o cmTC_e5068 -rdynamic 
+CMakeFiles/cmTC_e5068.dir/CheckSymbolExists.c.o: In Funktion `main':
+CheckSymbolExists.c:(.text+0x16): Nicht definierter Verweis auf `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e5068.dir/build.make:97: die Regel für Ziel „cmTC_e5068“ scheiterte
+make[1]: *** [cmTC_e5068] Fehler 1
+make[1]: Verzeichnis „/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp“ wird verlassen
+Makefile:126: die Regel für Ziel „cmTC_e5068/fast“ scheiterte
+make: *** [cmTC_e5068/fast] Fehler 2
+
+File /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_94f58/fast"
+/usr/bin/make -f CMakeFiles/cmTC_94f58.dir/build.make CMakeFiles/cmTC_94f58.dir/build
+make[1]: Verzeichnis „/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp“ wird betreten
+Building C object CMakeFiles/cmTC_94f58.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_94f58.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_94f58
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94f58.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_94f58.dir/CheckFunctionExists.c.o  -o cmTC_94f58 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_94f58.dir/build.make:97: die Regel für Ziel „cmTC_94f58“ scheiterte
+make[1]: *** [cmTC_94f58] Fehler 1
+make[1]: Verzeichnis „/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/CMakeTmp“ wird verlassen
+Makefile:126: die Regel für Ziel „cmTC_94f58/fast“ scheiterte
+make: *** [cmTC_94f58/fast] Fehler 2
+
+

@@ -1,51 +1,23 @@
-/*
- * Camera.cpp
- *
- *  Created on: Nov 13, 2015
- *      Author: twiemann
- */
-
 #include "Camera.hpp"
 
-namespace jumper
-{
-
-
-
-int Camera::x()
-{
-	return m_position.x();
+Camera::Camera(int x, int y){
+        jumper::Pixel p1(x,y);
+	p=p1;
 }
 
-int Camera::y()
-{
-	return m_position.y();
+
+void Camera::move(const jumper::Pixel &offset){
+  p+=offset;
 }
 
-Camera::Camera()
-{
-	m_position.setX(0);
-	m_position.setY(0);
+int Camera::x(){
+  return p.x();
 }
 
-void Camera::move(const Pixel& p)
-{
-	m_position += p;
+int Camera::y(){
+  return p.y();
 }
 
-Camera::Camera(const Pixel& pixel)
-	: m_position(pixel)
-{
-}
+Camera::~Camera(){
 
-Pixel Camera::position() const
-{
-	return m_position;
 }
-
-Camera::~Camera()
-{
-	// Nothing to do yet
-}
-
-} /* namespace jumper */

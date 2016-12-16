@@ -1,248 +1,162 @@
-/*
- * Level.cpp
- *
- *  Created on: Nov 13, 2015
- *      Author: twiemann
- */
-
 #include "Level.hpp"
 
-#include <iostream>
-#include <fstream>
-#include <SDL_image.h>
 
-namespace jumper
-{
+// Constructs a new Level from the .lvl file specified by filename.
+// The Renderer is used to render the tiles
+Level::Level(SDL_Renderer* prenderer, std::string filename){
+	
 
+	renderer = 0;
+	tileset = 0;
+        std::string texture_filename;
+        int r, g, b;
 
-Level::Level(SDL_Renderer* renderer, std::string filename)
-{
-	// Set all default values
-	m_texture 		= 0;
-	m_tileWidth 	= 0;
-	m_tileHeight	= 0;
-	m_tileOffset 	= 0;
-	m_numRows = 0;
-	m_keyR = 0;
-	m_keyG = 0;
-	m_keyB = 0;
-	m_tilesPerRow = 0;
-	m_levelWidth = 0;
-	m_levelHeight = 0;
-	m_renderer = renderer;
+        // Alloc memory for tileset struct 
+        tileset = new struct jmprLevel;
+	renderer = prenderer;
 
-	// Read meta data from level file
-	std::ifstream in(filename.c_str());
-	std::string texFileName;
+        if(tileset == 0)
+        {
+                std::cout << "jmprLoadTileDefinitions: Unable to alloc memory for tileset struct" << std::endl;      
+                exit(1);
+        }
 
-	int ir, ig, ib;
+        std::ifstream in(filename.c_str());
+        if(!in.good())
+        {
+                std::cout << "jmprLoadTileDefinitions: Unable to open file " << filename << std::endl;        
+                exit(1);
+        }
 
-	if(in.good())
-	{
-		in >> texFileName;
-		in >> m_tileWidth >> m_tileHeight >> m_tilesPerRow >> m_numRows;
-		in >> m_tileOffset >> ir >> ig >> ib;
-		in >> m_levelWidth >> m_levelHeight;
-	}
-	else
-	{
-		std::cout << "Unable to open file " << filename << std::endl;
-	}
+        in >> texture_filename;
 
-	// Cast keying colors manually!
-	m_keyR = (unsigned char)ir;
-	m_keyG = (unsigned char)ib;
-	m_keyB = (unsigned char)ig;
+        // Read tile set meta information
+        in >> tileset->tile_width >> tileset->tile_height;
+        in >> tileset->tiles_per_row >> tileset->num_rows;
+        in >> tileset->tile_offset;
+        in >> r >> g >> b;
+        tileset->key_r = r;
+        tileset->key_b = b;
+        tileset->key_g = g;
 
-	// Load texture
-	m_texture = loadTexture(texFileName);
+        // Read dimensions of tile grid
+        in >> tileset->level_width >> tileset->level_height;
 
-	if(!m_texture)
-	{
-		std::cout << "Unable to load texture " << texFileName << std::endl;
-	}
+        // Allocate memory for tile grid
+	tileset->matrix = new SparseMatrix(tileset->level_height, tileset->level_width);
+	int tmp = 0;
 
-	// Alloc tile set memory
-	m_tiles = new int*[m_levelHeight];
-	for(int i = 0; i < m_levelHeight; i++)
-	{
-		m_tiles[i] = new int[m_levelWidth];
-	}
+        // Read tile numbers in grid
+        for(int i = 0; i < tileset->level_height; i++)
+        {
+                for(int j = 0; j < tileset->level_width; j++)
+                {
+                        in >> tmp;
+			tileset->matrix->insert(i,j,tmp);
+                }
+        }
 
-	// Read tile indices
-	for(int i = 0; i < m_levelHeight; i++)
-	{
-		for(int j = 0; j < m_levelWidth; j++)
-		{
-			int tileID;
-			in >> tileID;
-			m_tiles[i][j] = tileID;
-		}
-	}
-
+        // Alloc texture 
+        tileset->texture = loadTexture(texture_filename.c_str());
 	in.close();
+		
 }
+// Renders the level
+void Level::render(Camera &cam){
 
-void Level::render(Camera& cam)
-{
-	if(m_renderer && m_texture)
-	{
-		int i;
-		int j;
-		int tile_index;
-		int col, row;
-		SDL_Rect target;
-		SDL_Rect source;
+	int i;
+        int j;
+        int tile_index;
+        int col, row;
+        SDL_Rect target;
+        SDL_Rect source;
 
-		/* Set target / source width and height to tile size,
-		 * they never change
-		 */
-		target.w = m_tileWidth;
-		target.h = m_tileHeight;
+        /* Set target / source width and height to tile size,
+         * they never change
+         */
+        target.w = tileset->tile_width;
+        target.h = tileset->tile_height;
 
-		source.w = m_tileWidth;
-		source.h = m_tileHeight;
+        source.w = tileset->tile_width;
+        source.h = tileset->tile_height;
 
 
-		for(i = 0; i < m_levelHeight; i++)
-		{
-			for(j = 0; j < m_levelWidth; j++)
-			{
-				tile_index = m_tiles[i][j] - 1;
-				if(tile_index >= 0)
-				{
-					/* Compute the position of the target on the screen */
-					target.x = j * m_tileWidth + cam.x();
-					target.y = i * m_tileHeight + cam.y();
+        for(i = 0; i < tileset->level_height; i++)
+        {
+                for(j = 0; j < tileset->level_width; j++)
+                {
+                        tile_index =(*tileset->matrix)[i][j];
+			tile_index --;
+                        if(tile_index >= 0)
+                        {
+                                /* Compute the position of the target on the screen */
+                                target.x = j * tileset->tile_width + cam.x();
+                                target.y = i * tileset->tile_height + cam.y();
 
-					/* Compute the position of the source pixel data
-					 * within the texture (no offset for first tiles)
-					 */
-					row = tile_index / m_tilesPerRow;
-					col = tile_index % m_tilesPerRow;
+                                /* Compute the position of the source pixel data
+                                 * within the texture (no offset for first tiles)
+                                 */
+                                row = tile_index / tileset->tiles_per_row;
+                                col = tile_index % tileset->tiles_per_row;
 
-					source.x = col * m_tileWidth;
-					if(col > 0)
-					{
-						source.x += col * m_tileOffset;
-					}
+                                source.x = col * tileset->tile_width;
+                                if(col > 0)
+                                {
+                                        source.x += col * tileset->tile_offset;
+                                }
 
-					source.y = row * m_tileHeight;
-					if(row > 0)
-					{
-						source.y += row * m_tileOffset;
-					}
+                                source.y = row * tileset->tile_height;
+                                if(row > 0)
+                                {
+                                        source.y += row * tileset->tile_offset;
+                                }
 
-					/* Copy pixel date to correct position */
-					SDL_RenderCopy( m_renderer, m_texture, &source, &target);
-				}
-			}
-		}
-	}
-}
+                                /* Copy pixel date to correct position */
+                                SDL_RenderCopy( renderer, tileset->texture, &source, &target);
+                        }
+                }
+        }
 
-void Level::render()
-{
-	if(m_renderer && m_texture)
-	{
-		int i;
-		int j;
-		int tile_index;
-		int col, row;
-		SDL_Rect target;
-		SDL_Rect source;
-
-		/* Set target / source width and height to tile size,
-		 * they never change
-		 */
-		target.w = m_tileWidth;
-		target.h = m_tileHeight;
-
-		source.w = m_tileWidth;
-		source.h = m_tileHeight;
-
-
-		for(i = 0; i < m_levelHeight; i++)
-		{
-			for(j = 0; j < m_levelWidth; j++)
-			{
-				tile_index = m_tiles[i][j] - 1;
-				if(tile_index >= 0)
-				{
-					/* Compute the position of the target on the screen */
-					target.x = j * m_tileWidth;
-					target.y = i * m_tileHeight;
-
-					/* Compute the position of the source pixel data
-					 * within the texture (no offset for first tiles)
-					 */
-					row = tile_index / m_tilesPerRow;
-					col = tile_index % m_tilesPerRow;
-
-					source.x = col * m_tileWidth;
-					if(col > 0)
-					{
-						source.x += col * m_tileOffset;
-					}
-
-					source.y = row * m_tileHeight;
-					if(row > 0)
-					{
-						source.y += row * m_tileOffset;
-					}
-
-					/* Copy pixel date to correct position */
-					SDL_RenderCopy( m_renderer, m_texture, &source, &target);
-				}
-			}
-		}
-	}
-}
-
-Level::~Level()
-{
-	// Free tile array
-	if(m_tiles)
-	{
-		for(int i = 0; i < m_levelHeight; i++)
-		{
-			delete[] m_tiles[i];
-		}
-	}
-	delete[] m_tiles;
-
-	// Free texture resources
-	SDL_DestroyTexture(m_texture);
-}
-
-SDL_Texture* Level::loadTexture(std::string texFileName)
-{
-	// The loaded texture
-	SDL_Texture* newTexture = NULL;
-
-	// Load image at specified path
-	SDL_Surface* loadedSurface = IMG_Load(texFileName.c_str());
-	if( loadedSurface == NULL )
-	{
-		std::cout << "Unable to load image! SDL_image Error: " <<  IMG_GetError() << std::endl;
-	}
-	else
-	{
-		// Set keying color
-		SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, m_keyR, m_keyG, m_keyB) );
-
-		// Create texture from surface pixels
-		newTexture = SDL_CreateTextureFromSurface( m_renderer, loadedSurface );
-		if( newTexture == NULL )
-		{
-			std::cout <<  "Unable to create texture from! SDL Error: " << texFileName <<  SDL_GetError() << std::endl;
-		}
-
-		// Get rid of old loaded surface
-		SDL_FreeSurface( loadedSurface );
-	}
-	return newTexture;
 
 }
+// Frees all resources
+Level::~Level(){
+	delete tileset->matrix;
+	SDL_DestroyTexture(tileset->texture);
+}
+// Loads a texture from the given file
+SDL_Texture* Level::loadTexture(std::string texFileName){
+	
 
-} /* namespace jumper */
+
+	/* The loaded texture */
+        SDL_Texture* newTexture = NULL;
+
+        /* Load image at specified path */
+        SDL_Surface* loadedSurface = IMG_Load(texFileName.c_str());
+        if( loadedSurface == NULL )
+        {
+                std::cout << "Unable to load image '" << texFileName << "': " << IMG_GetError() << std::endl;
+        }
+        else
+        { 
+		/* Set keying color */
+                SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, tileset->key_r, tileset->key_g, tileset->key_b ) );
+
+		//Create texture from surface pixels
+                newTexture = SDL_CreateTextureFromSurface( renderer, loadedSurface );
+                if( newTexture == NULL )
+                {
+                        std::cout << "Unable to generate texture from '" << texFileName << "': " << IMG_GetError() << std::endl;
+                }
+                //Get rid of old loaded surface
+                SDL_FreeSurface( loadedSurface );
+        }
+        return newTexture;
+}
+
+
+
+
+
+

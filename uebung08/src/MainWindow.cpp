@@ -1,181 +1,150 @@
-/*
- * MainWindow.cpp
- *
- *  Created on: Nov 13, 2015
- *      Author: twiemann
- */
-
 #include "MainWindow.hpp"
-#include "Pixel.hpp"
-
-#include <SDL_image.h>
-#include <iostream>
-
-namespace jumper
-{
 
 
-MainWindow::MainWindow(std::string title, int w, int h)
-{
-	/// Init width and height
-	m_width = w;
-	m_height = h;
 
-	/// Set pointer to NULL
-	m_renderer = 0;
-	m_level = 0;
+// Erstellt ein Hauptfenster mit Title title, width w und height h
+MainWindow::MainWindow(std::string title, int w, int h){	
+	renderer = 0; /*initialize private variable*/
+	window = 0;
+	
+	/* Init SDL */
+        if(SDL_Init( SDL_INIT_VIDEO ) < 0)
+        {
+                std::cout << "SDL could not initialize: " << SDL_GetError() << std::endl;
+                exit(1);
+        }
 
-	/// Initialize SDL stuff
-	initSDL();
+        /* Generate SDL main window */
+        window = SDL_CreateWindow(
+                        title.c_str(),
+                        SDL_WINDOWPOS_UNDEFINED,
+                        SDL_WINDOWPOS_UNDEFINED,
+                        w,
+                        h,
+                        SDL_WINDOW_SHOWN );
+
+        if(window == NULL)
+        {
+                std::cout << "SDL window could not be generated: " << SDL_GetError() << std::endl;
+                exit(1);
+        }
+
+        /* Create renderer for the SDL main window */
+        renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED );
+
+        if(renderer == NULL)
+        {
+                std::cout << "SDL could not generate renderer: " << SDL_GetError() << std::endl;
+                exit(1);
+        }
+         
+         //Initialize PNG loading
+        int imgFlags = IMG_INIT_PNG;
+        if( !( IMG_Init( imgFlags ) & imgFlags ) )
+        {       
+                std::cout << "SDL_image could not initialize! SDL_image Error: " << IMG_GetError() << std::endl;
+                exit(1);
+        }
+
+
+        /* Set background color for renderer */
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 0);
+		
+
+
+	
+
 }
 
-MainWindow::~MainWindow()
-{
-	quitSDL();
+
+// Returns a pointer to the internal SDL-Renderer
+SDL_Renderer* MainWindow::getRenderer(){
+	return renderer;
 }
 
-void MainWindow::run()
-{
-	bool quit = false;
+
+// Main loop: Renders contends and handles events
+void MainWindow::mainLoop(){
+	int quit = 0;
 	SDL_Event e;
 	const Uint8* currentKeyStates;
-	Pixel offset;
+	jumper::Pixel offset1(-1,0);
+	jumper::Pixel offset2(1,0);
+	jumper::Pixel offset3(0,-1);
+	jumper::Pixel offset4(0,1);
+	Camera cam;        
 
-	// Start main loop and event handling
-	while(!quit && m_renderer)
-	{
-		offset.setX(0);
-		offset.setY(0);
+	/* Start main loop and event handling */
+        while(!quit)
+        {
+	    
 
-		// Process events, detect quit signal for window closing
-		while(SDL_PollEvent(&e))
-		{
-			if(e.type == SDL_QUIT)
-			{
-				quit = true;
-			}
-		}
+            /* Processs events, detect quit signal for window closing */
+    	    while(SDL_PollEvent(&e))
+            {
+            	if(e.type == SDL_QUIT)
+                {
+           	     quit = 1;
+                }
+	    }	
 
-		currentKeyStates = SDL_GetKeyboardState( NULL );
+	    currentKeyStates = SDL_GetKeyboardState( NULL );
 
-		if( currentKeyStates[ SDL_SCANCODE_UP ] )
-		{
-			offset.setY(-1);
-		}
+ 	  	if( currentKeyStates[ SDL_SCANCODE_UP ] )
+	  	{
+       	   		cam.move(offset4);
+         	}
 		if( currentKeyStates[ SDL_SCANCODE_DOWN ] )
 		{
-			offset.setY(1);
+			cam.move(offset3);
 		}
 		if( currentKeyStates[ SDL_SCANCODE_LEFT ] )
 		{
-			offset.setX(-1);
+			cam.move(offset2);
 		}
 		if( currentKeyStates[ SDL_SCANCODE_RIGHT ] )
 		{
-			offset.setX(1);
-		}
+			cam.move(offset1);
+		}	
+	    
 
-		m_camera.move(offset);
+            /* Clear screen */
+            SDL_RenderClear( renderer );
 
-		// Clear screen
-		SDL_RenderClear(m_renderer);
 
-		// Render Level
-		if(m_level)
-		{
-			m_level->render();
-		}
+           /* Render tiles and sprite */
+           levelX->render(cam);
+	   /* Update screen */
+	   SDL_Delay(10);
+           SDL_RenderPresent( renderer );
+        }
+	
+	
+	
 
-		/* Uncomment me 
-		if(m_player)
-		{
-		    m_player->render();
-		} 
-		*/
 
-		SDL_Delay(10);
+	
+}
 
-		// Update screen
-		SDL_RenderPresent(m_renderer);
-	}
+
+// Frees all resources
+MainWindow::~MainWindow(){
+
+
+
+	SDL_DestroyRenderer(renderer);
+        renderer = NULL;
+
+        SDL_DestroyWindow(window);
+        window = NULL;
+
+        IMG_Quit();
+        SDL_Quit();
 
 }
 
-SDL_Renderer* MainWindow::getRenderer()
-{
-	return m_renderer;
+void MainWindow::setLevel(Level* level){
+	levelX=level;
 }
 
-void MainWindow::initSDL()
-{
-	// Initialize SDL
-	if(SDL_Init( SDL_INIT_VIDEO ) < 0)
-	{
-		std::cout << "SDL could not initialize: " << SDL_GetError() << std::endl;
-		return;
-	}
 
-	// Generate SDL main window
-	m_window = SDL_CreateWindow(
-				"Jumper Main Window",
-				SDL_WINDOWPOS_UNDEFINED,
-				SDL_WINDOWPOS_UNDEFINED,
-				m_width,
-				m_height,
-				SDL_WINDOW_SHOWN );
-
-	if(m_window == NULL)
-	{
-		std::cout << "SDL window could not be generated: " << SDL_GetError() << std::endl;
-	}
-	else
-	{
-
-		// Create renderer for the SDL main window
-		m_renderer = SDL_CreateRenderer( m_window, -1, SDL_RENDERER_ACCELERATED );
-
-		if(m_renderer == NULL)
-		{
-			std::cout << "SDL could not generate renderer: " << SDL_GetError() << std::endl;
-		}
-		else
-		{
-			// Set background color for renderer
-			SDL_SetRenderDrawColor(m_renderer, 255, 255, 255, 0);
-		}
-	}
-
-	//Initialize PNG loading
-	int imgFlags = IMG_INIT_PNG;
-	if( !( IMG_Init( imgFlags ) & imgFlags ) )
-	{
-		std::cout << "SDL_image could not initialize! SDL_image Error: " << IMG_GetError() << std::endl;
-	}
-}
-
-void MainWindow::setLevel(Level* level)
-{
-	m_level = level;
-}
-
-void MainWindow::quitSDL()
-{
-	// Destroy window and renderer
-	if(m_window)
-	{
-		SDL_DestroyWindow(m_window);
-		m_window = 0;
-	}
-
-	if(m_renderer)
-	{
-		SDL_DestroyRenderer(m_renderer);
-		m_renderer = 0;
-	}
-
-	// Quit SDL and SDL_Image
-	IMG_Quit();
-	SDL_Quit();
-}
-
-} /* namespace jumper */
