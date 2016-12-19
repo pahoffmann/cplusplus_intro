@@ -7,8 +7,7 @@ class SparseMatrix
 {
 	int columns;
 	int rows;
-	typedef SparseVector* VectorPointer;
-	VectorPointer m_rows;
+	SparseVector* m_rows;
 	public:
 
 	/// Builds a sparse rows x columns matrix

@@ -1,14 +1,17 @@
 #include "SparseMatrix.hpp"
 
 	/// Builds a sparse rows x columns matrix
-	SparseMatrix::SparseMatrix(int rows, int columns){
+	SparseMatrix::SparseMatrix(int rows, int columns) 
+	/*: rows(rows), columns(columns)*/{
+
+		this->rows = rows;
+		this->columns = columns;
 		
-		this -> rows = rows;
-		this -> columns = columns;
-		typedef SparseVector VectorPointer;
-		m_rows = new VectorPointer[columns];
-		for(int i = 0; i < columns; i++){
-			m_rows[i] = new SparseVector(rows);
+		m_rows = new SparseVector[rows];
+		SparseVector* objectptr;
+		for(int i = 0; i < rows; i++){
+			objectptr = new SparseVector(columns);
+			m_rows[i] = *objectptr;
 		}
 	}
 
@@ -26,8 +29,8 @@
 	
 	/// Destructor
 	SparseMatrix::~SparseMatrix(){
-		for(int i = 0; i < columns;i++){
-			delete[] &m_rows[i];
+		for(int i = 0; i < rows;i++){
+			//delete &m_rows[i];
 		}
-		delete m_rows;
+		delete[] m_rows;
 	}

@@ -10,6 +10,11 @@
 
 #include <new>
 
+SparseVector::SparseVector(){
+	size = 0;
+	start = 0;
+}
+
 
 /**
  * Constructs an empty SparseVector of size s.
@@ -236,7 +241,7 @@ bool SparseVector::operator!=(const SparseVector &b) const {
 
 
 //INDEXOPERATOR
-const int& SparseVector::operator[](const int index) const{
+const int SparseVector::operator[](const int index) const{
 	
 	/*if(index > this->getSize()){
 		return 0;
@@ -252,7 +257,8 @@ const int& SparseVector::operator[](const int index) const{
 		
 		return 0;	
 	}*/
-	return getElem(index);
+	int tmp = getElem(index);
+	return tmp;
 	
 	
 }

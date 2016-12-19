@@ -33,6 +33,7 @@ Pixel Pixel::operator =(const Pixel& other)
 		m_x = other.m_x;
 		m_y = other.m_y;
 	}
+	return *this;
 }
 
 Pixel Pixel::operator +(const Pixel& other) const

@@ -16,7 +16,8 @@ struct node
 };
   
 public:
-
+ 
+  SparseVector();
   SparseVector(int s);
   SparseVector(const SparseVector &c);
   ~SparseVector();
@@ -28,7 +29,7 @@ public:
   SparseVector & operator=(const SparseVector &b);    
   bool operator==(const SparseVector &b) const;  
   bool operator!=(const SparseVector &b) const; 
-  const int& operator[](const int index) const;
+  const int operator[](const int index) const;
 
 private:
 
