@@ -28,7 +28,7 @@ public:
   SparseVector & operator=(const SparseVector &b);    
   bool operator==(const SparseVector &b) const;  
   bool operator!=(const SparseVector &b) const; 
-  int operator[](int index);
+  const int& operator[](const int index) const;
 
 private:
 

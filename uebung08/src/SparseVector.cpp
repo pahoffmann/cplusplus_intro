@@ -236,9 +236,9 @@ bool SparseVector::operator!=(const SparseVector &b) const {
 
 
 //INDEXOPERATOR
-int SparseVector::operator[](int index){
+const int& SparseVector::operator[](const int index) const{
 	
-	if(index > this->getSize()){
+	/*if(index > this->getSize()){
 		return 0;
 	}
 	else{
@@ -251,7 +251,8 @@ int SparseVector::operator[](int index){
 		}
 		
 		return 0;	
-	}
+	}*/
+	return getElem(index);
 	
 	
 }

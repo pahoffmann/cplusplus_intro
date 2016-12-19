@@ -13,7 +13,7 @@
 	}
 
 	/// Returns the sparse vector at the given row
-	SparseVector& SparseMatrix::operator[](int row) {
+	const SparseVector& SparseMatrix::operator[](const int row) const{
 		return m_rows[row];
 	}
 	
