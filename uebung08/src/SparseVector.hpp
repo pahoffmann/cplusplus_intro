@@ -35,7 +35,7 @@ private:
 
   node *start;
   int size;
-  static const double epsilon = 0.00001;
+  /*static*/ const double epsilon = 0.00001;
 
   void clear();
   void copy(const SparseVector &c);

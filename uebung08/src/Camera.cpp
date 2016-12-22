@@ -1,12 +1,12 @@
 #include "Camera.hpp"
 
 Camera::Camera(int x, int y){
-        jumper::Pixel p1(x,y);
+        Pixel p1(x,y);
 	p=p1;
 }
 
 
-void Camera::move(const jumper::Pixel &offset){
+void Camera::move(const Pixel &offset){
   p+=offset;
 }
 

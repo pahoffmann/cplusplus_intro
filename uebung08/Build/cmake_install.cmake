@@ -1,4 +1,4 @@
-# Install script for directory: /home/patrick/UniOsnabrück/c++/C06/uebung08
+# Install script for directory: /home/patrick/UniOsnabrück/c++/uebungen/uebung08
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

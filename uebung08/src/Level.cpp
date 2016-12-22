@@ -57,10 +57,18 @@ Level::Level(SDL_Renderer* prenderer, std::string filename){
         }
 
         // Alloc texture 
-        tileset->texture = loadTexture(texture_filename.c_str());
+        tileset->texture = loadTextureWithKey(texture_filename.c_str(),r,g,b);
 	in.close();
 		
 }
+
+
+void Level::render(){
+	//dosmth
+	//unnecessary
+}
+
+
 // Renders the level
 void Level::render(Camera &cam){
 
@@ -119,40 +127,13 @@ void Level::render(Camera &cam){
 
 
 }
+
+
 // Frees all resources
 Level::~Level(){
 	delete tileset->matrix;
 	SDL_DestroyTexture(tileset->texture);
-}
-// Loads a texture from the given file
-SDL_Texture* Level::loadTexture(std::string texFileName){
-	
-
-
-	/* The loaded texture */
-        SDL_Texture* newTexture = NULL;
-
-        /* Load image at specified path */
-        SDL_Surface* loadedSurface = IMG_Load(texFileName.c_str());
-        if( loadedSurface == NULL )
-        {
-                std::cout << "Unable to load image '" << texFileName << "': " << IMG_GetError() << std::endl;
-        }
-        else
-        { 
-		/* Set keying color */
-                SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, tileset->key_r, tileset->key_g, tileset->key_b ) );
-
-		//Create texture from surface pixels
-                newTexture = SDL_CreateTextureFromSurface( renderer, loadedSurface );
-                if( newTexture == NULL )
-                {
-                        std::cout << "Unable to generate texture from '" << texFileName << "': " << IMG_GetError() << std::endl;
-                }
-                //Get rid of old loaded surface
-                SDL_FreeSurface( loadedSurface );
-        }
-        return newTexture;
+	//~Renderable();
 }
 
 

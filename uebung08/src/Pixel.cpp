@@ -7,8 +7,8 @@
 
 #include "Pixel.hpp"
 
-namespace jumper
-{
+//namespace jumper
+//{
 
 Pixel::Pixel(int x, int y)
 	:	m_x(x), m_y(y)
@@ -69,4 +69,4 @@ void Pixel::setY(int y)
 	m_y = y;
 }
 
-} /* namespace jumper */
+//} /* namespace jumper */

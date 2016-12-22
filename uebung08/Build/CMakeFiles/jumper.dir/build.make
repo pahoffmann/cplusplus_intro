@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/patrick/UniOsnabrück/c++/C06/uebung08
+CMAKE_SOURCE_DIR = /home/patrick/UniOsnabrück/c++/uebungen/uebung08
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/patrick/UniOsnabrück/c++/C06/uebung08/Build
+CMAKE_BINARY_DIR = /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/jumper.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/jumper.dir/flags.make
 
 CMakeFiles/jumper.dir/src/Main.cpp.o: CMakeFiles/jumper.dir/flags.make
 CMakeFiles/jumper.dir/src/Main.cpp.o: ../src/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/jumper.dir/src/Main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Main.cpp.o -c /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/jumper.dir/src/Main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Main.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Main.cpp
 
 CMakeFiles/jumper.dir/src/Main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/Main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Main.cpp > CMakeFiles/jumper.dir/src/Main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Main.cpp > CMakeFiles/jumper.dir/src/Main.cpp.i
 
 CMakeFiles/jumper.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/Main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Main.cpp -o CMakeFiles/jumper.dir/src/Main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Main.cpp -o CMakeFiles/jumper.dir/src/Main.cpp.s
 
 CMakeFiles/jumper.dir/src/Main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/jumper.dir/src/Main.cpp.o.provides.build: CMakeFiles/jumper.dir/src/M
 
 CMakeFiles/jumper.dir/src/MainWindow.cpp.o: CMakeFiles/jumper.dir/flags.make
 CMakeFiles/jumper.dir/src/MainWindow.cpp.o: ../src/MainWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/jumper.dir/src/MainWindow.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/MainWindow.cpp.o -c /home/patrick/UniOsnabrück/c++/C06/uebung08/src/MainWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/jumper.dir/src/MainWindow.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/MainWindow.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/MainWindow.cpp
 
 CMakeFiles/jumper.dir/src/MainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/MainWindow.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/C06/uebung08/src/MainWindow.cpp > CMakeFiles/jumper.dir/src/MainWindow.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/MainWindow.cpp > CMakeFiles/jumper.dir/src/MainWindow.cpp.i
 
 CMakeFiles/jumper.dir/src/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/MainWindow.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/C06/uebung08/src/MainWindow.cpp -o CMakeFiles/jumper.dir/src/MainWindow.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/MainWindow.cpp -o CMakeFiles/jumper.dir/src/MainWindow.cpp.s
 
 CMakeFiles/jumper.dir/src/MainWindow.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/jumper.dir/src/MainWindow.cpp.o.provides.build: CMakeFiles/jumper.dir
 
 CMakeFiles/jumper.dir/src/Level.cpp.o: CMakeFiles/jumper.dir/flags.make
 CMakeFiles/jumper.dir/src/Level.cpp.o: ../src/Level.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/jumper.dir/src/Level.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Level.cpp.o -c /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Level.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/jumper.dir/src/Level.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Level.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Level.cpp
 
 CMakeFiles/jumper.dir/src/Level.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/Level.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Level.cpp > CMakeFiles/jumper.dir/src/Level.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Level.cpp > CMakeFiles/jumper.dir/src/Level.cpp.i
 
 CMakeFiles/jumper.dir/src/Level.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/Level.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Level.cpp -o CMakeFiles/jumper.dir/src/Level.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Level.cpp -o CMakeFiles/jumper.dir/src/Level.cpp.s
 
 CMakeFiles/jumper.dir/src/Level.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/jumper.dir/src/Level.cpp.o.provides.build: CMakeFiles/jumper.dir/src/
 
 CMakeFiles/jumper.dir/src/Camera.cpp.o: CMakeFiles/jumper.dir/flags.make
 CMakeFiles/jumper.dir/src/Camera.cpp.o: ../src/Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/jumper.dir/src/Camera.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Camera.cpp.o -c /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/jumper.dir/src/Camera.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Camera.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Camera.cpp
 
 CMakeFiles/jumper.dir/src/Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/Camera.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Camera.cpp > CMakeFiles/jumper.dir/src/Camera.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Camera.cpp > CMakeFiles/jumper.dir/src/Camera.cpp.i
 
 CMakeFiles/jumper.dir/src/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/Camera.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Camera.cpp -o CMakeFiles/jumper.dir/src/Camera.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Camera.cpp -o CMakeFiles/jumper.dir/src/Camera.cpp.s
 
 CMakeFiles/jumper.dir/src/Camera.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/jumper.dir/src/Camera.cpp.o.provides.build: CMakeFiles/jumper.dir/src
 
 CMakeFiles/jumper.dir/src/Pixel.cpp.o: CMakeFiles/jumper.dir/flags.make
 CMakeFiles/jumper.dir/src/Pixel.cpp.o: ../src/Pixel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/jumper.dir/src/Pixel.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Pixel.cpp.o -c /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Pixel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/jumper.dir/src/Pixel.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Pixel.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Pixel.cpp
 
 CMakeFiles/jumper.dir/src/Pixel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/Pixel.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Pixel.cpp > CMakeFiles/jumper.dir/src/Pixel.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Pixel.cpp > CMakeFiles/jumper.dir/src/Pixel.cpp.i
 
 CMakeFiles/jumper.dir/src/Pixel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/Pixel.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/C06/uebung08/src/Pixel.cpp -o CMakeFiles/jumper.dir/src/Pixel.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Pixel.cpp -o CMakeFiles/jumper.dir/src/Pixel.cpp.s
 
 CMakeFiles/jumper.dir/src/Pixel.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/jumper.dir/src/Pixel.cpp.o.provides.build: CMakeFiles/jumper.dir/src/
 
 CMakeFiles/jumper.dir/src/SparseVector.cpp.o: CMakeFiles/jumper.dir/flags.make
 CMakeFiles/jumper.dir/src/SparseVector.cpp.o: ../src/SparseVector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/jumper.dir/src/SparseVector.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/SparseVector.cpp.o -c /home/patrick/UniOsnabrück/c++/C06/uebung08/src/SparseVector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/jumper.dir/src/SparseVector.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/SparseVector.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/SparseVector.cpp
 
 CMakeFiles/jumper.dir/src/SparseVector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/SparseVector.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/C06/uebung08/src/SparseVector.cpp > CMakeFiles/jumper.dir/src/SparseVector.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/SparseVector.cpp > CMakeFiles/jumper.dir/src/SparseVector.cpp.i
 
 CMakeFiles/jumper.dir/src/SparseVector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/SparseVector.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/C06/uebung08/src/SparseVector.cpp -o CMakeFiles/jumper.dir/src/SparseVector.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/SparseVector.cpp -o CMakeFiles/jumper.dir/src/SparseVector.cpp.s
 
 CMakeFiles/jumper.dir/src/SparseVector.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/jumper.dir/src/SparseVector.cpp.o.provides.build: CMakeFiles/jumper.d
 
 CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o: CMakeFiles/jumper.dir/flags.make
 CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o: ../src/SparseMatrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o -c /home/patrick/UniOsnabrück/c++/C06/uebung08/src/SparseMatrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/SparseMatrix.cpp
 
 CMakeFiles/jumper.dir/src/SparseMatrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/SparseMatrix.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/C06/uebung08/src/SparseMatrix.cpp > CMakeFiles/jumper.dir/src/SparseMatrix.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/SparseMatrix.cpp > CMakeFiles/jumper.dir/src/SparseMatrix.cpp.i
 
 CMakeFiles/jumper.dir/src/SparseMatrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/SparseMatrix.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/C06/uebung08/src/SparseMatrix.cpp -o CMakeFiles/jumper.dir/src/SparseMatrix.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/SparseMatrix.cpp -o CMakeFiles/jumper.dir/src/SparseMatrix.cpp.s
 
 CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o.requires:
 
@@ -225,6 +225,102 @@ CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o.provides: CMakeFiles/jumper.dir/src
 CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o.provides.build: CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o
 
 
+CMakeFiles/jumper.dir/src/Renderable.cpp.o: CMakeFiles/jumper.dir/flags.make
+CMakeFiles/jumper.dir/src/Renderable.cpp.o: ../src/Renderable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/jumper.dir/src/Renderable.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Renderable.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Renderable.cpp
+
+CMakeFiles/jumper.dir/src/Renderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/Renderable.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Renderable.cpp > CMakeFiles/jumper.dir/src/Renderable.cpp.i
+
+CMakeFiles/jumper.dir/src/Renderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/Renderable.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Renderable.cpp -o CMakeFiles/jumper.dir/src/Renderable.cpp.s
+
+CMakeFiles/jumper.dir/src/Renderable.cpp.o.requires:
+
+.PHONY : CMakeFiles/jumper.dir/src/Renderable.cpp.o.requires
+
+CMakeFiles/jumper.dir/src/Renderable.cpp.o.provides: CMakeFiles/jumper.dir/src/Renderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Renderable.cpp.o.provides.build
+.PHONY : CMakeFiles/jumper.dir/src/Renderable.cpp.o.provides
+
+CMakeFiles/jumper.dir/src/Renderable.cpp.o.provides.build: CMakeFiles/jumper.dir/src/Renderable.cpp.o
+
+
+CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o: CMakeFiles/jumper.dir/flags.make
+CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o: ../src/AnimatedRenderable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/AnimatedRenderable.cpp
+
+CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/AnimatedRenderable.cpp > CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.i
+
+CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/AnimatedRenderable.cpp -o CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.s
+
+CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.requires:
+
+.PHONY : CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.requires
+
+CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.provides: CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.provides
+
+CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.provides.build: CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o
+
+
+CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o: CMakeFiles/jumper.dir/flags.make
+CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o: ../src/StaticRenderable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/StaticRenderable.cpp
+
+CMakeFiles/jumper.dir/src/StaticRenderable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/StaticRenderable.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/StaticRenderable.cpp > CMakeFiles/jumper.dir/src/StaticRenderable.cpp.i
+
+CMakeFiles/jumper.dir/src/StaticRenderable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/StaticRenderable.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/StaticRenderable.cpp -o CMakeFiles/jumper.dir/src/StaticRenderable.cpp.s
+
+CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.requires:
+
+.PHONY : CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.requires
+
+CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.provides: CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.provides.build
+.PHONY : CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.provides
+
+CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.provides.build: CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o
+
+
+CMakeFiles/jumper.dir/src/Player.cpp.o: CMakeFiles/jumper.dir/flags.make
+CMakeFiles/jumper.dir/src/Player.cpp.o: ../src/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/jumper.dir/src/Player.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jumper.dir/src/Player.cpp.o -c /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Player.cpp
+
+CMakeFiles/jumper.dir/src/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jumper.dir/src/Player.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Player.cpp > CMakeFiles/jumper.dir/src/Player.cpp.i
+
+CMakeFiles/jumper.dir/src/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jumper.dir/src/Player.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrück/c++/uebungen/uebung08/src/Player.cpp -o CMakeFiles/jumper.dir/src/Player.cpp.s
+
+CMakeFiles/jumper.dir/src/Player.cpp.o.requires:
+
+.PHONY : CMakeFiles/jumper.dir/src/Player.cpp.o.requires
+
+CMakeFiles/jumper.dir/src/Player.cpp.o.provides: CMakeFiles/jumper.dir/src/Player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Player.cpp.o.provides.build
+.PHONY : CMakeFiles/jumper.dir/src/Player.cpp.o.provides
+
+CMakeFiles/jumper.dir/src/Player.cpp.o.provides.build: CMakeFiles/jumper.dir/src/Player.cpp.o
+
+
 # Object files for target jumper
 jumper_OBJECTS = \
 "CMakeFiles/jumper.dir/src/Main.cpp.o" \
@@ -233,7 +329,11 @@ jumper_OBJECTS = \
 "CMakeFiles/jumper.dir/src/Camera.cpp.o" \
 "CMakeFiles/jumper.dir/src/Pixel.cpp.o" \
 "CMakeFiles/jumper.dir/src/SparseVector.cpp.o" \
-"CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o"
+"CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o" \
+"CMakeFiles/jumper.dir/src/Renderable.cpp.o" \
+"CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o" \
+"CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o" \
+"CMakeFiles/jumper.dir/src/Player.cpp.o"
 
 # External object files for target jumper
 jumper_EXTERNAL_OBJECTS =
@@ -245,13 +345,17 @@ jumper: CMakeFiles/jumper.dir/src/Camera.cpp.o
 jumper: CMakeFiles/jumper.dir/src/Pixel.cpp.o
 jumper: CMakeFiles/jumper.dir/src/SparseVector.cpp.o
 jumper: CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o
+jumper: CMakeFiles/jumper.dir/src/Renderable.cpp.o
+jumper: CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o
+jumper: CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o
+jumper: CMakeFiles/jumper.dir/src/Player.cpp.o
 jumper: CMakeFiles/jumper.dir/build.make
 jumper: /usr/lib/x86_64-linux-gnu/libSDL2main.a
 jumper: /usr/lib/x86_64-linux-gnu/libSDL2.so
 jumper: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 jumper: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 jumper: CMakeFiles/jumper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable jumper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable jumper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jumper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -266,6 +370,10 @@ CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/Camera.cpp.o.requires
 CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/Pixel.cpp.o.requires
 CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/SparseVector.cpp.o.requires
 CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o.requires
+CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/Renderable.cpp.o.requires
+CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o.requires
+CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o.requires
+CMakeFiles/jumper.dir/requires: CMakeFiles/jumper.dir/src/Player.cpp.o.requires
 
 .PHONY : CMakeFiles/jumper.dir/requires
 
@@ -274,6 +382,6 @@ CMakeFiles/jumper.dir/clean:
 .PHONY : CMakeFiles/jumper.dir/clean
 
 CMakeFiles/jumper.dir/depend:
-	cd /home/patrick/UniOsnabrück/c++/C06/uebung08/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/patrick/UniOsnabrück/c++/C06/uebung08 /home/patrick/UniOsnabrück/c++/C06/uebung08 /home/patrick/UniOsnabrück/c++/C06/uebung08/Build /home/patrick/UniOsnabrück/c++/C06/uebung08/Build /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/jumper.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/patrick/UniOsnabrück/c++/uebungen/uebung08 /home/patrick/UniOsnabrück/c++/uebungen/uebung08 /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles/jumper.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/jumper.dir/depend
 

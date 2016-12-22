@@ -3,12 +3,14 @@
 #include "Level.hpp"
 #include <iostream>
 #include <SDL2/SDL_image.h>
+#include "Player.hpp"
 
 
 class MainWindow{
 	SDL_Renderer* renderer;
 	SDL_Window* window;
 	Level* levelX;
+	Player* player;
 
 public:
 	// Erstellt ein Hauptfenster mit Title title, width w und height h
@@ -22,7 +24,9 @@ public:
 	void mainLoop();
 	
 	void setLevel(Level* level);
-
+	
+	void setPlayer(Player* player);
+	
 	// Frees all resources
 	~MainWindow();
 };

@@ -8,8 +8,8 @@
 #ifndef SRC_PIXEL_HPP_
 #define SRC_PIXEL_HPP_
 
-namespace jumper
-{
+//namespace jumper
+//{
 
 /***
  * A class to represent a pixel
@@ -90,6 +90,6 @@ private:
 };
 
 
-} /* namespace jumper */
+//} /* namespace jumper */
 
 #endif /* SRC_PIXEL_HPP_ */

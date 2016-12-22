@@ -68,10 +68,10 @@ void MainWindow::mainLoop(){
 	int quit = 0;
 	SDL_Event e;
 	const Uint8* currentKeyStates;
-	jumper::Pixel offset1(-1,0);
-	jumper::Pixel offset2(1,0);
-	jumper::Pixel offset3(0,-1);
-	jumper::Pixel offset4(0,1);
+	Pixel offset1(-1,0);
+	Pixel offset2(1,0);
+	Pixel offset3(0,-1);
+	Pixel offset4(0,1);
 	Camera cam;        
 
 	/* Start main loop and event handling */
@@ -101,10 +101,14 @@ void MainWindow::mainLoop(){
 		if( currentKeyStates[ SDL_SCANCODE_LEFT ] )
 		{
 			cam.move(offset2);
+			player->move(offset1);
+			player->move(offset1);
 		}
 		if( currentKeyStates[ SDL_SCANCODE_RIGHT ] )
 		{
 			cam.move(offset1);
+			player->move(offset2);
+			player->move(offset2);
 		}	
 	    
 
@@ -113,6 +117,7 @@ void MainWindow::mainLoop(){
 
 
            /* Render tiles and sprite */
+	   player->render();
            levelX->render(cam);
 	   /* Update screen */
 	   SDL_Delay(10);
@@ -145,6 +150,10 @@ MainWindow::~MainWindow(){
 
 void MainWindow::setLevel(Level* level){
 	levelX=level;
+}
+
+void MainWindow::setPlayer(Player* player){
+	this->player = player;
 }
 
 

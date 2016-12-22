@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/patrick/UniOsnabrück/c++/C06/uebung08
+CMAKE_SOURCE_DIR = /home/patrick/UniOsnabrück/c++/uebungen/uebung08
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/patrick/UniOsnabrück/c++/C06/uebung08/Build
+CMAKE_BINARY_DIR = /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/UniOsnabrück/c++/C06/uebung08/Build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/patrick/UniOsnabrück/c++/uebungen/uebung08/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ jumper: cmake_check_build_system
 jumper/fast:
 	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/build
 .PHONY : jumper/fast
+
+src/AnimatedRenderable.o: src/AnimatedRenderable.cpp.o
+
+.PHONY : src/AnimatedRenderable.o
+
+# target to build an object file
+src/AnimatedRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o
+.PHONY : src/AnimatedRenderable.cpp.o
+
+src/AnimatedRenderable.i: src/AnimatedRenderable.cpp.i
+
+.PHONY : src/AnimatedRenderable.i
+
+# target to preprocess a source file
+src/AnimatedRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.i
+.PHONY : src/AnimatedRenderable.cpp.i
+
+src/AnimatedRenderable.s: src/AnimatedRenderable.cpp.s
+
+.PHONY : src/AnimatedRenderable.s
+
+# target to generate assembly for a file
+src/AnimatedRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.s
+.PHONY : src/AnimatedRenderable.cpp.s
 
 src/Camera.o: src/Camera.cpp.o
 
@@ -258,6 +285,60 @@ src/Pixel.cpp.s:
 	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Pixel.cpp.s
 .PHONY : src/Pixel.cpp.s
 
+src/Player.o: src/Player.cpp.o
+
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/Renderable.o: src/Renderable.cpp.o
+
+.PHONY : src/Renderable.o
+
+# target to build an object file
+src/Renderable.cpp.o:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Renderable.cpp.o
+.PHONY : src/Renderable.cpp.o
+
+src/Renderable.i: src/Renderable.cpp.i
+
+.PHONY : src/Renderable.i
+
+# target to preprocess a source file
+src/Renderable.cpp.i:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Renderable.cpp.i
+.PHONY : src/Renderable.cpp.i
+
+src/Renderable.s: src/Renderable.cpp.s
+
+.PHONY : src/Renderable.s
+
+# target to generate assembly for a file
+src/Renderable.cpp.s:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/Renderable.cpp.s
+.PHONY : src/Renderable.cpp.s
+
 src/SparseMatrix.o: src/SparseMatrix.cpp.o
 
 .PHONY : src/SparseMatrix.o
@@ -312,6 +393,33 @@ src/SparseVector.cpp.s:
 	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/SparseVector.cpp.s
 .PHONY : src/SparseVector.cpp.s
 
+src/StaticRenderable.o: src/StaticRenderable.cpp.o
+
+.PHONY : src/StaticRenderable.o
+
+# target to build an object file
+src/StaticRenderable.cpp.o:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o
+.PHONY : src/StaticRenderable.cpp.o
+
+src/StaticRenderable.i: src/StaticRenderable.cpp.i
+
+.PHONY : src/StaticRenderable.i
+
+# target to preprocess a source file
+src/StaticRenderable.cpp.i:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/StaticRenderable.cpp.i
+.PHONY : src/StaticRenderable.cpp.i
+
+src/StaticRenderable.s: src/StaticRenderable.cpp.s
+
+.PHONY : src/StaticRenderable.s
+
+# target to generate assembly for a file
+src/StaticRenderable.cpp.s:
+	$(MAKE) -f CMakeFiles/jumper.dir/build.make CMakeFiles/jumper.dir/src/StaticRenderable.cpp.s
+.PHONY : src/StaticRenderable.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -321,6 +429,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... jumper"
+	@echo "... src/AnimatedRenderable.o"
+	@echo "... src/AnimatedRenderable.i"
+	@echo "... src/AnimatedRenderable.s"
 	@echo "... src/Camera.o"
 	@echo "... src/Camera.i"
 	@echo "... src/Camera.s"
@@ -336,12 +447,21 @@ help:
 	@echo "... src/Pixel.o"
 	@echo "... src/Pixel.i"
 	@echo "... src/Pixel.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/Renderable.o"
+	@echo "... src/Renderable.i"
+	@echo "... src/Renderable.s"
 	@echo "... src/SparseMatrix.o"
 	@echo "... src/SparseMatrix.i"
 	@echo "... src/SparseMatrix.s"
 	@echo "... src/SparseVector.o"
 	@echo "... src/SparseVector.i"
 	@echo "... src/SparseVector.s"
+	@echo "... src/StaticRenderable.o"
+	@echo "... src/StaticRenderable.i"
+	@echo "... src/StaticRenderable.s"
 .PHONY : help
 
 

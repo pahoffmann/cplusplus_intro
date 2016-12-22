@@ -6,6 +6,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/jumper.dir/src/Pixel.cpp.o"
   "CMakeFiles/jumper.dir/src/SparseVector.cpp.o"
   "CMakeFiles/jumper.dir/src/SparseMatrix.cpp.o"
+  "CMakeFiles/jumper.dir/src/Renderable.cpp.o"
+  "CMakeFiles/jumper.dir/src/AnimatedRenderable.cpp.o"
+  "CMakeFiles/jumper.dir/src/StaticRenderable.cpp.o"
+  "CMakeFiles/jumper.dir/src/Player.cpp.o"
   "jumper.pdb"
   "jumper"
 )

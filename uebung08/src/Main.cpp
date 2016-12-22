@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-using namespace jumper;
+//using namespace jumper;
 
 int main(int argc, char** argv)
 {
@@ -16,12 +16,11 @@ int main(int argc, char** argv)
 	}
 
 	MainWindow window("Jumper", 800, 600);
-	Level level(window.getRenderer(), std::string(argv[1]));
+	Level level(window.getRenderer(), std::string("test1.lvl"));
 	window.setLevel(&level);
 
-/* Unomment me! 
-	Player player(std::string(argv[2], window.getRenderer());
+	Player player(window.getRenderer(), std::string(argv[2]));
 	window.setPlayer(&player);
-*/
+
 	window.mainLoop();
 }

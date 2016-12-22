@@ -7,7 +7,7 @@
 class Camera
 {
 private:
-  jumper::Pixel p;
+  Pixel p;
 public:
 
 
@@ -17,7 +17,7 @@ public:
 	Camera(int x=0 , int y=0 );
 
         
-        void move(const jumper::Pixel &offset);  
+        void move(const Pixel &offset);  
         
 
 	/// Returns the current x-position

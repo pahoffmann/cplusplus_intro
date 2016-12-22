@@ -4,12 +4,12 @@ project(JUMPER)
 cmake_minimum_required(VERSION 2.8)
  
 # Setup sources
-set(JUMPER_SOURCES src/Main.cpp src/MainWindow.cpp src/Level.cpp src/Camera.cpp src/Pixel.cpp src/SparseVector.cpp src/SparseMatrix.cpp)
+set(JUMPER_SOURCES src/Main.cpp src/MainWindow.cpp src/Level.cpp src/Camera.cpp src/Pixel.cpp src/SparseVector.cpp src/SparseMatrix.cpp src/Renderable.cpp src/AnimatedRenderable.cpp src/StaticRenderable.cpp src/Player.cpp)
 
 # Appends the cmake/modules path inside the MAKE_MODULE_PATH variable which stores the
 # directories of additional CMake modules (ie. MacroOutOfSourceBuild.cmake):
 set(CMAKE_MODULE_PATH ${JUMPER_SOURCE_DIR}/cmake/ ${CMAKE_MODULE_PATH})
-set(CMAKE_CXX_FLAGS "-g -Wall ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "-std=c++11 -g -Wall -Werror ${CMAKE_CXX_FLAGS}")
 
 # Find SDL2 libraries using the custom made module in 
 # the cmake/ path
