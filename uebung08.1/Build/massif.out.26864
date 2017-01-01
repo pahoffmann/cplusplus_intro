@@ -1,0 +1,1379 @@
+desc: (none)
+cmd: ./jumper test1.lvl test.spr
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=23215756
+mem_heap_B=906603
+mem_heap_extra_B=38733
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=58300249
+mem_heap_B=22457599
+mem_heap_extra_B=73969
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=94156371
+mem_heap_B=26763801
+mem_heap_extra_B=532135
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=127086000
+mem_heap_B=28125298
+mem_heap_extra_B=583710
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=163712428
+mem_heap_B=35483200
+mem_heap_extra_B=602136
+mem_stacks_B=0
+heap_tree=peak
+n7: 35483200 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16269328 0xE851EE8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 16269328 0xE9F1B8C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 16269328 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 16269328 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 16269328 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 16269328 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 16269328 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 16269328 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n2: 16269328 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 16269328 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n1: 16269328 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 16269328 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+             n0: 16269328 0x402C26: main (Main.cpp:18)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n3: 6123485 0xE92F1F0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n0: 4244021 in 1038 places, all below massif's threshold (1.00%)
+  n2: 1334792 0xE92F24C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n2: 968896 0xE92FBBD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 547552 0xEA831B9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 547552 0xEA8398C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 547552 0xEA41119: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 547552 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 547552 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 547552 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 547552 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 547552 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 547552 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 547552 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 547552 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 547552 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 547552 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 547552 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                  n1: 547552 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                   n0: 547552 0x402C26: main (Main.cpp:18)
+    n1: 421344 0xEAC465B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 421344 0xEA41121: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 421344 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 421344 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 421344 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 421344 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 421344 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 421344 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 421344 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 421344 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 421344 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 421344 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 421344 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 421344 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                  n0: 421344 0x402C26: main (Main.cpp:18)
+   n0: 365896 in 70 places, all below massif's threshold (1.00%)
+  n1: 544672 0xE96AC62: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 544672 in 19 places, all below massif's threshold (1.00%)
+ n2: 4196064 0x4EDD47A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+  n1: 3356328 0x4EDD653: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+   n1: 3356328 0x4E88F43: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+    n1: 3356328 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+     n1: 3356328 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+      n0: 3356328 0x402C8D: main (Main.cpp:19)
+  n1: 839736 0x514E65F: IMG_LoadPNG_RW (in /usr/lib/x86_64-linux-gnu/libSDL2_image-2.0.so.0.0.1)
+   n1: 839736 0x5146BE7: IMG_LoadTyped_RW (in /usr/lib/x86_64-linux-gnu/libSDL2_image-2.0.so.0.0.1)
+    n1: 839736 0x403A87: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:136)
+     n1: 839736 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+      n0: 839736 0x402C8D: main (Main.cpp:19)
+ n2: 3702784 0xEED0D1F: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 3670016 0xEA3D8F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3670016 0xEA3DC61: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3670016 0xE7D1689: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3670016 0xE7D18D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3670016 0xE7D1CF6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 3670016 0x4E8CC52: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+        n1: 3670016 0x4E86384: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n1: 3670016 0x4E88F6B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 3670016 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+           n1: 3670016 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+            n0: 3670016 0x402C8D: main (Main.cpp:19)
+  n0: 32768 in 1 place, below massif's threshold (1.00%)
+ n1: 2819232 0xE792512: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 2819232 0xE842BD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 2819232 0xE87FFD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 2819232 0xE9F1BBF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 2819232 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 2819232 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 2819232 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 2819232 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 2819232 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 2819232 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n2: 2819232 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 2819232 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 2819232 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 2819232 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+               n0: 2819232 0x402C26: main (Main.cpp:18)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1416554 0xE7924BD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0xE7F726D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0xE8414EB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0xE841A24: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 59562 in 5 places, all below massif's threshold (1.00%)
+ n0: 955753 in 422 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=205806078
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=238193910
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=286319035
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=313763084
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=342551578
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=detailed
+n7: 32241170 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16269328 0xE851EE8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 16269328 0xE9F1B8C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 16269328 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 16269328 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 16269328 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 16269328 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 16269328 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 16269328 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n2: 16269328 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 16269328 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n1: 16269328 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 16269328 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+             n0: 16269328 0x402C26: main (Main.cpp:18)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n4: 6181541 0xE92F1F0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n0: 3943277 in 1040 places, all below massif's threshold (1.00%)
+  n2: 1346472 0xE92F24C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n2: 968896 0xE92FBBD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 547552 0xEA831B9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 547552 0xEA8398C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 547552 0xEA41119: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 547552 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 547552 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 547552 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 547552 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 547552 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 547552 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 547552 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 547552 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 547552 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 547552 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 547552 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                  n1: 547552 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                   n0: 547552 0x402C26: main (Main.cpp:18)
+    n1: 421344 0xEAC465B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 421344 0xEA41121: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 421344 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 421344 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 421344 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 421344 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 421344 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 421344 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 421344 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 421344 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 421344 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 421344 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 421344 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 421344 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                  n0: 421344 0x402C26: main (Main.cpp:18)
+   n0: 377576 in 70 places, all below massif's threshold (1.00%)
+  n1: 551472 0xE96AC62: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 551472 in 19 places, all below massif's threshold (1.00%)
+  n1: 340320 0xE8D10F8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 340320 in 109 places, all below massif's threshold (1.00%)
+ n2: 4063232 0xEED0D1F: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 3670016 0xEA3D8F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3670016 0xEA3DC61: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3670016 0xE7D1689: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3670016 0xE7D18D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3670016 0xE7D1CF6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 3670016 0x4E8CC52: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+        n1: 3670016 0x4E86384: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n1: 3670016 0x4E88F6B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 3670016 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+           n1: 3670016 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+            n0: 3670016 0x402C8D: main (Main.cpp:19)
+  n0: 393216 in 2 places, all below massif's threshold (1.00%)
+ n1: 2819232 0xE792512: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 2819232 0xE842BD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 2819232 0xE87FFD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 2819232 0xE9F1BBF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 2819232 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 2819232 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 2819232 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 2819232 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 2819232 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 2819232 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n2: 2819232 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 2819232 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 2819232 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 2819232 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+               n0: 2819232 0x402C26: main (Main.cpp:18)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1416554 0xE7924BD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0xE7F726D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0xE8414EB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0xE841A24: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 59562 in 5 places, all below massif's threshold (1.00%)
+ n0: 967251 in 426 places, all below massif's threshold (1.00%)
+ n1: 524032 0xEED0358: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 524032 0xEED04DB: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+   n2: 524032 0xEA2DE53: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 524032 0xEA2A1CE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 524032 0xEA0DA5F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 524032 0xE9F4836: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n0: 524032 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=11
+#-----------
+time=376283687
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=396530649
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=425319143
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=454107637
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=482896131
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=512090610
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=541344464
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=560978732
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=590225010
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=614357524
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=detailed
+n7: 32241170 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16269328 0xE851EE8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 16269328 0xE9F1B8C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 16269328 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 16269328 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 16269328 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 16269328 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 16269328 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 16269328 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n2: 16269328 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 16269328 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n1: 16269328 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 16269328 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+             n0: 16269328 0x402C26: main (Main.cpp:18)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n4: 6181541 0xE92F1F0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n0: 3943277 in 1040 places, all below massif's threshold (1.00%)
+  n2: 1346472 0xE92F24C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n2: 968896 0xE92FBBD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 547552 0xEA831B9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 547552 0xEA8398C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 547552 0xEA41119: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 547552 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 547552 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 547552 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 547552 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 547552 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 547552 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 547552 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 547552 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 547552 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 547552 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 547552 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                  n1: 547552 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                   n0: 547552 0x402C26: main (Main.cpp:18)
+    n1: 421344 0xEAC465B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 421344 0xEA41121: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 421344 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 421344 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 421344 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 421344 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 421344 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 421344 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 421344 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 421344 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 421344 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 421344 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 421344 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 421344 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                  n0: 421344 0x402C26: main (Main.cpp:18)
+   n0: 377576 in 70 places, all below massif's threshold (1.00%)
+  n1: 551472 0xE96AC62: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 551472 in 19 places, all below massif's threshold (1.00%)
+  n1: 340320 0xE8D10F8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 340320 in 109 places, all below massif's threshold (1.00%)
+ n2: 4063232 0xEED0D1F: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 3670016 0xEA3D8F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3670016 0xEA3DC61: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3670016 0xE7D1689: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3670016 0xE7D18D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3670016 0xE7D1CF6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 3670016 0x4E8CC52: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+        n1: 3670016 0x4E86384: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n1: 3670016 0x4E88F6B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 3670016 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+           n1: 3670016 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+            n0: 3670016 0x402C8D: main (Main.cpp:19)
+  n0: 393216 in 2 places, all below massif's threshold (1.00%)
+ n1: 2819232 0xE792512: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 2819232 0xE842BD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 2819232 0xE87FFD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 2819232 0xE9F1BBF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 2819232 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 2819232 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 2819232 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 2819232 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 2819232 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 2819232 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n2: 2819232 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 2819232 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 2819232 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 2819232 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+               n0: 2819232 0x402C26: main (Main.cpp:18)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1416554 0xE7924BD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0xE7F726D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0xE8414EB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0xE841A24: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 59562 in 5 places, all below massif's threshold (1.00%)
+ n0: 967251 in 426 places, all below massif's threshold (1.00%)
+ n1: 524032 0xEED0358: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 524032 0xEED04DB: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+   n2: 524032 0xEA2DE53: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 524032 0xEA2A1CE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 524032 0xEA0DA5F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 524032 0xE9F4836: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n0: 524032 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=652331682
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=675227038
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=705158836
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=746849275
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=782166074
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=817482110
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=835140128
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=870470139
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=917019537
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=954001959
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=978538171
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1015104558
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=detailed
+n7: 32241170 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16269328 0xE851EE8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 16269328 0xE9F1B8C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 16269328 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 16269328 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 16269328 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 16269328 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 16269328 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 16269328 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n2: 16269328 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 16269328 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n1: 16269328 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 16269328 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+             n0: 16269328 0x402C26: main (Main.cpp:18)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n4: 6181541 0xE92F1F0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n0: 3943277 in 1040 places, all below massif's threshold (1.00%)
+  n2: 1346472 0xE92F24C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n2: 968896 0xE92FBBD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 547552 0xEA831B9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 547552 0xEA8398C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 547552 0xEA41119: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 547552 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 547552 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 547552 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 547552 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 547552 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 547552 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 547552 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 547552 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 547552 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 547552 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 547552 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                  n1: 547552 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                   n0: 547552 0x402C26: main (Main.cpp:18)
+    n1: 421344 0xEAC465B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 421344 0xEA41121: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 421344 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 421344 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 421344 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 421344 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 421344 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 421344 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 421344 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 421344 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 421344 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 421344 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 421344 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 421344 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                  n0: 421344 0x402C26: main (Main.cpp:18)
+   n0: 377576 in 70 places, all below massif's threshold (1.00%)
+  n1: 551472 0xE96AC62: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 551472 in 19 places, all below massif's threshold (1.00%)
+  n1: 340320 0xE8D10F8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 340320 in 109 places, all below massif's threshold (1.00%)
+ n2: 4063232 0xEED0D1F: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 3670016 0xEA3D8F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3670016 0xEA3DC61: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3670016 0xE7D1689: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3670016 0xE7D18D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3670016 0xE7D1CF6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 3670016 0x4E8CC52: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+        n1: 3670016 0x4E86384: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n1: 3670016 0x4E88F6B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 3670016 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+           n1: 3670016 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+            n0: 3670016 0x402C8D: main (Main.cpp:19)
+  n0: 393216 in 2 places, all below massif's threshold (1.00%)
+ n1: 2819232 0xE792512: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 2819232 0xE842BD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 2819232 0xE87FFD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 2819232 0xE9F1BBF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 2819232 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 2819232 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 2819232 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 2819232 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 2819232 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 2819232 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n2: 2819232 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 2819232 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 2819232 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 2819232 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+               n0: 2819232 0x402C26: main (Main.cpp:18)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1416554 0xE7924BD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0xE7F726D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0xE8414EB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0xE841A24: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 59562 in 5 places, all below massif's threshold (1.00%)
+ n0: 967251 in 426 places, all below massif's threshold (1.00%)
+ n1: 524032 0xEED0358: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 524032 0xEED04DB: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+   n2: 524032 0xEA2DE53: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 524032 0xEA2A1CE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 524032 0xEA0DA5F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 524032 0xE9F4836: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n0: 524032 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=1051051866
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1086516653
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1122566072
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1159652467
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1184866673
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1209186486
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1234202730
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1258549742
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=detailed
+n7: 32241170 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16269328 0xE851EE8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 16269328 0xE9F1B8C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 16269328 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 16269328 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 16269328 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 16269328 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 16269328 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 16269328 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n2: 16269328 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 16269328 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n1: 16269328 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 16269328 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+             n0: 16269328 0x402C26: main (Main.cpp:18)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n4: 6181541 0xE92F1F0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n0: 3943277 in 1040 places, all below massif's threshold (1.00%)
+  n2: 1346472 0xE92F24C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n2: 968896 0xE92FBBD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 547552 0xEA831B9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 547552 0xEA8398C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 547552 0xEA41119: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 547552 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 547552 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 547552 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 547552 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 547552 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 547552 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 547552 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 547552 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 547552 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 547552 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 547552 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                  n1: 547552 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                   n0: 547552 0x402C26: main (Main.cpp:18)
+    n1: 421344 0xEAC465B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 421344 0xEA41121: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 421344 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 421344 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 421344 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 421344 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 421344 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 421344 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 421344 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 421344 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 421344 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 421344 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 421344 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 421344 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                  n0: 421344 0x402C26: main (Main.cpp:18)
+   n0: 377576 in 70 places, all below massif's threshold (1.00%)
+  n1: 551472 0xE96AC62: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 551472 in 19 places, all below massif's threshold (1.00%)
+  n1: 340320 0xE8D10F8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 340320 in 109 places, all below massif's threshold (1.00%)
+ n2: 4063232 0xEED0D1F: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 3670016 0xEA3D8F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3670016 0xEA3DC61: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3670016 0xE7D1689: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3670016 0xE7D18D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3670016 0xE7D1CF6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 3670016 0x4E8CC52: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+        n1: 3670016 0x4E86384: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n1: 3670016 0x4E88F6B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 3670016 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+           n1: 3670016 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+            n0: 3670016 0x402C8D: main (Main.cpp:19)
+  n0: 393216 in 2 places, all below massif's threshold (1.00%)
+ n1: 2819232 0xE792512: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 2819232 0xE842BD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 2819232 0xE87FFD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 2819232 0xE9F1BBF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 2819232 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 2819232 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 2819232 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 2819232 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 2819232 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 2819232 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n2: 2819232 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 2819232 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 2819232 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 2819232 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+               n0: 2819232 0x402C26: main (Main.cpp:18)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1416554 0xE7924BD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0xE7F726D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0xE8414EB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0xE841A24: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 59562 in 5 places, all below massif's threshold (1.00%)
+ n0: 967251 in 426 places, all below massif's threshold (1.00%)
+ n1: 524032 0xEED0358: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 524032 0xEED04DB: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+   n2: 524032 0xEA2DE53: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 524032 0xEA2A1CE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 524032 0xEA0DA5F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 524032 0xE9F4836: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n0: 524032 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=1282870633
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1307678871
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1331268994
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1366602548
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1402221858
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=1426104396
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1461759861
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1497078946
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=detailed
+n7: 32241170 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16269328 0xE851EE8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 16269328 0xE9F1B8C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 16269328 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 16269328 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 16269328 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 16269328 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 16269328 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 16269328 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n2: 16269328 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 16269328 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n1: 16269328 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 16269328 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+             n0: 16269328 0x402C26: main (Main.cpp:18)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n4: 6181541 0xE92F1F0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n0: 3943277 in 1040 places, all below massif's threshold (1.00%)
+  n2: 1346472 0xE92F24C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n2: 968896 0xE92FBBD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 547552 0xEA831B9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 547552 0xEA8398C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 547552 0xEA41119: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 547552 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 547552 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 547552 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 547552 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 547552 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 547552 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 547552 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 547552 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 547552 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 547552 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 547552 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                  n1: 547552 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                   n0: 547552 0x402C26: main (Main.cpp:18)
+    n1: 421344 0xEAC465B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 421344 0xEA41121: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 421344 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 421344 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 421344 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 421344 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 421344 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 421344 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 421344 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 421344 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 421344 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 421344 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 421344 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 421344 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                  n0: 421344 0x402C26: main (Main.cpp:18)
+   n0: 377576 in 70 places, all below massif's threshold (1.00%)
+  n1: 551472 0xE96AC62: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 551472 in 19 places, all below massif's threshold (1.00%)
+  n1: 340320 0xE8D10F8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 340320 in 109 places, all below massif's threshold (1.00%)
+ n2: 4063232 0xEED0D1F: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 3670016 0xEA3D8F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3670016 0xEA3DC61: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3670016 0xE7D1689: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3670016 0xE7D18D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3670016 0xE7D1CF6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 3670016 0x4E8CC52: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+        n1: 3670016 0x4E86384: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n1: 3670016 0x4E88F6B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 3670016 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+           n1: 3670016 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+            n0: 3670016 0x402C8D: main (Main.cpp:19)
+  n0: 393216 in 2 places, all below massif's threshold (1.00%)
+ n1: 2819232 0xE792512: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 2819232 0xE842BD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 2819232 0xE87FFD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 2819232 0xE9F1BBF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 2819232 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 2819232 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 2819232 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 2819232 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 2819232 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 2819232 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n2: 2819232 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 2819232 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 2819232 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 2819232 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+               n0: 2819232 0x402C26: main (Main.cpp:18)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1416554 0xE7924BD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0xE7F726D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0xE8414EB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0xE841A24: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 59562 in 5 places, all below massif's threshold (1.00%)
+ n0: 967251 in 426 places, all below massif's threshold (1.00%)
+ n1: 524032 0xEED0358: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 524032 0xEED04DB: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+   n2: 524032 0xEA2DE53: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 524032 0xEA2A1CE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 524032 0xEA0DA5F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 524032 0xE9F4836: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n0: 524032 in 2 places, all below massif's threshold (1.00%)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=1520708180
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1538366198
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1556102474
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1573765265
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1591428150
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1610178787
+mem_heap_B=32241170
+mem_heap_extra_B=611318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1627843343
+mem_heap_B=32044658
+mem_heap_extra_B=611302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1645504532
+mem_heap_B=31913674
+mem_heap_extra_B=611310
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1663162687
+mem_heap_B=31913710
+mem_heap_extra_B=611330
+mem_stacks_B=0
+heap_tree=detailed
+n6: 31913710 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16269328 0xE851EE8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 16269328 0xE9F1B8C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 16269328 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 16269328 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 16269328 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 16269328 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 16269328 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 16269328 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n2: 16269328 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 16269328 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n1: 16269328 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 16269328 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+             n0: 16269328 0x402C26: main (Main.cpp:18)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n4: 6181541 0xE92F1F0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n0: 3943277 in 1040 places, all below massif's threshold (1.00%)
+  n2: 1346472 0xE92F24C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n2: 968896 0xE92FBBD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 547552 0xEA831B9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 547552 0xEA8398C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 547552 0xEA41119: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 547552 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 547552 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 547552 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 547552 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 547552 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 547552 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 547552 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 547552 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 547552 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 547552 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 547552 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                  n1: 547552 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                   n0: 547552 0x402C26: main (Main.cpp:18)
+    n1: 421344 0xEAC465B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 421344 0xEA41121: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 421344 0xEA3AF5B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 421344 0xE9A30CD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 421344 0xCDBB501: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 421344 0xCD938A2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 421344 0xCD8FC29: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 421344 0xCD90060: glXQueryExtensionsString (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 421344 0x4EEECAD: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 421344 0x4EE137D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 421344 0x4EE328A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 421344 0x4EE2F33: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 421344 0x4E4A395: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                 n1: 421344 0x402E2E: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:11)
+                  n0: 421344 0x402C26: main (Main.cpp:18)
+   n0: 377576 in 70 places, all below massif's threshold (1.00%)
+  n1: 551472 0xE96AC62: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 551472 in 19 places, all below massif's threshold (1.00%)
+  n1: 340320 0xE8D10F8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 340320 in 109 places, all below massif's threshold (1.00%)
+ n2: 4063232 0xEED0D1F: ??? (in /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0)
+  n1: 3670016 0xEA3D8F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3670016 0xEA3DC61: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3670016 0xE7D1689: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3670016 0xE7D18D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3670016 0xE7D1CF6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 3670016 0x4E8CC52: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+        n1: 3670016 0x4E86384: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+         n1: 3670016 0x4E88F6B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+          n1: 3670016 0x403B4B: Level::loadTexture(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:147)
+           n1: 3670016 0x403750: Level::Level(SDL_Renderer*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (Level.cpp:60)
+            n0: 3670016 0x402C8D: main (Main.cpp:19)
+  n0: 393216 in 2 places, all below massif's threshold (1.00%)
+ n1: 2819232 0xE792512: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 2819232 0xE842BD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 2819232 0xE87FFD6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 2819232 0xE9F1BBF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 2819232 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 2819232 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 2819232 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 2819232 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 2819232 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 2819232 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+           n2: 2819232 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+            n1: 2819232 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n1: 2819232 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 2819232 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+               n0: 2819232 0x402C26: main (Main.cpp:18)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1416554 0xE7924BD: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0xE7F726D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0xE8414EB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0xE841A24: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0xE8307D9: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0xE82F13A: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0xE9F1BA6: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0xE9A2D8F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0xE9A2EEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 387712 0xCDBB0A5: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0xCD8F239: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 387712 0xCD8F537: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EEF59E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+             n2: 387712 0x4EE20EE: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+              n1: 387712 0x4E8E32E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+               n1: 387712 0x4E86E11: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.4.0)
+                n1: 387712 0x402F08: MainWindow::MainWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int) (MainWindow.cpp:33)
+                 n0: 387712 0x402C26: main (Main.cpp:18)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 59562 in 5 places, all below massif's threshold (1.00%)
+ n0: 1163823 in 427 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=1680821068
+mem_heap_B=31913710
+mem_heap_extra_B=611330
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1698479193
+mem_heap_B=31913674
+mem_heap_extra_B=611310
+mem_stacks_B=0
+heap_tree=empty
