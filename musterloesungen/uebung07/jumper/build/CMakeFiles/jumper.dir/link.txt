@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/jumper.dir/src/Main.cpp.o CMakeFiles/jumper.dir/src/MainWindow.cpp.o CMakeFiles/jumper.dir/src/Level.cpp.o CMakeFiles/jumper.dir/src/Camera.cpp.o CMakeFiles/jumper.dir/src/Pixel.cpp.o  -o jumper -rdynamic -Wl,-Bstatic -lSDL2main -Wl,-Bdynamic -lSDL2 -lpthread -lSDL2_image -lSDL2_image -lpthread -lm 

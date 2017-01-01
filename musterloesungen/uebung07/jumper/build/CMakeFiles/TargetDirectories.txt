@@ -1,0 +1,3 @@
+/home/patrick/UniOsnabrück/c++/C06/musterloesungen/uebung07/jumper/build/CMakeFiles/rebuild_cache.dir
+/home/patrick/UniOsnabrück/c++/C06/musterloesungen/uebung07/jumper/build/CMakeFiles/edit_cache.dir
+/home/patrick/UniOsnabrück/c++/C06/musterloesungen/uebung07/jumper/build/CMakeFiles/jumper.dir
