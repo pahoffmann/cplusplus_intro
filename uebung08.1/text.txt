@@ -1,0 +1,7 @@
+es ist zu sehen, dass beide algorithmen einen ähnlichen speicherverbrauch haben.
+leider sind die texte etwas unübersichtlich zu lesen.
+ebenso ist zu sehen, dass zu Programmende der speicher schneller deallociert
+wird bei der neuen variante über den sparsevector.
+
+der operator [][] musste nicht abgewandelt werden, da sowohl die sparsematrix als auch der sparsevector
+den [] operator implementieren. damit ist [] doppelt anwendebar, da eine einfache verwendung ein objekt vom typ sparsevector returned auf das erneut der [] operator anzuwenden ist.
