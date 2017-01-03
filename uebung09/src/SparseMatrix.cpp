@@ -1,0 +1,110 @@
+#include "SparseMatrix.hpp"
+#include <iostream>
+
+
+SparseMatrix::SparseMatrix(const int& rows, const int &cols)
+{
+
+    // Save width and height
+    m_numRows = rows;
+    m_numColumns = cols;
+    m_rows = 0;
+    
+
+    if(m_numRows >0)
+    {
+        // Create rows
+        m_rows = new SparseVector*[rows];
+        for(int i = 0; i < rows; i++)
+        {
+            m_rows[i] = new SparseVector(cols);
+        }   
+    }
+
+}
+
+void SparseMatrix::copy(const SparseMatrix& other)
+{
+    if(&other != this)
+    {
+
+        // Check if rows was already used and free resources
+        // if necessary.
+        if(m_rows)
+        {
+            clear();
+        }
+
+        // Copy width and height
+        m_numRows = other.m_numRows;
+        m_numColumns = other.m_numColumns;
+
+        // Create rows
+        m_rows = new SparseVector*[other.m_numRows];
+
+        // Create sparse vectors for columns
+        for(int i = 0; i < m_numRows; i++)
+        {
+            m_rows[i] = new SparseVector(other[i]);
+        }
+    }
+
+}
+
+void SparseMatrix::clear()
+{
+
+    if(m_rows)
+    {
+        for(int i = 0; i < m_numRows; i++)
+        {
+            delete m_rows[i];
+        }
+
+        delete[] m_rows;
+    }
+    m_rows = 0;
+
+}
+
+SparseMatrix::SparseMatrix()
+{
+    m_numRows = 0;
+    m_numColumns = 0;
+    m_rows = 0;
+}
+
+SparseMatrix::SparseMatrix(const SparseMatrix& other)
+{
+    copy(other);
+}
+
+SparseMatrix::~SparseMatrix()
+{
+    clear();
+}
+
+SparseMatrix& SparseMatrix::operator =(const SparseMatrix& other)
+{
+    if(&other != this)
+    {
+        clear();
+        copy(other);
+    }
+    return *this;
+}
+
+SparseVector& SparseMatrix::operator[](int index) const
+{   
+    
+    return *m_rows[index];
+}
+
+void SparseMatrix::insert(const int& row, const int& col, const int& value)
+{
+
+    m_rows[row]->setElem(col, value);
+
+
+}
+
