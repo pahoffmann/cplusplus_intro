@@ -6,7 +6,7 @@
  */
 
 #include "MainWindow.hpp"
-#include <SDL2/SDL_image.h>
+#include <SDL_image.h>
 #include <iostream>
 #include "Vector.hpp"
 

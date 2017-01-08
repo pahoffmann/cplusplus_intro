@@ -86,17 +86,18 @@ void TileTree::insert(int i, int j, int index)
 	int w;
 	int h;
 	int tmp;
+	int possibleTiles;
 
 	if(m_axis == VERTICAL){
 		/* Split position */
-		splitx = m_x + m_w/2;
+		splitx = x % m_tileWidth + m_w/2;
 		splity = m_y;
-		if(!(splitx % m_tileWidth == 0)){
+		/*if(!(splitx % m_tileWidth == 0)){
 			tmp = splitx % m_tileWidth;
 			if(tmp < m_tileWidth-tmp){
 				splitx = splitx - tmp;
 			} else splitx+=(m_tileWidth - tmp);
-		}
+		}*/
 
 		/*if(!(splity % m_tileHeight == 0)){
 			tmp = splity % m_tileHeight;
@@ -108,54 +109,79 @@ void TileTree::insert(int i, int j, int index)
 			if(m_sub1){
 				m_sub1 -> insert(i,j,index);
 			} else{
-				w = splitx-m_x;
+				w = splitx - m_x;
 				h = m_h;
 				if(w > m_tileWidth){
-					m_sub1 = new TileTree(splitx-(splitx - m_x),splity,w,h,HORIZONTAL);
+					m_sub1 = new TileTree(m_x,m_y,w,h,HORIZONTAL);
 				} else {
-					tmp = (w/m_tileWidth);
+					//Anzahl an Tiles, die horizontal in die Bounding Box passen
+					possibleTiles = m_h / m_tileHeight;
+
+					//tmp = (w/m_tileWidth);
 					if(m_numTiles == 0){
-						m_tiles = new int[10000];
+						m_tiles = new int[possibleTiles];
 					}
+					m_numTiles++;
+
+					//Index, an der das Tile eingefügt werden soll
+					tmp = (y - m_y) / 16;
+					m_tiles[tmp] = index;
+					/*
 					m_numTiles++;
 					tmp = m_x / m_tileWidth;
 					m_tiles[i-tmp] = index;
+					*/
 				}
 			}
 		} else{
 			if(m_sub2){
 				m_sub2 -> insert(i,j,index);
 			} else{
-				w = m_w-(splitx-m_x);
+				w = m_w - splitx;
 				h = m_h;
 				if(w > m_tileWidth){
 					m_sub1 = new TileTree(splitx,splity,w,h,HORIZONTAL);
 				} else {
-					tmp = (w/m_tileWidth);
+					//Anzahl an Tiles, die horizontal in die Bounding Box passen
+					possibleTiles = m_h / m_tileHeight;
+
+					if(m_numTiles == 0){
+						m_tiles = new int[possibleTiles];
+					}
+					m_numTiles++;
+
+					//Index, an der das Tile eingefügt werden soll
+					tmp = (y - m_y) / 16;
+					m_tiles[tmp] = index;
+
+
+					/*tmp = (w/m_tileWidth);
 					if(m_numTiles == 0){
 						m_tiles = new int[10000];
 					}
 					m_numTiles++;
 					tmp = m_x / m_tileWidth;
 					m_tiles[i-tmp] = index;
+					*/
 				}
 			}
 		}
 	} else{
 		/* Split position */
 		splitx = m_x;
-		splity = m_y + m_h/2;
+		splity = y % m_tileHeight + m_h/2;
 		/*if(!(splitx % m_tileWidth == 0)){
 			tmp = splitx % m_tileWidth;
 			splitx = splitx - tmp;
 		}*/
 
-		if(!(splity % m_tileHeight == 0)){
+		/*if(!(splity % m_tileHeight == 0)){
 			tmp = splity % m_tileHeight;
 			if(tmp < m_tileHeight-tmp){
 				splity-=tmp;
 			} else splity+=(m_tileHeight - tmp);
 		}
+		*/
 		/* end of split position */
 
 		if(y < splity){
@@ -165,16 +191,28 @@ void TileTree::insert(int i, int j, int index)
 				w = m_w;
 				h = splity - m_y;
 				if(h > m_tileHeight){
-					m_sub1 = new TileTree(splitx,splity-(splity - m_h),w,h,VERTICAL);
+					m_sub1 = new TileTree(m_x,m_y,w,h,VERTICAL);
 				} else {
-					tmp = (h/m_tileHeight);
+					//Anzahl an Tiles, die horizontal in die Bounding Box passen
+					possibleTiles = m_w / m_tileWidth;
+
+					if (m_numTiles == 0){
+						m_tiles = new int[possibleTiles];
+					}
+					m_numTiles++;
+
+					tmp = (x - m_x) / 16;
+					m_tiles[tmp] = index;
+
+					/*tmp = (h/m_tileHeight);
 					if(m_numTiles == 0){
 						m_tiles = new int[10000];
 					}
 					m_numTiles++;
 
 					tmp = m_y / m_tileHeight;
-					m_tiles[j-tmp] = index;    /* insert to array */
+					m_tiles[j-tmp] = index;
+					*/
 				}
 			}
 		} else{
@@ -182,17 +220,32 @@ void TileTree::insert(int i, int j, int index)
 				m_sub2 -> insert(i,j,index);
 			} else{
 				w = m_w;
-				h = m_h - (splity- m_y);
+				h = m_h - splity;
 				if(h > m_tileHeight){
 					m_sub1 = new TileTree(splitx,splity,w,h,VERTICAL);
 				} else {
+
+					//Anzahl an Tiles, die horizontal in die Bounding Box passen
+					possibleTiles = m_w / m_tileWidth;
+
+					if (m_numTiles == 0){
+						m_tiles = new int[possibleTiles];
+					}
+					m_numTiles++;
+
+					tmp = (x - m_x) / 16;
+					m_tiles[tmp] = index;
+
+
+					/*
 					tmp = (h/m_tileHeight);
 					if(m_numTiles == 0){
 						m_tiles = new int[10000];
 					}
 					m_numTiles++;
 					tmp = m_y / m_tileHeight;
-					m_tiles[j-tmp] = index;   /* insert to array */
+					m_tiles[j-tmp] = index;
+					*/
 				}
 			}
 		}
@@ -217,5 +270,3 @@ TileTree::~TileTree()
 {
 	clear();
 }
-
-
