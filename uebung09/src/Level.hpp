@@ -9,7 +9,7 @@
 #define SRC_LEVEL_HPP_
 
 #include <string>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Camera.hpp"
 #include "StaticRenderable.hpp"
@@ -93,8 +93,8 @@ private:
 
 	Camera  			m_camera;
 
-	SparseMatrix		m_tiles;
-	//TileTree*			m_tiles;		// <- TILE TREE VERSION
+	//SparseMatrix		m_tiles;
+	TileTree*			m_tiles;		// <- TILE TREE VERSION
 
 	Player*				m_player;
 

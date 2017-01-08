@@ -37,8 +37,13 @@ public:
 	 */
 	int get(int i, int j);
 
+	void clear();
+
 	/// Destrcutor
 	virtual ~TileTree();
+
+
+
 
 	/// Width of the tiles in the tree
 	static int		m_tileWidth;
@@ -70,10 +75,12 @@ protected:
 	TileTree* 		m_sub2;
 
 	/// Array of tiles stored in the leafs
-	int				m_tiles;
+	int* 			m_tiles;
 
 	/// Number of tiles on the tile leaf array
 	int				m_numTiles;
+
+
 };
 
 #endif /* KD_KDTREE_TILETREE_HPP_ */

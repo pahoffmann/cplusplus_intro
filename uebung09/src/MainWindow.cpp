@@ -6,7 +6,7 @@
  */
 
 #include "MainWindow.hpp"
-#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 #include "Vector.hpp"
 
@@ -157,17 +157,17 @@ void MainWindow::setLevel(Level* level)
 void MainWindow::quitSDL()
 {
 	// Destroy window and renderer
-	if(m_window)
-	{
-		SDL_DestroyWindow(m_window);
-		m_window = 0;
-	}
 
 	if(m_renderer)
 	{
 		SDL_DestroyRenderer(m_renderer);
 		m_renderer = 0;
 	}
+	if(m_window)
+		{
+			SDL_DestroyWindow(m_window);
+			m_window = 0;
+		}
 
 	// Quit SDL and SDL_Image
 	IMG_Quit();

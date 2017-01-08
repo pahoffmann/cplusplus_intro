@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include <fstream>
-#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
 
 
 namespace jumper
@@ -52,12 +52,12 @@ Level::Level(SDL_Renderer* renderer, std::string filename, Camera & camera) :
 		std::cout << "Unable to open file " << filename << std::endl;
 	}
 
-	SparseMatrix tiles(m_levelWidth, m_levelHeight);
-	m_tiles = tiles;
+	/*SparseMatrix tiles(m_levelWidth, m_levelHeight);
+	m_tiles = tiles;*/
 
-//	m_tiles = new TileTree(0, 0, m_tileWidth * m_levelWidth, m_tileHeight * m_levelHeight, VERTICAL); <- TILE TREE VERSION
-//	TileTree::m_tileWidth = m_tileWidth;
-//	TileTree::m_tileHeight = m_tileHeight;
+	m_tiles = new TileTree(0, 0, m_tileWidth * m_levelWidth, m_tileHeight * m_levelHeight, VERTICAL); //<- TILE TREE VERSION
+	TileTree::m_tileWidth = m_tileWidth;
+	TileTree::m_tileHeight = m_tileHeight;
 
 	// Cast keying colors manually!
 	m_keyR = (unsigned char)ir;
@@ -80,8 +80,8 @@ Level::Level(SDL_Renderer* renderer, std::string filename, Camera & camera) :
 		{
 			int tileID;
 			in >> tileID;
-			m_tiles.insert(j, i, tileID);
-			//m_tiles->insert(j, i, tileID); // <- TILE TREE VERSION
+			//m_tiles.insert(j, i, tileID);
+			m_tiles->insert(j, i, tileID); // <- TILE TREE VERSION
 		}
 	}
 
@@ -121,9 +121,9 @@ void Level::render()
 		{
 			for(j = 0; j < m_levelWidth; j++)
 			{
-				//tile_index = m_tiles->get(j,i) - 1;  	<- TILE TREE VERSION
+				tile_index = m_tiles->get(j,i) - 1;  	//<- TILE TREE VERSION
 
-				tile_index = m_tiles[j][i] - 1;
+				/* tile_index = m_tiles[j][i] - 1; */
 				if(tile_index >= 0)
 				{
 					//Compute the position of the target on the screen
@@ -184,7 +184,7 @@ Level::~Level()
     // Free texture resources
     SDL_DestroyTexture(m_texture);
 
-    //delete m_tiles; <- TILE TREE VERSION
+    delete m_tiles; //<- TILE TREE VERSION
 }
 
 

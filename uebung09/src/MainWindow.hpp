@@ -9,7 +9,7 @@
 #define SRC_MAINWINDOW_HPP_
 
 #include <string>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Level.hpp"
 #include "Camera.hpp"

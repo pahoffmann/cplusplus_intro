@@ -2,7 +2,7 @@
 // Created by isaak on 25.11.15.
 //
 
-#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 #include "Renderable.hpp"
 namespace jumper

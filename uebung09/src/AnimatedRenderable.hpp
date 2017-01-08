@@ -9,7 +9,7 @@
 #define SRC_ANIMATEDRENDERABLE_HPP_
 
 #include "Renderable.hpp"
-
+#include <SDL2/SDL.h>
 #include <string>
 #include <iostream>
 

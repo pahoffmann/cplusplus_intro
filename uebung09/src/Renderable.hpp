@@ -5,7 +5,7 @@
 #ifndef JUMPER_RENDERABLE_H
 #define JUMPER_RENDERABLE_H
 
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <string>
 #include "Camera.hpp"
 
