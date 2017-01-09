@@ -98,7 +98,7 @@ int TileTree::get(int i, int j)
 		} else{
 			//cout << " length: " << m_numTiles << "  " << m_numTiles1 << endl;
 			if(j*m_tileHeight < splitYH)
-				return m_numTiles;//m_tiles[i-(m_x/m_tileWidth)];
+				return m_tiles[i-(m_x/m_tileWidth)];
 			else
 				return m_numTiles1;//m_tiles1[i-(m_x/m_tileWidth)];
 		}
@@ -135,32 +135,32 @@ void TileTree::insert(int i, int j,int index){
 				else{
 					subW = splitX - m_x;
 					subH = m_h;
-					if(subW > m_tileWidth) m_sub1 = new TileTree(m_x,m_y,subW,subH,HORIZONTAL);
+					if(subW > m_tileWidth) (m_sub1 = new TileTree(m_x,m_y,subW,subH,HORIZONTAL))->insert(i,j,index);
 					else{
 						if(m_numTiles == 0){
 							tmp = m_h/m_tileHeight;
 							m_tiles = new int[tmp];
 							m_numTiles = tmp;
 						}
-
+						cout << index << endl;
 						m_tiles[j-(m_y/m_tileHeight)] = index;
 
 
 					}
 				}
 			} else {                              /* RIGHT SUB TREE HERE */
-				if(m_sub2){cout << "test" <<endl; m_sub2 -> insert(i,j,index); }
+				if(m_sub2){m_sub2 -> insert(i,j,index); }
 				else{
 					subW = m_x + m_w - splitX;
 					subH = m_h;
-					if(subW > m_tileWidth) m_sub2 = new TileTree(splitX,m_y,subW,subH,HORIZONTAL);
+					if(subW > m_tileWidth) (m_sub2 = new TileTree(splitX,m_y,subW,subH,HORIZONTAL)) -> insert(i,j,index);
 					else{
 						if(m_numTiles1 == 0){
 							tmp = m_h/m_tileHeight;
 							m_tiles1 = new int[tmp];
 							m_numTiles1 = tmp;
 						}
-
+						cout << index << endl;
 						m_tiles1[j-(m_y/m_tileHeight)] = index;
 					}
 				}
@@ -183,14 +183,14 @@ void TileTree::insert(int i, int j,int index){
 				else{
 					subW = m_w;
 					subH = splitY - m_y;
-					if(subH > m_tileHeight) m_sub1 = new TileTree(m_x,m_y,subW,subH,VERTICAL);
+					if(subH > m_tileHeight) (m_sub1 = new TileTree(m_x,m_y,subW,subH,VERTICAL)) ->insert(i,j,index);
 					else{
 						if(m_numTiles == 0){
 							tmp = m_w/m_tileWidth;
 							m_tiles = new int[tmp];
 							m_numTiles = tmp;
 						}
-
+						cout << index << endl;
 						m_tiles[i-(m_x/m_tileWidth)] = index;
 
 
@@ -201,7 +201,7 @@ void TileTree::insert(int i, int j,int index){
 				else{
 					subW = m_w;
 					subH = m_y + m_h - splitY;
-					if(subW > m_tileWidth) m_sub2 = new TileTree(m_x,splitY,subW,subH,VERTICAL);
+					if(subW > m_tileWidth) (m_sub2 = new TileTree(m_x,splitY,subW,subH,VERTICAL)) ->insert(i,j,index);
 					else{
 						if(m_numTiles1 == 0){
 							tmp = m_w/m_tileWidth;
@@ -209,7 +209,7 @@ void TileTree::insert(int i, int j,int index){
 							m_numTiles1 = tmp;
 						}
 
-
+						cout << index << endl;
 						m_tiles1[i-(m_x/m_tileWidth)] = index;
 					}
 				}

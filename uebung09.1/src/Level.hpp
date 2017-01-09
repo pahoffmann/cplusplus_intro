@@ -13,7 +13,7 @@
 
 #include "Camera.hpp"
 #include "StaticRenderable.hpp"
-#include "SparseMatrix.cpp"
+#include "SparseMatrix.hpp"
 #include "TileTree.hpp"
 #include "Player.hpp"
 #include "Vector.hpp"

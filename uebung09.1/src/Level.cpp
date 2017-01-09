@@ -81,6 +81,7 @@ Level::Level(SDL_Renderer* renderer, std::string filename, Camera & camera) :
 			int tileID;
 			in >> tileID;
 			//m_tiles.insert(j, i, tileID);
+			cout << "Level:: " << tileID << endl;
 			m_tiles->insert(j, i, tileID); // <- TILE TREE VERSION
 		}
 	}
