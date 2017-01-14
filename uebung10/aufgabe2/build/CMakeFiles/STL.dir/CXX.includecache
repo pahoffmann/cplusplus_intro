@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/Aufgabe2_1.cpp
+stdlib.h
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/stdlib.h
+
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/Aufgabe2_2.cpp
+string
+-
+stdlib.h
+-
+
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/Aufgabe2_3.cpp
+functional
+-
+
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/STL.cpp
+time.h
+-
+vector
+-
+stdlib.h
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/stdlib.h
+iostream
+-
+algorithm
+-
+iterator
+-
+string
+-
+functional
+-
+Aufgabe2_1.cpp
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/Aufgabe2_1.cpp
+Aufgabe2_2.cpp
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/Aufgabe2_2.cpp
+Aufgabe2_3.cpp
+/home/patrick/UniOsnabrück/c++/C06/uebung10/aufgabe2/src/Aufgabe2_3.cpp
+

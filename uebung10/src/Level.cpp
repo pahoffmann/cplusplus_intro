@@ -91,6 +91,60 @@ void Level::setPlayer(Player* player)
 
 void Level::render()
 {
+	SDL_Rect target;
+	SDL_Rect source;
+
+	int row;
+	int col;
+
+	target.w = m_tileWidth;
+	target.h = m_tileHeight;
+
+	source.w = m_tileWidth;
+	source.h = m_tileHeight;
+	list.clear();
+	m_tiles->clip(m_camera,list);
+	//std::cout << list.size() << std::endl;
+
+	for(Tile t : list){
+	
+		//Compute the position of the target on the screen
+
+		int tile_index = std::get<0>(t) -1;
+
+
+		target.x = std::get<1>(t) * m_tileWidth;
+		target.y = std::get<2>(t) * m_tileHeight;
+
+		shiftTargetRect(target);
+		//std::cout << "x : " <<target.x  << std::endl; 
+		//std::cout << "y : " << target.y << std::endl;
+
+
+		row = tile_index / m_tilesPerRow;
+		col = tile_index % m_tilesPerRow;
+
+		source.x = col * m_tileWidth;
+		if(col > 0)
+		{
+			source.x += col * m_tileOffset;
+		}
+
+		source.y = row * m_tileHeight;
+		if(row > 0)
+		{
+			source.y += row * m_tileOffset;
+		}
+		SDL_RenderCopy(getRenderer(), m_texture, &source, &target);
+	}
+
+	
+
+	if(m_player)
+	{
+		m_player->render();
+	}
+
 	// TODO: Implement rendering of clipped level
 }
 
@@ -162,6 +216,7 @@ Level::~Level()
 {
     // Free texture resources
     SDL_DestroyTexture(m_texture);
+    list.clear();
 }
 
 void Level::checkAndResolveCollision()

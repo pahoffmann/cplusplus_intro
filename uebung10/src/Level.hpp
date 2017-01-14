@@ -18,6 +18,7 @@
 #include "Vector.hpp"
 #include "WorldProperty.hpp"
 #include "TileTree.hpp"
+#include "JumperTypes.hpp"
 
 namespace jumper
 {
@@ -124,6 +125,8 @@ private:
 
 	/// The player object of the level
 	Player*				m_player;
+
+	TileList list;
 
 };
 

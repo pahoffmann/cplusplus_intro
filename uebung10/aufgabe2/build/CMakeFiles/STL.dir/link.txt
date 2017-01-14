@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -Wall   CMakeFiles/STL.dir/src/Aufgabe2_1.cpp.o CMakeFiles/STL.dir/src/Aufgabe2_2.cpp.o CMakeFiles/STL.dir/src/Aufgabe2_3.cpp.o CMakeFiles/STL.dir/src/STL.cpp.o  -o STL -rdynamic -lm 
