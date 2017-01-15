@@ -4,7 +4,7 @@ template <class T>
       public:
          static T& GetInstance()
          {
-            static T oInstance ;
+            static T oInstance ; // Konstruktor der Unterklasse
             return oInstance ;
          }
  
@@ -15,7 +15,9 @@ template <class T>
          SingletonBase( const SingletonBase& ) ;
          SingletonBase& operator=( const SingletonBase& ) {return *this;}
    } ;
- 
+   
+
+   //Aufruf der erbenden Klasse mit sich selbst in der vererbenden Klasse
    // Verwendung
    class MySingleton : public SingletonBase< MySingleton >
    {
@@ -26,3 +28,5 @@ template <class T>
  
       //...
    };
+
+   ///Instanziierung über MySingleton s = SingletonBase<MySingleton>.getInstance();

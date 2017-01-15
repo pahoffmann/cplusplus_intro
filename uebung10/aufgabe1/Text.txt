@@ -1,0 +1,79 @@
+Aufgabe 1
+
+(1)
+	Vorteile:
+		- Code wiederverwertbar (generísch)
+		- Funktionalität über Traits erweiterbar
+		- Compiler hat die Möglichkeit der Codeoptimierung       	
+		-
+		-
+	Nachteile:
+		- für jeden Typ muss eine neue Modellklasse für den Vektor geschrieben werden
+		-> man bekommt zur laufzeit mehr klassen  
+		- deutlich höherer Programmieraufwand
+		- Traits undurchsichtig -> nur Spezialisierung oder Vererbung
+		- helfen aber dort -> logisch -> aber programmiertechnisch aufwendig.
+		- Vererbung & Polymorphismus Notwendigkeit für dynamic_cast
+		- code generell schwerer zu verstehen 
+
+(2) 
+
+
+	Programmierungs siehe Traits.cpp
+	Möglichkeit über Vererbung -> CVertex erbt von GVertex
+	->danach nach Traits-überprüfung dynamic_cast um dem compiler zu zeigen,
+	dass das generische Objekt T eine Instanz vom Typ CVertex ist.
+	Ansonsten hilft nur eine Spezialisierung der print Methode für verschiedene Vertices.
+	(siehe auskommentierter Code)
+
+(3)
+	
+	
+	Das Basetemplate SingletonBase enthält eine statische Metode getInstance(), welche den Konstruktor von T aufruft.
+	Das Template mit der abgeleiteten Klasse MySingleton instanziert das Basetemplate, wobei
+	eine Spezialisierung von T zu MySingleton ausgeführt wird. Die Funktionalität unseres Singletons wird nun im Konstruktor oder in den anderen Methoden der Klasse MySingleton implementiert, sodass die Funktion getInstance() des Basetemplates diese Implementierung durchläuft, dabei aber dafür sorgt, dass nie mehr als eine Instanz existiert. Der Defaultkonstruktor in SingletonBase wird leer implementiert. Des Weiteren ist ein copy konstruktor deklariert. Schwierigkeiten beim Zugriff auf private Methoden/Variablen werden umgangen durch das Schlüsselwort friend. Ebenso ist ein Zuweisungsoperator implementiert, welcher lediglich eine Referenz auf die aktuelle Instanz zurückgibt, um dem Singleton-Entwurfsmuster zu entsprechen. 
+	Aufruf von MySingleton:
+
+	MySingleton s = SingletonBase<MySingleton>.getInstance();
+
+(4) 
+	
+	Als Container werden Datenstrukturen bezeichnet, die Daten enthalten.
+	Jeder Container hat Einschränkungen, wie man effizient auf Elemente zugreifen, sie hinzufügen oder entfernen kann.
+	Unterschieden wird zwischen Assoziativ- und Sequenzcontainern.
+	Sequenzcontainer sind Datenstrukturen mit einem Anfang und Ende, sie können sortiert werden/sein (z.B. vector, deque, list).
+	Assoziativcontainer sind Container ohne Ordnung. Sattdessen haben sie Verbindungen untereinander, um zum Beispiel Einzigartigkeit zu bestimmen(z.B. set, multiset, map, multimap).
+
+	Container Adapter (adapt = sich anpassen) dagegen sind Interfaces, die enstehen durch Einschränken der Funktionalität eines Containers, den es vorher schon gab.
+	Ebenso enthalten sie eine andere Menge von Funktionalität.
+	Man kann beim deklarieren der Container Adapter festlegen, welche Sequenz von Containern den zugrunde liegenden Container formen (z.B. stack, queue, priority_queue).
+
+(5)	
+	
+	Tupel: Wie instanziiert ? (Konstruktor / std::make_tuple)
+		   Funktionaltität von std::get und std::tie
+
+		   Der Konstruktor baut wie zu erwarten ein neues tuple objekt.
+		   Mit std::make_tuple lässt sich ein tuple mit übergebenen argumenttypen erstellen.
+
+		   Bsp : auto t1 = std::make_tuple(10, "Test", 3.14); //auto neues schlüsselwort -> setzt typ automatisch -> hier z.b std::tuple<int,std::string,double>
+
+		   Unterschied : Einfaches Erstellen  von tuples über make_tuple, aber mehr Möglichkeiten über Konstruktoren.
+		   make_tuple liefert ein tuple objekt zurück, wobei der kontruktor ein bereits vorher deklariertes tuple definiert.
+		   Beim Konstruktor ist eine direkte angabe der templatetypen von nöten, bei
+		   make_tuple genügt auto.
+
+
+		   Mit std::get lassen sich sowohl einzelne Werte im Tupel setzen, als auch Werte aus dem Tupel entnehmen.
+
+		   int count = 5;
+		   std::tuple<int,int,int> t;
+		   std::get<0>(t) = count;
+		   Bsp: int x = std::get<0>(t); //x ist jetzt count
+
+		   std::tie erstellt ein tuple von lvalue referenzen auf seine argumente oder instanzen von std::ignore. zusätzlich initialisiert er die Member vom tuple
+		   std::tuple<T&...> -> tie erstellt also ebenfalls ein tuple, aber einen lvalue referenz typ, make_tuple dagegen estellt ein normales tuple
+
+
+
+
