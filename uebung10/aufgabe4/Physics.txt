@@ -1,0 +1,58 @@
+Wie funktionieren die Physics unseres Jump n' Runs?
+
+
+(1)
+	
+	Scrolling:
+
+	Scrolling wird realisiert durch die virtuelle Camera.
+	Die Tiles werden nach der Position der Camera über die Methode shiftTargetRect(SDL_Rect r)
+	an die richtige Stelle verschoben. Damit ist ein scrolling realisiert.
+	Die Kamera richtet sich dabei nach der player position, da der player sich immer in der mitte des fensters befinden soll.
+	die position des players wird auch über shiftTargetRect verschoben.
+	Damit befindet sich die Kamera immer in der Mitte des Fensters.
+	Ihre Position erhöht sich je nach Benutzereingaben.
+
+
+(2)
+
+	Kollision zwischen Player und Level?
+
+	Zunächst holt man sich die globale Position des Spielers
+	und setzt die gewollte Position auf diese Position.
+	anschließend werden die Tiles um diese Postion herum in einem array gespeichert.
+	danach wird überprüft, ob sich das "Player-rect" mit einem der Tile Rects überschneidet. Für diesen Fall wird die postion des players angepasst, je nachdem um welche Überschneidung es sich handelt. Wenn der player zum beispiel gegen ein objekt an der rechten seite läuft, wird seine position leicht nach links verschoben (und zwar genau um die breite der überschneidung).
+	Deswegen ensteht auch der Anschein, dass der Player immer läuft.
+
+
+
+
+(3)
+
+	numerische Probleme bei der Art der Simulation?
+
+	-aufwendig, die position jedes mal neu zu justieren.
+	-ist so realisiert, dass der Player nie einfach steht, sondern praktisch immer
+	fällt, jedoch durch verschieben immer wieder zurückgesetzt wird
+	->bugs können auftreten bei zu viel interaktion, weil ein gewisser Zeitaufwand besteht, alle kollisionen zu checken.
+	->viele berechnungen nötig -> hoher Aufwand
+	-gibt bestimmt bessere realisierungen (z.B. zusätzliche Eigenschaften für eizelne Indices 	in einer Liste von Listen -> abfragen (z.B. isSolid oder canStandOn) etc. pp
+	-BUG: sehr hohes springen wenn nah an Textur -> numerisches Problem?
+	-Sprung sehr gewöhnungsbedürftig -> keine Parabel, sondern eher dreieck->falsche berechnungen?
+	-die zeit dt zwischen zwei Aufrufen ist nie gleich -> keine gleichmäßigen Bewegungen
+	->Physics nicht "real"
+	-arbeiten mit nebenläufigen Threads und richtiger zeit sinnvoll
+
+
+(4)
+
+	Welche Eigenschaften von Player und Umgebung lassen sich beschreiben (mit unserem Modell?)
+
+	-Player läuft auf Umgebung
+	-Player läuft gegen Umgebung (links, rechts)
+	-Player springt (gegen decke)
+	-Player fällt (Schwerkraft wirkt auf Player)
+	-Player springt von Umgebung ab
+	-Umgebungs bremst Player ab (oder auch eben nicht)
+	-Player beschleunigt (in alle Richtungen)
+	-Player bremst ab
