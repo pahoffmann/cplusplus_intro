@@ -12,6 +12,7 @@
 #include "PlayerProperty.hpp"
 #include "WorldProperty.hpp"
 #include "Level.hpp"
+#include <thread>
 
 namespace jumper
 {
@@ -92,6 +93,8 @@ public:
 	/// Returns true if the camera is following this actor
 	bool hasFocus();
 
+	void start(Level &l);
+
 protected:
 
 	/// Retruns the time elapsed since the last call of this function
@@ -117,6 +120,9 @@ protected:
 
     /// True if the camera is following this actor
     bool				m_focus;
+
+    //Thread, starting the actor
+    std::thread         m_thread;
 
 };
 

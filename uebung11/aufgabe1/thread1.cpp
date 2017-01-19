@@ -2,11 +2,16 @@
 #include <vector>
 #include <thread>
 #include <functional>
+#include <mutex>
 using namespace std;
+
+std::mutex m;
 
 void pow2(int &square_sum, int x)
 {
-    square_sum += x * x;
+    m.lock();               //mutex wird gelockt -> im weiteren abschnitt kann nur der thread, der zuerst das lock aufgerufen hat vordringen, solange bis
+    square_sum += x * x;    //das lock aufgelöst wird - so wird sichergestellt, dass sich im lese/schreibe abschnitt nur ein thread befindet.
+    m.unlock();
 }
 
 int main() 

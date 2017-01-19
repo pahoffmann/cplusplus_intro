@@ -8,6 +8,7 @@
 #include "Game.hpp"
 
 #include <iostream>
+#include <vector>
 using std::cout;
 using std::endl;
 
@@ -107,6 +108,9 @@ void Game::update(const Uint8* &currentKeyStates)
 
 void Game::start()
 {
+	for(std::vector<Actor*>::iterator it = m_actors.begin(); it != m_actors.end(); ++it) {
+    	(*it)->start(*m_level);
+	}
 
 }
 

@@ -24,7 +24,7 @@ Item::Item(SDL_Renderer* renderer, SDL_Texture* texture, int frameWidth,
 
 void Item::move(Level& level)
 {
-
+	nextFrame();
 }
 
 Item::~Item()

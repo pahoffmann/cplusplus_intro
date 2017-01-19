@@ -7,6 +7,8 @@
 
 #include <SDL.h>
 #include "Actor.hpp"
+#include <thread>
+#include <functional>
 
 namespace jumper
 {
@@ -90,6 +92,15 @@ void Actor::render()
     	// Render current animation frame
     	SDL_RenderCopyEx( getRenderer(), m_texture, &m_sourceRect, &target, 0, NULL, flip);
     }
+
+}
+
+void Actor::start(Level& l){
+	auto var = std::ref(l);
+	std::thread thread2(&jumper::Actor::move, this , var);
+	m_thread.swap(thread2);
+
+	m_thread.join();
 
 }
 
