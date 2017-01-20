@@ -24,7 +24,11 @@ Item::Item(SDL_Renderer* renderer, SDL_Texture* texture, int frameWidth,
 
 void Item::move(Level& level)
 {
-	nextFrame();
+	while(true){
+		nextFrame();
+		std::this_thread::sleep_for(std::chrono::milliseconds(2));
+	}
+	
 }
 
 Item::~Item()
