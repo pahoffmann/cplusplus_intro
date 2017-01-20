@@ -100,7 +100,7 @@ void Actor::start(Level& l){
 	std::thread thread2(&jumper::Actor::move, this , var);
 	m_thread.swap(thread2);
 
-	m_thread.join();
+	//m_thread.join();*/
 
 }
 
