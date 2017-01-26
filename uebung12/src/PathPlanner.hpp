@@ -3,6 +3,9 @@
 
 #include <string>
 #include <list>
+#include <cassert>
+#include <vector>
+#include <map>
 
 #include "Network.hpp"
 #include "Vector.hpp"
@@ -11,6 +14,7 @@
 #include <boost/graph/graphml.hpp>
 #include <boost/graph/astar_search.hpp>
 
+using namespace boost;
 
 namespace jumper
 {
@@ -36,6 +40,14 @@ class PathPlanner
 
     /// TODO: Add graph structure etc.
     std::list<Vector2f> m_solutionPath;
+    typedef adjacency_list<vecS, vecS, undirectedS,/*property<vertex_index2_t, int>*/ boost::no_property, property<edge_weight_t, float>> Graph;
+    Graph g;
+    std::vector<Vector2i> nodes;
+	std::vector<pair<unsigned int, unsigned int>> edges;
+	
+	typedef boost::graph_traits<Graph>::vertex_descriptor Vertex;
+	typedef std::map<int, Vertex> IndexVertexMap;
+	IndexVertexMap indices;
 };
 
     
