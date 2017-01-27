@@ -13,30 +13,31 @@ namespace jumper
 
 struct location { 
 public:
-	int x,y;
+	float x,y;
 };
 
-template<class Graph, class CostType, class Location>
-class Heuristic : public boost::astar_heuristic<Graph,CostType> {
+template<class Graph, class Cost, class Location>
+class Heuristic : public boost::astar_heuristic<Graph,Cost> {
 	public:
 		typedef typename boost::graph_traits<Graph>::vertex_descriptor Vertex;
 		Heuristic(Location l, Vertex goal) : m_loc(l), m_goal(goal){
 			//nothing here
 		}
 
-		CostType operator()(Vertex v){
-			//return m_loc[m_goal].distanceTo(m_loc[v]);
-			CostType dx = m_loc[m_goal].x - m_loc[v].x;
-    		CostType dy = m_loc[m_goal].y - m_loc[v].y;
+		Cost operator()(Vertex v){
+			Cost dx = m_loc[m_goal].x - m_loc[v].x;
+    		Cost dy = m_loc[m_goal].y - m_loc[v].y;
+    		//std::cout << "Dist: " << sqrt(dx * dx + dy * dy) << std::endl; 
     		return sqrt(dx * dx + dy * dy);
 		}
 	private:
-		Vertex m_goal;
 		Location m_loc;
+		Vertex m_goal;
+		
 
 };
 
-struct found {}; //except if the foal was found
+struct found {}; //except if the goal was found
 
 // visitor
 template <class Vertex>
@@ -67,7 +68,15 @@ void PathPlanner::planPath(int s, int e)
 
     typedef boost::graph_traits<Graph>::vertex_descriptor Vertex;
     Vertex end;
-    end = indices.find(e)->second;
+
+
+    std::map<int,Vertex>:: iterator it = indices.begin();
+
+    //it=it+(e-1);
+    for(int i =0; i< e; i++) it++;
+
+    end = (*it).second;//indices.find(e)->second;
+    std::cout << "End-index-test: " << e << " == " << (*it).first<< std::endl;
 
     //vectors for predecassor map & distance map
     vector<Graph::vertex_descriptor> pre(num_vertices(g));
@@ -75,37 +84,39 @@ void PathPlanner::planPath(int s, int e)
   	std::cout << "Vertices: " << boost::num_vertices(g) << " Edges: " << boost::num_edges(g) << std::endl;
 
   	//try finding the goal with astar search
+  	std::list<Vertex> path;
   	try {
     	// call astar
-    	boost::astar_search(g, s, Heuristic<Graph, float, location*>(locs, e),
+    	boost::astar_search(g, indices.find(s)->second, Heuristic<Graph, float, location*>(locs, end), //ASTAR with these parameters is bad.
                             boost::predecessor_map(&pre[0]).distance_map(&dist[0]).
-       						visitor(astar_visitor<Vertex>(indices.find(e)->second)));
+       						visitor(astar_visitor<Vertex>(end)));
   
   
-  	} catch(found f) { // found a path to the goal
-    	std::list<Vertex> path;
-   	    for(Vertex v = end;; v = pre[v]) {
-      	path.push_front(v);
-      	if(pre[v] == v)
-        	break;
+  	} catch(found f) {		 // found a path to the goal
+    	
+   	    for(Vertex v = end;pre[v] != v; v = pre[v]) {
+      		path.push_front(v);
+    	}
+    	path.push_front(indices.find(s)->second);
     }
+
+   	/* finding vertex in map and getting index of it
+       pushing it into the list*/ 
     int value;
-    // finding vertex in map and getting index of it
-    // pushning it into the list
+   
     for(Vertex v : path){
-    	value = indices.find(v)->first;
-    	Vector2f vec(nodes[value].x(),nodes[value].y());
+    	value = indices.find(v)->first;                       // BUG HERE
+    	Vector2f vec(nodes[value].x(),nodes[value].y()); 
     	m_solutionPath.push_back(vec);
     }
     std::cout << "Shortest path from " << s << " to "
          << e << ": ";
-    std::list<Vertex>::iterator spi = path.begin();
+    std::list<Vertex>::iterator it1 = path.begin();
     std::cout << s;
-    for(++spi; spi != path.end(); ++spi)
-      std::cout << " -> " << indices.find(*spi)->first;
-    std::cout << std::endl << "Total travel time: " << dist[end] << std::endl;
-    
-  }
+    for(++it1; it1 != path.end(); ++it1){
+      	std::cout << " -> " << indices.find(*it1)->first;                                   //BUGGY HERE
+  	}
+  	std::cout << std::endl << "Total travel time: " << dist[end] << std::endl;
 }
 
 
@@ -141,7 +152,6 @@ PathPlanner::PathPlanner (Network* net)
 		boost::tie(pos,inserted) = indices.insert(std::make_pair(end, Vertex()));
 		if(inserted){
 			v2 = boost::add_vertex(g);
-			//index_map[v2] = end;
 			pos->second = v2;
 		} else{
 			v2 = pos->second;

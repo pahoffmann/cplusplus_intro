@@ -8,6 +8,7 @@
 #include "PathFollower.hpp"
 
 #include <iostream>
+#include <math.h>
 using std::cout;
 using std::endl;
 namespace jumper
@@ -50,7 +51,44 @@ void PathFollower::render()
 
 void PathFollower::move(Level& l)
 {
-	// TODO: Implement move logic
+	Vector2f u;
+	Vector2f v;
+	Vector2f norm_vec;
+	float square;
+	//iterators
+	std::list<Vector2f>::iterator it = m_path.begin();
+	std::list<Vector2f>::iterator it1 = m_path.begin();
+	it1++;
+	//Stützvektor
+	m_physicalProps.setPosition(*it);
+
+	for(int i = 0; i < m_path.size();i++){
+		u = *it;
+		v = *(it1);
+
+		//normvec
+		norm_vec = v+(u*(-1));
+		square = sqrt(pow(norm_vec.x(),2)+pow(norm_vec.y(),2));
+		norm_vec.setX(norm_vec.x()/square);
+		norm_vec.setY(norm_vec.y()/square);
+		
+		//aiming add next vertex, if distance < 3 -> set position on vertex position
+		while(true){
+			nextFrame();
+			//std::cout << "Position: " << m_physicalProps.position() << std::endl;
+			m_physicalProps.position()+=norm_vec;
+			if(m_physicalProps.position().distanceTo(v)<3){  /* dist < 3 ? */
+				m_physicalProps.position() = v;
+				break;
+			}
+			//sleep
+			std::this_thread::sleep_for(std::chrono::milliseconds(10));
+
+		}
+		it++;     /*incrementing iterators */
+		it1++;
+
+	}
 }
 
 
