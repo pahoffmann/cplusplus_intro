@@ -62,7 +62,7 @@ void PathFollower::move(Level& l)
 	//Stützvektor
 	m_physicalProps.setPosition(*it);
 
-	for(int i = 0; i < m_path.size();i++){
+	for(int i = 0; i < m_path.size()-1;i++){
 		u = *it;
 		v = *(it1);
 

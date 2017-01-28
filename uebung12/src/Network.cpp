@@ -90,6 +90,7 @@ void Network::parseGraphFile(string file)
 		for(int i = 0; i < num_nodes; i++ )
 		{
 			in >> x >> y;
+			//std::cout << "Node coords: " <<i << ": "<< x << " " << y << std::endl;
 			m_nodes.push_back(Vector2i(x,y));
 		}
 
@@ -97,6 +98,8 @@ void Network::parseGraphFile(string file)
 		while(in.good())
 		{
 			in >> x >> y;
+			//std::cout << "Edge: " << x << " "<< y << std::endl;
+
 
 			// Check if stream is still valid after last
 			// read attempt

@@ -66,35 +66,45 @@ void PathPlanner::planPath(int s, int e)
 		locs[i].y = nodes[i].y();
 	}
 
+
+	//easy code
     typedef boost::graph_traits<Graph>::vertex_descriptor Vertex;
+    
+    //vertices
     Vertex end;
+    Vertex start;
 
-
-    std::map<int,Vertex>:: iterator it = indices.begin();
-
-    //it=it+(e-1);
-    for(int i =0; i< e; i++) it++;
-
-    end = (*it).second;//indices.find(e)->second;
-    std::cout << "End-index-test: " << e << " == " << (*it).first<< std::endl;
+    
+    //initialize start & end vertex
+    end = indices.find(e)->second;
+    start = indices.find(s)->second;
+    
+    std::cout << "End-index-test: " << e << " == " << indices.find(e)->first << std::endl;
 
     //vectors for predecassor map & distance map
     vector<Graph::vertex_descriptor> pre(num_vertices(g));
-  	vector<float> dist(num_vertices(g));
+  	
+  	boost::static_property_map<float> weight(1);
+
+
+  	//testwise
   	std::cout << "Vertices: " << boost::num_vertices(g) << " Edges: " << boost::num_edges(g) << std::endl;
+
+  	//Heuristic
+  	Heuristic<Graph, float, location*> m_heuristic(locs, end);
 
   	//try finding the goal with astar search
   	std::list<Vertex> path;
   	try {
     	// call astar
-    	boost::astar_search(g, indices.find(s)->second, Heuristic<Graph, float, location*>(locs, end), //ASTAR with these parameters is bad.
-                            boost::predecessor_map(&pre[0]).distance_map(&dist[0]).
+    	boost::astar_search(g, start, m_heuristic /*Heuristic<Graph, float, location*>(locs, end)*/, //ASTAR with these parameters is bad.
+                            boost::weight_map(weight).predecessor_map(&pre[0]).
        						visitor(astar_visitor<Vertex>(end)));
   
   
   	} catch(found f) {		 // found a path to the goal
-    	
-   	    for(Vertex v = end;pre[v] != v; v = pre[v]) {
+    	std::cout << " Found PATH!" << std::endl;
+   	    for(Vertex v = end; v != indices.find(s)->second; v = pre[v]) {
       		path.push_front(v);
     	}
     	path.push_front(indices.find(s)->second);
@@ -103,20 +113,26 @@ void PathPlanner::planPath(int s, int e)
    	/* finding vertex in map and getting index of it
        pushing it into the list*/ 
     int value;
-   
+   	
+    std::cout << "Shortest path from " << s << " to "
+         << e << ": ";
+    std::cout << s;
+
+
+    // for all vertices of path
     for(Vertex v : path){
-    	value = indices.find(v)->first;                       // BUG HERE
+    	for(int i = 0; i< indices.size() ; i++){
+    		if(v == indices.find(i)->second){
+    			value = i;	//get index of vertex
+    			i = indices.size();
+    			std::cout << " -> " << indices.find(value)->first;
+    		}
+    	}
+    	//adding vector to solution path
     	Vector2f vec(nodes[value].x(),nodes[value].y()); 
     	m_solutionPath.push_back(vec);
     }
-    std::cout << "Shortest path from " << s << " to "
-         << e << ": ";
-    std::list<Vertex>::iterator it1 = path.begin();
-    std::cout << s;
-    for(++it1; it1 != path.end(); ++it1){
-      	std::cout << " -> " << indices.find(*it1)->first;                                   //BUGGY HERE
-  	}
-  	std::cout << std::endl << "Total travel time: " << dist[end] << std::endl;
+
 }
 
 
