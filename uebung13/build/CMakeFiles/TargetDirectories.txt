@@ -1,3 +1,0 @@
-/home/patrick/UniOsnabrück/c++/C06/uebung13/build/CMakeFiles/edit_cache.dir
-/home/patrick/UniOsnabrück/c++/C06/uebung13/build/CMakeFiles/rebuild_cache.dir
-/home/patrick/UniOsnabrück/c++/C06/uebung13/build/CMakeFiles/MyProject.dir

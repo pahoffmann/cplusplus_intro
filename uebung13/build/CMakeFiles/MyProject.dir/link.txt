@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/MyProject.dir/Main.cpp.o CMakeFiles/MyProject.dir/MainWindow.cpp.o CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o  -o MyProject -rdynamic -lQtGui -lQtCore 
