@@ -1,9 +1,11 @@
+#include <QMainWindow>
+#include "../build/ui_untitled.h"
 /* Basisfunktionalität & eigenes Window! */
 
 
-namespace Ui{
-	class MainWindow : public Ui_MainWindow(){}
-}
+/*namespace Ui{
+	class MainWindow;
+}*/
 
 class MainWindow : public QMainWindow, public Ui::MainWindow{
 	Q_OBJECT; /* Signaling etc */
