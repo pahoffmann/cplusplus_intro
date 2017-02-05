@@ -1,8 +1,14 @@
 #ifndef LEVEL_SCENE_HPP
 #define LEVEL_SCENE_HPP
 
+#include <QString>
+#include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
+#include "MainWindow.hpp"
+
 class LevelScene : public QGraphicsScene
 {
+	Q_OBJECT;
 public:
     /// Loads des Level with the given filenale nad
     /// Stores a pointer to it's main window in a
@@ -25,7 +31,7 @@ private:
 	int m_keyR;           // Key color r component
 	int m_keyG;           // Key color g component
 	int m_keyB;           // Key color b component
-	string m_texFileName; // File name of the tile bitmap
+	std::string m_texFileName; // File name of the tile bitmap
 	MainWindow* m_mainWindow; // Pointer to a main window
 };
 

@@ -38,7 +38,7 @@
    <property name="minimumSize">
     <size>
      <width>200</width>
-     <height>152</height>
+     <height>185</height>
     </size>
    </property>
    <property name="maximumSize">
@@ -59,6 +59,13 @@
    <widget class="QWidget" name="dockWidgetContents">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Öffnen</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
         <string>Level Width:</string>
@@ -75,14 +82,14 @@
      <item>
       <widget class="QLabel" name="label_5">
        <property name="text">
-        <string>Tile Width</string>
+        <string>Tile Width:</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Tile Height</string>
+        <string>Tile Height:</string>
        </property>
       </widget>
      </item>
@@ -101,7 +108,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Bitmap-Name</string>
+        <string>Bitmap-Name:</string>
        </property>
       </widget>
      </item>

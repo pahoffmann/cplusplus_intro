@@ -4,8 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.cpp" "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o"
+  "/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.cpp" "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/LevelScene.cpp.o"
   "/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/Main.cpp" "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/Main.cpp.o"
   "/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.cpp" "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/MainWindow.cpp.o"
+  "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_GraphicsTileItem.cxx" "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o"
+  "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_LevelScene.cxx" "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o"
   "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_MainWindow.cxx" "/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -23,7 +27,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/qt4/QtGui"
   "/usr/include/qt4/QtCore"
   "/home/patrick/UniOsnabrueck/c++/C06/uebung13/src"
-  "."
   )
 
 # Targets to which this target links.

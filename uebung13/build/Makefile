@@ -123,6 +123,60 @@ MyProject/fast:
 	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
 .PHONY : MyProject/fast
 
+GraphicsTileItem.o: GraphicsTileItem.cpp.o
+
+.PHONY : GraphicsTileItem.o
+
+# target to build an object file
+GraphicsTileItem.cpp.o:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o
+.PHONY : GraphicsTileItem.cpp.o
+
+GraphicsTileItem.i: GraphicsTileItem.cpp.i
+
+.PHONY : GraphicsTileItem.i
+
+# target to preprocess a source file
+GraphicsTileItem.cpp.i:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.i
+.PHONY : GraphicsTileItem.cpp.i
+
+GraphicsTileItem.s: GraphicsTileItem.cpp.s
+
+.PHONY : GraphicsTileItem.s
+
+# target to generate assembly for a file
+GraphicsTileItem.cpp.s:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.s
+.PHONY : GraphicsTileItem.cpp.s
+
+LevelScene.o: LevelScene.cpp.o
+
+.PHONY : LevelScene.o
+
+# target to build an object file
+LevelScene.cpp.o:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/LevelScene.cpp.o
+.PHONY : LevelScene.cpp.o
+
+LevelScene.i: LevelScene.cpp.i
+
+.PHONY : LevelScene.i
+
+# target to preprocess a source file
+LevelScene.cpp.i:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/LevelScene.cpp.i
+.PHONY : LevelScene.cpp.i
+
+LevelScene.s: LevelScene.cpp.s
+
+.PHONY : LevelScene.s
+
+# target to generate assembly for a file
+LevelScene.cpp.s:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/LevelScene.cpp.s
+.PHONY : LevelScene.cpp.s
+
 Main.o: Main.cpp.o
 
 .PHONY : Main.o
@@ -177,6 +231,60 @@ MainWindow.cpp.s:
 	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/MainWindow.cpp.s
 .PHONY : MainWindow.cpp.s
 
+moc_GraphicsTileItem.o: moc_GraphicsTileItem.cxx.o
+
+.PHONY : moc_GraphicsTileItem.o
+
+# target to build an object file
+moc_GraphicsTileItem.cxx.o:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o
+.PHONY : moc_GraphicsTileItem.cxx.o
+
+moc_GraphicsTileItem.i: moc_GraphicsTileItem.cxx.i
+
+.PHONY : moc_GraphicsTileItem.i
+
+# target to preprocess a source file
+moc_GraphicsTileItem.cxx.i:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.i
+.PHONY : moc_GraphicsTileItem.cxx.i
+
+moc_GraphicsTileItem.s: moc_GraphicsTileItem.cxx.s
+
+.PHONY : moc_GraphicsTileItem.s
+
+# target to generate assembly for a file
+moc_GraphicsTileItem.cxx.s:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.s
+.PHONY : moc_GraphicsTileItem.cxx.s
+
+moc_LevelScene.o: moc_LevelScene.cxx.o
+
+.PHONY : moc_LevelScene.o
+
+# target to build an object file
+moc_LevelScene.cxx.o:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o
+.PHONY : moc_LevelScene.cxx.o
+
+moc_LevelScene.i: moc_LevelScene.cxx.i
+
+.PHONY : moc_LevelScene.i
+
+# target to preprocess a source file
+moc_LevelScene.cxx.i:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_LevelScene.cxx.i
+.PHONY : moc_LevelScene.cxx.i
+
+moc_LevelScene.s: moc_LevelScene.cxx.s
+
+.PHONY : moc_LevelScene.s
+
+# target to generate assembly for a file
+moc_LevelScene.cxx.s:
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_LevelScene.cxx.s
+.PHONY : moc_LevelScene.cxx.s
+
 moc_MainWindow.o: moc_MainWindow.cxx.o
 
 .PHONY : moc_MainWindow.o
@@ -213,12 +321,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyProject"
+	@echo "... GraphicsTileItem.o"
+	@echo "... GraphicsTileItem.i"
+	@echo "... GraphicsTileItem.s"
+	@echo "... LevelScene.o"
+	@echo "... LevelScene.i"
+	@echo "... LevelScene.s"
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
 	@echo "... MainWindow.o"
 	@echo "... MainWindow.i"
 	@echo "... MainWindow.s"
+	@echo "... moc_GraphicsTileItem.o"
+	@echo "... moc_GraphicsTileItem.i"
+	@echo "... moc_GraphicsTileItem.s"
+	@echo "... moc_LevelScene.o"
+	@echo "... moc_LevelScene.i"
+	@echo "... moc_LevelScene.s"
 	@echo "... moc_MainWindow.o"
 	@echo "... moc_MainWindow.i"
 	@echo "... moc_MainWindow.s"

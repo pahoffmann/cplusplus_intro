@@ -1,3 +1,5 @@
 # Hashes of file build rules.
+3ba5a004caad342a229f975c30b13f4e moc_GraphicsTileItem.cxx
+7258b63e7072a7defd356b4c639d6be3 moc_LevelScene.cxx
 e01d3dfa8a1907a0f79c71a99d2d0fe3 moc_MainWindow.cxx
 f10b428e23f7a80471867fa6d99c66c0 ui_untitled.h

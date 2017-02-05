@@ -18,6 +18,7 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QMainWindow>
+#include <QtGui/QPushButton>
 #include <QtGui/QStatusBar>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
@@ -34,6 +35,7 @@ public:
     QDockWidget *dockWidget;
     QWidget *dockWidgetContents;
     QVBoxLayout *verticalLayout;
+    QPushButton *pushButton;
     QLabel *label_4;
     QLabel *label_3;
     QLabel *label_5;
@@ -66,13 +68,18 @@ public:
         MainWindow->setStatusBar(statusbar);
         dockWidget = new QDockWidget(MainWindow);
         dockWidget->setObjectName(QString::fromUtf8("dockWidget"));
-        dockWidget->setMinimumSize(QSize(200, 152));
+        dockWidget->setMinimumSize(QSize(200, 185));
         dockWidget->setMaximumSize(QSize(200, 524287));
         dockWidget->setBaseSize(QSize(200, 0));
         dockWidgetContents = new QWidget();
         dockWidgetContents->setObjectName(QString::fromUtf8("dockWidgetContents"));
         verticalLayout = new QVBoxLayout(dockWidgetContents);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        pushButton = new QPushButton(dockWidgetContents);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        verticalLayout->addWidget(pushButton);
+
         label_4 = new QLabel(dockWidgetContents);
         label_4->setObjectName(QString::fromUtf8("label_4"));
 
@@ -111,11 +118,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("MainWindow", "\303\226ffnen", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("MainWindow", "Level Width:", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("MainWindow", "Level height: ", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("MainWindow", "Tile Width", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("MainWindow", "Tile Height", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("MainWindow", "Bitmap-Name", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("MainWindow", "Tile Width:", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("MainWindow", "Tile Height:", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("MainWindow", "Bitmap-Name:", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

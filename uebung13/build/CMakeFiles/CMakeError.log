@@ -1,20 +1,20 @@
 Determining if the Q_WS_WIN exist failed with the following output:
 Change Dir: /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ace66/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ace66.dir/build.make CMakeFiles/cmTC_ace66.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6b898/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b898.dir/build.make CMakeFiles/cmTC_6b898.dir/build
 make[1]: Verzeichnis „/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_ace66.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_ace66.dir/CheckSymbolExists.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTC_6b898.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_6b898.dir/CheckSymbolExists.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
    return ((int*)(&Q_WS_WIN))[argc];
                    ^
-CMakeFiles/cmTC_ace66.dir/build.make:65: die Regel für Ziel „CMakeFiles/cmTC_ace66.dir/CheckSymbolExists.cxx.o“ scheiterte
-make[1]: *** [CMakeFiles/cmTC_ace66.dir/CheckSymbolExists.cxx.o] Fehler 1
+CMakeFiles/cmTC_6b898.dir/build.make:65: die Regel für Ziel „CMakeFiles/cmTC_6b898.dir/CheckSymbolExists.cxx.o“ scheiterte
+make[1]: *** [CMakeFiles/cmTC_6b898.dir/CheckSymbolExists.cxx.o] Fehler 1
 make[1]: Verzeichnis „/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp“ wird verlassen
-Makefile:126: die Regel für Ziel „cmTC_ace66/fast“ scheiterte
-make: *** [cmTC_ace66/fast] Fehler 2
+Makefile:126: die Regel für Ziel „cmTC_6b898/fast“ scheiterte
+make: *** [cmTC_6b898/fast] Fehler 2
 
 File /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -34,20 +34,20 @@ int main(int argc, char** argv)
 Determining if the Q_WS_QWS exist failed with the following output:
 Change Dir: /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1b504/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1b504.dir/build.make CMakeFiles/cmTC_1b504.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_dcd94/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dcd94.dir/build.make CMakeFiles/cmTC_dcd94.dir/build
 make[1]: Verzeichnis „/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_1b504.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_1b504.dir/CheckSymbolExists.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTC_dcd94.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_dcd94.dir/CheckSymbolExists.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
    return ((int*)(&Q_WS_QWS))[argc];
                    ^
-CMakeFiles/cmTC_1b504.dir/build.make:65: die Regel für Ziel „CMakeFiles/cmTC_1b504.dir/CheckSymbolExists.cxx.o“ scheiterte
-make[1]: *** [CMakeFiles/cmTC_1b504.dir/CheckSymbolExists.cxx.o] Fehler 1
+CMakeFiles/cmTC_dcd94.dir/build.make:65: die Regel für Ziel „CMakeFiles/cmTC_dcd94.dir/CheckSymbolExists.cxx.o“ scheiterte
+make[1]: *** [CMakeFiles/cmTC_dcd94.dir/CheckSymbolExists.cxx.o] Fehler 1
 make[1]: Verzeichnis „/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp“ wird verlassen
-Makefile:126: die Regel für Ziel „cmTC_1b504/fast“ scheiterte
-make: *** [cmTC_1b504/fast] Fehler 2
+Makefile:126: die Regel für Ziel „cmTC_dcd94/fast“ scheiterte
+make: *** [cmTC_dcd94/fast] Fehler 2
 
 File /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
@@ -67,20 +67,20 @@ int main(int argc, char** argv)
 Determining if the Q_WS_MAC exist failed with the following output:
 Change Dir: /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_25d19/fast"
-/usr/bin/make -f CMakeFiles/cmTC_25d19.dir/build.make CMakeFiles/cmTC_25d19.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_59131/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59131.dir/build.make CMakeFiles/cmTC_59131.dir/build
 make[1]: Verzeichnis „/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_25d19.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_25d19.dir/CheckSymbolExists.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Building CXX object CMakeFiles/cmTC_59131.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_59131.dir/CheckSymbolExists.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
    return ((int*)(&Q_WS_MAC))[argc];
                    ^
-CMakeFiles/cmTC_25d19.dir/build.make:65: die Regel für Ziel „CMakeFiles/cmTC_25d19.dir/CheckSymbolExists.cxx.o“ scheiterte
-make[1]: *** [CMakeFiles/cmTC_25d19.dir/CheckSymbolExists.cxx.o] Fehler 1
+CMakeFiles/cmTC_59131.dir/build.make:65: die Regel für Ziel „CMakeFiles/cmTC_59131.dir/CheckSymbolExists.cxx.o“ scheiterte
+make[1]: *** [CMakeFiles/cmTC_59131.dir/CheckSymbolExists.cxx.o] Fehler 1
 make[1]: Verzeichnis „/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp“ wird verlassen
-Makefile:126: die Regel für Ziel „cmTC_25d19/fast“ scheiterte
-make: *** [cmTC_25d19/fast] Fehler 2
+Makefile:126: die Regel für Ziel „cmTC_59131/fast“ scheiterte
+make: *** [cmTC_59131/fast] Fehler 2
 
 File /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */

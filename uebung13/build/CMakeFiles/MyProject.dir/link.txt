@@ -1,1 +1,1 @@
-/usr/bin/c++      CMakeFiles/MyProject.dir/Main.cpp.o CMakeFiles/MyProject.dir/MainWindow.cpp.o CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o  -o MyProject -rdynamic -lQtGui -lQtCore 
+/usr/bin/c++   -std=c++11 -Wall   CMakeFiles/MyProject.dir/Main.cpp.o CMakeFiles/MyProject.dir/MainWindow.cpp.o CMakeFiles/MyProject.dir/LevelScene.cpp.o CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o  -o MyProject -rdynamic -lQtGui -lQtCore 

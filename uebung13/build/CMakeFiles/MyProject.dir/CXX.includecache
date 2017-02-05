@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_GraphicsTileItem.cxx
+
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_LevelScene.cxx
+../src/LevelScene.hpp
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.hpp
+
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_MainWindow.cxx
 ../src/MainWindow.hpp
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.hpp
@@ -29,12 +35,58 @@ QtGui/QLabel
 -
 QtGui/QMainWindow
 -
+QtGui/QPushButton
+-
 QtGui/QStatusBar
 -
 QtGui/QVBoxLayout
 -
 QtGui/QWidget
 -
+
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.cpp
+GraphicsTileItem.hpp
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.hpp
+
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.hpp
+QRect
+-
+QPixmap
+-
+QColor
+-
+QGraphicsScene
+-
+QGraphicsPixmapItem
+-
+QGraphicsSceneMouseEvent
+-
+
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.cpp
+LevelScene.hpp
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.hpp
+QIODevice
+-
+QFile
+-
+QTextStream
+-
+iostream
+-
+QPixmap
+-
+GraphicsTileItem.hpp
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.hpp
+
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.hpp
+QString
+-
+QGraphicsScene
+-
+QGraphicsSceneMouseEvent
+-
+MainWindow.hpp
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.hpp
 
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/Main.cpp
 QApplication
@@ -45,6 +97,14 @@ MainWindow.hpp
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.cpp
 MainWindow.hpp
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.hpp
+LevelScene.hpp
+/home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.hpp
+iostream
+-
+QFileDialog
+-
+QString
+-
 
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.hpp
 QMainWindow
@@ -70,6 +130,14 @@ iterator
 list
 -
 
+/usr/include/qt4/QtCore/QFile
+qfile.h
+/usr/include/qt4/QtCore/qfile.h
+
+/usr/include/qt4/QtCore/QIODevice
+qiodevice.h
+/usr/include/qt4/QtCore/qiodevice.h
+
 /usr/include/qt4/QtCore/QPoint
 qpoint.h
 /usr/include/qt4/QtCore/qpoint.h
@@ -77,6 +145,18 @@ qpoint.h
 /usr/include/qt4/QtCore/QPointF
 qpoint.h
 /usr/include/qt4/QtCore/qpoint.h
+
+/usr/include/qt4/QtCore/QRect
+qrect.h
+/usr/include/qt4/QtCore/qrect.h
+
+/usr/include/qt4/QtCore/QString
+qstring.h
+/usr/include/qt4/QtCore/qstring.h
+
+/usr/include/qt4/QtCore/QTextStream
+qtextstream.h
+/usr/include/qt4/QtCore/qtextstream.h
 
 /usr/include/qt4/QtCore/QVariant
 qvariant.h
@@ -310,6 +390,16 @@ QtCore/qiodevice.h
 QtCore/qglobal.h
 -
 
+/usr/include/qt4/QtCore/qdir.h
+QtCore/qstring.h
+-
+QtCore/qfileinfo.h
+-
+QtCore/qstringlist.h
+-
+QtCore/qshareddata.h
+-
+
 /usr/include/qt4/QtCore/qeventloop.h
 QtCore/qobject.h
 -
@@ -324,6 +414,14 @@ QtCore/qstring.h
 stdio.h
 -
 f32file.h
+-
+
+/usr/include/qt4/QtCore/qfileinfo.h
+QtCore/qfile.h
+-
+QtCore/qlist.h
+-
+QtCore/qshareddata.h
 -
 
 /usr/include/qt4/QtCore/qglobal.h
@@ -576,6 +674,28 @@ Qt3Support/q3valuelist.h
 QtCore/qstring.h
 -
 
+/usr/include/qt4/QtCore/qtextcodec.h
+QtCore/qstring.h
+-
+QtCore/qlist.h
+-
+
+/usr/include/qt4/QtCore/qtextstream.h
+QtCore/qiodevice.h
+-
+QtCore/qstring.h
+-
+QtCore/qchar.h
+-
+QtCore/qlocale.h
+-
+QtCore/qscopedpointer.h
+-
+QtCore/qtextcodec.h
+-
+stdio.h
+-
+
 /usr/include/qt4/QtCore/qvariant.h
 QtCore/qatomic.h
 -
@@ -628,9 +748,29 @@ qapplication.h
 qbuttongroup.h
 /usr/include/qt4/QtGui/qbuttongroup.h
 
+/usr/include/qt4/QtGui/QColor
+qcolor.h
+/usr/include/qt4/QtGui/qcolor.h
+
 /usr/include/qt4/QtGui/QDockWidget
 qdockwidget.h
 /usr/include/qt4/QtGui/qdockwidget.h
+
+/usr/include/qt4/QtGui/QFileDialog
+qfiledialog.h
+/usr/include/qt4/QtGui/qfiledialog.h
+
+/usr/include/qt4/QtGui/QGraphicsPixmapItem
+qgraphicsitem.h
+/usr/include/qt4/QtGui/qgraphicsitem.h
+
+/usr/include/qt4/QtGui/QGraphicsScene
+qgraphicsscene.h
+/usr/include/qt4/QtGui/qgraphicsscene.h
+
+/usr/include/qt4/QtGui/QGraphicsSceneMouseEvent
+qgraphicssceneevent.h
+/usr/include/qt4/QtGui/qgraphicssceneevent.h
 
 /usr/include/qt4/QtGui/QGraphicsView
 qgraphicsview.h
@@ -648,9 +788,17 @@ qlabel.h
 qmainwindow.h
 /usr/include/qt4/QtGui/qmainwindow.h
 
+/usr/include/qt4/QtGui/QPixmap
+qpixmap.h
+/usr/include/qt4/QtGui/qpixmap.h
+
 /usr/include/qt4/QtGui/QPlatformWindow
 qplatformwindow_qpa.h
 /usr/include/qt4/QtGui/qplatformwindow_qpa.h
+
+/usr/include/qt4/QtGui/QPushButton
+qpushbutton.h
+/usr/include/qt4/QtGui/qpushbutton.h
 
 /usr/include/qt4/QtGui/QStatusBar
 qstatusbar.h
@@ -663,6 +811,14 @@ qboxlayout.h
 /usr/include/qt4/QtGui/QWidget
 qwidget.h
 /usr/include/qt4/QtGui/qwidget.h
+
+/usr/include/qt4/QtGui/qabstractbutton.h
+QtGui/qicon.h
+-
+QtGui/qkeysequence.h
+-
+QtGui/qwidget.h
+-
 
 /usr/include/qt4/QtGui/qabstractitemdelegate.h
 QtCore/qobject.h
@@ -784,6 +940,10 @@ QtGui/qwindowdefs.h
 QtGui/qwidget.h
 -
 
+/usr/include/qt4/QtGui/qdialog.h
+QtGui/qwidget.h
+-
+
 /usr/include/qt4/QtGui/qdockwidget.h
 QtGui/qwidget.h
 -
@@ -830,6 +990,14 @@ QtCore/qset.h
 QtCore/qfile.h
 -
 
+/usr/include/qt4/QtGui/qfiledialog.h
+QtCore/qdir.h
+-
+QtCore/qstring.h
+-
+QtGui/qdialog.h
+-
+
 /usr/include/qt4/QtGui/qfont.h
 QtGui/qwindowdefs.h
 -
@@ -856,6 +1024,22 @@ QtCore/qrect.h
 QtGui/qwidget.h
 -
 
+/usr/include/qt4/QtGui/qgraphicsitem.h
+QtCore/qglobal.h
+-
+QtCore/qobject.h
+-
+QtCore/qvariant.h
+-
+QtCore/qrect.h
+-
+QtCore/qscopedpointer.h
+-
+QtGui/qpainterpath.h
+-
+QtGui/qpixmap.h
+-
+
 /usr/include/qt4/QtGui/qgraphicsscene.h
 QtCore/qobject.h
 -
@@ -872,6 +1056,22 @@ QtGui/qtransform.h
 QtGui/qmatrix.h
 -
 QtGui/qpen.h
+-
+
+/usr/include/qt4/QtGui/qgraphicssceneevent.h
+QtCore/qcoreevent.h
+-
+QtCore/qpoint.h
+-
+QtCore/qscopedpointer.h
+-
+QtCore/qrect.h
+-
+QtGui/qpolygon.h
+-
+QtCore/qset.h
+-
+QtCore/qhash.h
 -
 
 /usr/include/qt4/QtGui/qgraphicsview.h
@@ -1102,6 +1302,10 @@ QtCore/qvector.h
 QtCore/qpoint.h
 -
 QtCore/qrect.h
+-
+
+/usr/include/qt4/QtGui/qpushbutton.h
+QtGui/qabstractbutton.h
 -
 
 /usr/include/qt4/QtGui/qregion.h

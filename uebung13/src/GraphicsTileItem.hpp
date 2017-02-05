@@ -1,8 +1,16 @@
 #ifndef GRAPHICS_TILE_ITEM_HPP
 #define GRAPHICS_TILE_ITEM_HPP
 
+#include <QRect>
+#include <QPixmap>
+#include <QColor>
+#include <QGraphicsScene>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsSceneMouseEvent>
+
 class GraphicsTileItem : public QGraphicsPixmapItem
 {
+    //Q_OBJECT;
 public:
     /// Constructor. Creates a sub-pixmap from tileset at position rect
     /// and stores the given index

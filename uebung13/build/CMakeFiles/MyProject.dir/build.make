@@ -62,13 +62,23 @@ moc_MainWindow.cxx: moc_MainWindow.cxx_parameters
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_MainWindow.cxx"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_MainWindow.cxx_parameters
 
+moc_LevelScene.cxx: /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.hpp
+moc_LevelScene.cxx: moc_LevelScene.cxx_parameters
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating moc_LevelScene.cxx"
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_LevelScene.cxx_parameters
+
+moc_GraphicsTileItem.cxx: /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.hpp
+moc_GraphicsTileItem.cxx: moc_GraphicsTileItem.cxx_parameters
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating moc_GraphicsTileItem.cxx"
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_GraphicsTileItem.cxx_parameters
+
 ui_untitled.h: /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/untitled.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ui_untitled.h"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ui_untitled.h"
 	/usr/lib/x86_64-linux-gnu/qt4/bin/uic -o /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/ui_untitled.h /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/untitled.ui
 
 CMakeFiles/MyProject.dir/Main.cpp.o: CMakeFiles/MyProject.dir/flags.make
 CMakeFiles/MyProject.dir/Main.cpp.o: /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyProject.dir/Main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyProject.dir/Main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyProject.dir/Main.cpp.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/Main.cpp
 
 CMakeFiles/MyProject.dir/Main.cpp.i: cmake_force
@@ -92,7 +102,7 @@ CMakeFiles/MyProject.dir/Main.cpp.o.provides.build: CMakeFiles/MyProject.dir/Mai
 
 CMakeFiles/MyProject.dir/MainWindow.cpp.o: CMakeFiles/MyProject.dir/flags.make
 CMakeFiles/MyProject.dir/MainWindow.cpp.o: /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyProject.dir/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyProject.dir/MainWindow.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyProject.dir/MainWindow.cpp.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/MainWindow.cpp
 
 CMakeFiles/MyProject.dir/MainWindow.cpp.i: cmake_force
@@ -114,9 +124,57 @@ CMakeFiles/MyProject.dir/MainWindow.cpp.o.provides: CMakeFiles/MyProject.dir/Mai
 CMakeFiles/MyProject.dir/MainWindow.cpp.o.provides.build: CMakeFiles/MyProject.dir/MainWindow.cpp.o
 
 
+CMakeFiles/MyProject.dir/LevelScene.cpp.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/LevelScene.cpp.o: /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyProject.dir/LevelScene.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyProject.dir/LevelScene.cpp.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.cpp
+
+CMakeFiles/MyProject.dir/LevelScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/LevelScene.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.cpp > CMakeFiles/MyProject.dir/LevelScene.cpp.i
+
+CMakeFiles/MyProject.dir/LevelScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/LevelScene.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/LevelScene.cpp -o CMakeFiles/MyProject.dir/LevelScene.cpp.s
+
+CMakeFiles/MyProject.dir/LevelScene.cpp.o.requires:
+
+.PHONY : CMakeFiles/MyProject.dir/LevelScene.cpp.o.requires
+
+CMakeFiles/MyProject.dir/LevelScene.cpp.o.provides: CMakeFiles/MyProject.dir/LevelScene.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/LevelScene.cpp.o.provides.build
+.PHONY : CMakeFiles/MyProject.dir/LevelScene.cpp.o.provides
+
+CMakeFiles/MyProject.dir/LevelScene.cpp.o.provides.build: CMakeFiles/MyProject.dir/LevelScene.cpp.o
+
+
+CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o: /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.cpp
+
+CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.cpp > CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.i
+
+CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.cpp -o CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.s
+
+CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.requires:
+
+.PHONY : CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.requires
+
+CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.provides: CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.requires
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.provides.build
+.PHONY : CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.provides
+
+CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.provides.build: CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o
+
+
 CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o: CMakeFiles/MyProject.dir/flags.make
 CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o: moc_MainWindow.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_MainWindow.cxx
 
 CMakeFiles/MyProject.dir/moc_MainWindow.cxx.i: cmake_force
@@ -138,23 +196,79 @@ CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o.provides: CMakeFiles/MyProject.dir
 CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o.provides.build: CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o
 
 
+CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o: moc_LevelScene.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_LevelScene.cxx
+
+CMakeFiles/MyProject.dir/moc_LevelScene.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/moc_LevelScene.cxx.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_LevelScene.cxx > CMakeFiles/MyProject.dir/moc_LevelScene.cxx.i
+
+CMakeFiles/MyProject.dir/moc_LevelScene.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/moc_LevelScene.cxx.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_LevelScene.cxx -o CMakeFiles/MyProject.dir/moc_LevelScene.cxx.s
+
+CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.requires:
+
+.PHONY : CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.requires
+
+CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.provides: CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.requires
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.provides.build
+.PHONY : CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.provides
+
+CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.provides.build: CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o
+
+
+CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o: moc_GraphicsTileItem.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o -c /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_GraphicsTileItem.cxx
+
+CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_GraphicsTileItem.cxx > CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.i
+
+CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/moc_GraphicsTileItem.cxx -o CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.s
+
+CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.requires:
+
+.PHONY : CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.requires
+
+CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.provides: CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.requires
+	$(MAKE) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.provides.build
+.PHONY : CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.provides
+
+CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.provides.build: CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o
+
+
 # Object files for target MyProject
 MyProject_OBJECTS = \
 "CMakeFiles/MyProject.dir/Main.cpp.o" \
 "CMakeFiles/MyProject.dir/MainWindow.cpp.o" \
-"CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o"
+"CMakeFiles/MyProject.dir/LevelScene.cpp.o" \
+"CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o" \
+"CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o" \
+"CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o" \
+"CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o"
 
 # External object files for target MyProject
 MyProject_EXTERNAL_OBJECTS =
 
 MyProject: CMakeFiles/MyProject.dir/Main.cpp.o
 MyProject: CMakeFiles/MyProject.dir/MainWindow.cpp.o
+MyProject: CMakeFiles/MyProject.dir/LevelScene.cpp.o
+MyProject: CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o
 MyProject: CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o
+MyProject: CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o
+MyProject: CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o
 MyProject: CMakeFiles/MyProject.dir/build.make
 MyProject: /usr/lib/x86_64-linux-gnu/libQtGui.so
 MyProject: /usr/lib/x86_64-linux-gnu/libQtCore.so
 MyProject: CMakeFiles/MyProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable MyProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable MyProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -164,7 +278,11 @@ CMakeFiles/MyProject.dir/build: MyProject
 
 CMakeFiles/MyProject.dir/requires: CMakeFiles/MyProject.dir/Main.cpp.o.requires
 CMakeFiles/MyProject.dir/requires: CMakeFiles/MyProject.dir/MainWindow.cpp.o.requires
+CMakeFiles/MyProject.dir/requires: CMakeFiles/MyProject.dir/LevelScene.cpp.o.requires
+CMakeFiles/MyProject.dir/requires: CMakeFiles/MyProject.dir/GraphicsTileItem.cpp.o.requires
 CMakeFiles/MyProject.dir/requires: CMakeFiles/MyProject.dir/moc_MainWindow.cxx.o.requires
+CMakeFiles/MyProject.dir/requires: CMakeFiles/MyProject.dir/moc_LevelScene.cxx.o.requires
+CMakeFiles/MyProject.dir/requires: CMakeFiles/MyProject.dir/moc_GraphicsTileItem.cxx.o.requires
 
 .PHONY : CMakeFiles/MyProject.dir/requires
 
@@ -173,6 +291,8 @@ CMakeFiles/MyProject.dir/clean:
 .PHONY : CMakeFiles/MyProject.dir/clean
 
 CMakeFiles/MyProject.dir/depend: moc_MainWindow.cxx
+CMakeFiles/MyProject.dir/depend: moc_LevelScene.cxx
+CMakeFiles/MyProject.dir/depend: moc_GraphicsTileItem.cxx
 CMakeFiles/MyProject.dir/depend: ui_untitled.h
 	cd /home/patrick/UniOsnabrueck/c++/C06/uebung13/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/patrick/UniOsnabrueck/c++/C06/uebung13/src /home/patrick/UniOsnabrueck/c++/C06/uebung13/src /home/patrick/UniOsnabrueck/c++/C06/uebung13/build /home/patrick/UniOsnabrueck/c++/C06/uebung13/build /home/patrick/UniOsnabrueck/c++/C06/uebung13/build/CMakeFiles/MyProject.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MyProject.dir/depend

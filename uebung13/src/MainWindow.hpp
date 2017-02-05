@@ -1,3 +1,6 @@
+#ifndef MAIN_WINDOW_HPP
+#define MAIN_WINDOW_HPP
+
 #include <QMainWindow>
 #include "../build/ui_untitled.h"
 /* Basisfunktionalität & eigenes Window! */
@@ -16,8 +19,13 @@ public:
 
 
 private slots:
-	//void handleButton();
+
+    void on_pushButton_clicked();
+
+signals:
+
 private:
 	//QPushButton *m_PushButton;
 	
 };
+#endif
