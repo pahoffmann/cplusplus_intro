@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
 
 void MainWindow::on_pushButton_clicked()
 {
-   QString filename = QFileDialog::getOpenFileName(this, tr("Open File"), "users/patrick/","Level Files (*.lvl)");
+   QString filename = QFileDialog::getOpenFileName(this, tr("Open File"), "users/","Level Files (*.lvl)");
    LevelScene *l = new LevelScene(filename, this);
    graphicsView->setScene(l);
    graphicsView->show();
