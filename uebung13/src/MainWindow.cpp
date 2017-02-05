@@ -13,7 +13,8 @@ MainWindow::~MainWindow(){
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
 	//stuff here 
 	//connecting signaling etc
-	setupUi(this);
+    setupUi(this);
+    connect(pushButton, SIGNAL(clicked()), this, SLOT(on_pushButton_clicked()));
 
 
 }

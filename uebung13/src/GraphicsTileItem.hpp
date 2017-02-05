@@ -31,7 +31,10 @@ public:
 protected:
     
     /// Is called when the mouse is pressed on the item
-	virtual void mousePressEvent(QGraphicsSceneMouseEvent * event);
+    virtual void mousePressEvent(QGraphicsSceneMouseEvent * event);
+
+/*signals:
+    void mouseClicked(int index); */
 
 private:
     

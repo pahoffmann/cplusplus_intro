@@ -47,6 +47,10 @@ QtGui/QWidget
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.cpp
 GraphicsTileItem.hpp
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.hpp
+QPointF
+-
+iostream
+-
 
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.hpp
 QRect
@@ -74,6 +78,8 @@ QTextStream
 iostream
 -
 QPixmap
+-
+QPoint
 -
 GraphicsTileItem.hpp
 /home/patrick/UniOsnabrueck/c++/C06/uebung13/src/GraphicsTileItem.hpp

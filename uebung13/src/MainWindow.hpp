@@ -6,9 +6,6 @@
 /* Basisfunktionalität & eigenes Window! */
 
 
-/*namespace Ui{
-	class MainWindow;
-}*/
 
 class MainWindow : public QMainWindow, public Ui::MainWindow{
 	Q_OBJECT; /* Signaling etc */
@@ -25,7 +22,6 @@ private slots:
 signals:
 
 private:
-	//QPushButton *m_PushButton;
 	
 };
 #endif

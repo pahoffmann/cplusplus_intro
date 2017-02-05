@@ -18,6 +18,9 @@ protected:
     /// Is called whenever the mouse is pressend within
     /// the scene
     virtual void mousePressEvent(QGraphicsSceneMouseEvent * event);
+
+/*public slots:
+    void levelClicked(int index);*/
 private:  
   int** m_tiles;        // The 2D tile array
   QPixmap* m_pixmap;    // A QPixmap to store the tile bitmap

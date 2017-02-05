@@ -4,6 +4,7 @@
 #include <QTextStream>
 #include <iostream>
 #include <QPixmap>
+#include <QPoint>
 #include "GraphicsTileItem.hpp"
 
 LevelScene::LevelScene(QString filename, MainWindow* window){
@@ -70,6 +71,7 @@ LevelScene::LevelScene(QString filename, MainWindow* window){
 	//GraphicTiles erzeugen
 
 	GraphicsTileItem* item;
+
 	QRect rect;
 	int index;
 	int col; //helpers
@@ -105,7 +107,10 @@ LevelScene::LevelScene(QString filename, MainWindow* window){
 				//target on screen
 				item->setX(j*m_tileWidth);
 				item->setY(i*m_tileHeight);
-				addItem(item);
+
+                //connect(this,SIGNAL(levelClicked(QGraphicsSceneMouseEvent * event)),item,SLOT(mouseClicked(QGraphicsSceneMouseEvent * event)));
+                //connect(item, SIGNAL(mouseClicked(int)), this, SLOT(levelClicked(int)));
+                addItem(item);
 			}
 		
 		}
@@ -117,7 +122,12 @@ LevelScene::LevelScene(QString filename, MainWindow* window){
 
 }
 
+/*void LevelScene::levelClicked(int index){
+    std::cout << "Level has been clicked!" << std::endl;
+}*/
+
 
 void LevelScene::mousePressEvent(QGraphicsSceneMouseEvent * event){
-    //connect(event, )
+
+    //nothing here
 }
